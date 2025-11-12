@@ -2,21 +2,31 @@
 \section{Overview}
 
 While ultracold atoms laboratories are in general on the technically heavy side of table-top experiments, the Dy-K machine is a challenging set up even for the standards of the community. While recently the flourishing of ultracold atomic experiments where new, controlled, complexity is added, mostly in the form of \ac{QGM}, use to selectively control individual atoms in lattices or projecting arbitrary potential. The Dy-K set up, while focusing on bulk physics in harmonic traps, proves to be a cumbersome at times.
- For example, a standard ultracold experiment working with an alkali atom in a bulk system, typically uses one or two lasers resonant with the D2 and D1 lines for cooling, in the \ac{MOT} and grey molasses stages, and one or two high power infrared beam for trapping and evaporative cooling. Working with an heteronuclear mixture requires additional resonant laser sources for the different transitions of the various atomic species \albi{cite}. Moreover, lanthanides atoms like dysprosium, erbium, europium \albi{cite} present a richer electronic structure, which can be used to produce colder sub-\unit{\micro\K} atomic samples before evaporative cooling, as is the case in the Dy-K experiment. \albi{this part to be reduced a bit}
+ For example, a standard ultracold experiment working with an alkali atom in a bulk system, typically uses one or two lasers resonant with the D$2$ and D$1$ lines for cooling, in the \ac{MOT} and grey molasses stages, and one or two high power infrared beam for trapping and evaporative cooling. Working with an heteronuclear mixture requires additional resonant laser sources for the different transitions of the various atomic species \albi{cite}. Moreover, lanthanides atoms like dysprosium, erbium, europium \albi{cite} present a richer electronic structure, which can be used to produce colder sub-\unit{\micro\K} atomic samples before evaporative cooling, as is the case in the Dy-K experiment. \albi{this part to be reduced a bit}
  
- When I joined the team at the end of 2021, the experiment was already fully operational. Many results regarding the mixture \cite{Ravensbergen2018ado, Ravensbergen2018poa, Ravensbergen2020rif}, possible upgrades \cite{Kreyer2021mot} and limitations \cite{Soave2022lff} were already successfully obtained. Here, I will summarize the procedure developed in the years to obtained the doubly-degenerate Fermi mixture and in the next section describe the results that mostly concern this thesis, i.e.\, the investigation of the interspecies interaction in the mixture.
+ When I joined the team at the end of 2021, the experiment was already fully operational. Many important results regarding the mixture preparation and interaction \cite{Ravensbergen2018ado, Ravensbergen2018poa, Ravensbergen2020rif}, possible upgrades \cite{Kreyer2021mot} and intrinsic limitations \cite{Soave2022lff}, were already successfully achieved. In this chapter, I will first summarize the procedure developed to obtained the doubly-degenerate Fermi mixture \cite{Ravensbergen2018poa}\albi{cite the different thesis}, while in the following section I will describe the results obtained previously concerning  the investigation of interaction in the mixture \cite{Ravensbergen2020rif}.
+ \subsection{Experimental sequence at a glance}
+In our experiment we use on of the two fermionic isotope of dysprosium, $^{161}$Dy, combined with the only fermionic isotope of potassium, $^{40}$K. We employ an all optical approach to cool the mixture to degeneracy. Due to the different magnetic moments of the two atomic species, the magnetic field gradients applied in the \ac{MOT} are very different, requiring a sequential loading. Since the magnetic gradient used for potassium is about $5$ times stronger than the one needed for dysprosium, it is convenient to first load the K \ac{MOT} and then the Dy one, in order to avoid large losses in the Dy cloud. 
+
+Potassium is loaded in to the $3$D \ac{MOT} from its atomic source, a $2$D \ac{MOT} prepared in a separated glass cell. Both $3$D and $2$D {MOT}s operate on the potassium D$2$ line at \SI{767}{nm} (linewidth $\Gamma_{D2}/2\pi\sim\SI{6}{MHz}$), and all the light beams are generated with the same source\footnote{Toptica TA Pro}. After the \ac{MOT}, potassium is further cooled by performing gray molasses on the D$1$ line (wavelength \SI{770}{nm} with linewidth $\Gamma_{D1}/2\pi\sim\SI{6}{MHz}$), reaching a temperature of around \SI{30}{\micro K}, with an almost ($\sim80\%$) spin polarised sample in the lowest hyperfine state $\ket{9/2,-9/2}$. During the grey molasses cooling, the K cloud is transferred in a large volume reservoir crossed \ac{ODT}, operating in the near infrared at a wavelength of \SI{1064}{nm}\footnote{Azurlight ALS-IR-1064-5-I-CC-SF}. \albi{add some ref on the general preparation of K in other systems, see also pra cornee}
+
+Once potassium is trapped in the reservoir \ac{ODT}, the preparation of the Dy cloud can start. The dysprosium atomic source is a high-temperature effusion oven operating at around $1000$\,$^\circ$C. The atomic beam is then decelerated using a Zeeman slower, operating along the broad transition at \SI{421}{nm} ($\Gamma_{421}/2\pi\sim\SI{32}{MHz}$). The slowed atomic beam is capture in a $3$D \ac{MOT} generated at the narrow intercombination transition at \SI{626}nm (linewidth $\Gamma_{626}/2\pi\sim\SI{135}{kHz}$). Thanks to narrowness of transition used in the \ac{MOT} the cold atomic sample obtained is already spin polarized in the lowest hyperfine state \cite{Dreon2017oca}, that is the stretched state $\ket{21/2, -21/2}$. At the end of the compressed \ac{MOT} stage, the temperature of the atomic cloud is approximately \SI{8}{\micro K}. After the compressed \ac{MOT} the Dy cloud is also transferred in the same reservoir \ac{ODT} of K.
+
+Before the evaporative cooling stage, necessary to reach the degenerate regime, Dy undergoes an additional resonant cooling\footnote{This additional stage was implemented in the experiment before I joined the team, but reported for the first time in the publication \cite{Ye2022ool}, which is reported in this thesis as the chapter \ref{Chpt:Lowfieldpaper}.}, performed near the narrow transition at the \SI{741}{nm}, with linewidth $\Gamma_{741}/2\pi\sim\SI{1.7}{kHz}$ 
+
+%sequential loading of the two \ac{MOT}s in a crossed \ac{ODT}. We first  
  
-As mentioned before, in our experiment we use the fermionic isotope of dysprosium $^{161}$Dy, combined with the only fermionic isotope of potassium, $^{40}$K. We employ an all optical approach to produce a deeply degenerate mixture. The first phase of every experimental sequence is the sequential loading of the two \ac{MOT} in a crossed \ac{ODT}
- 
-  
+  \albi{table with the different transition and stages of experimental preparation?}
 
 
  universal dipolar scattering for cooling
 
 
+missing ingredient are the interactions
+
 %Due to the intrinsic explorative nature of our experiment, at times, we had aligned on the mixture up to nine infrared beams used for trapping, combined this with two sets of \ac{MOT} beams and two set of molasses beam
 
-\section{Feshbach resonances in Dy-K}
+\section{Feshbach resonances in D\lowercase{y}-K}
 
 
 
