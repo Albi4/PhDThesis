@@ -1,0 +1,263 @@
+\chapter{Publication: Optically trapped Feshbach molecules of fermionic $^{161}$Dy and $^{40}$K: Role of light-induced and collisional losses}
+\chaptermark{Publication:  Role of light-induced and collisional losses}
+\label{Chpt:MolLoss}
+
+
+
+\begin{flushleft}
+	\noindent
+
+	{\Large  Alberto Canali, Chun-Kit Wong, Luc Absil, Zhu-Xiong Ye, Marian Kreyer, Emil Kirilov, and Rudolf Grimm.\linebreak}
+	
+	{\Large\href{DOI: }\linebreak}
+	
+	
+	\vfill
+	
+	\noindent
+	{\large \textbf{Author contribution:}}
+	The author took a supporting role in the process of acquiring and analyzing the data described in this publication as well as writing the manuscript. \linebreak
+	\noindent
+	
+	
+\end{flushleft}
+
+\newpage
+\begin{minipage}{10cm}
+We study the decay of a dense, ultracold sample of weakly bound DyK dimers stored in an optical dipole trap.
+Our bosonic dimers are composed of the fermionic isotopes $^{161}$Dy and $^{40}$K, which is of particular interest for experiments related to pairing and superfluidity in fermionic systems with mass imbalance.
+We have realized dipole traps with near-infrared laser light in four different wavelength regions between $1050$ and $2002$ \unit{nm}. We have identified trap-light-induced processes as the overall dominant source of losses, except for wavelengths around $2000$ \unit{nm}, where light-induced losses appeared to be much weaker. In a trap near $1550$ \unit{nm}, we found a plateau of minimal light-induced losses, and by carefully tuning the wavelength we reached conditions where losses from inelastic collisions between the trapped dimers became observable. For very weakly bound dimers close to the center of a magnetically tuned Feshbach resonance, we demonstrate the Pauli suppression of collisional losses by about an order of magnitude.
+	% insert abstract here
+\end{minipage}
+
+
+\section{Introduction}
+
+
+Since its first demonstration almost $40$ years ago \cite{Chu1986eoo}, the trapping of atoms by the optical dipole force in off-resonant laser light \cite{Grimm2000odt} has become a key technique in modern atomic physics and quantum sciences \cite{Wolswijk2025tma}. Optical dipole traps (ODTs) have found numerous applications, e.g.\ for ultraprecise atomic clocks \cite{Ludlow2015oac, Yang2025cbb}, for precision measurements \cite{Zheng2022mot, Thekkeppatt2025mot, Ravensbergen2018ado}, and for quantum computation and simulation \cite{Browaeys2020mbp,Kaufman2021qsw, Anand2024ads, Gruen2024ota}. In the broad research field of ultracold quantum gases \cite{Varenna1998book, Varenna2006book, Varenna2022book}, optical dipole trapping schemes have, in many cases, served as the enabling tool to achieve quantum degeneracy \cite{Weber2003bec, Takasu2003ssb, Griesmaier2005bec} and to create novel quantum-degenerate systems with single species, spin mixtures, and mixtures of different species.
+
+In the rapidly developing field of ultracold molecules, ODTs are widely employed for the preparation of cold and dense atomic samples, serving as a starting point to create molecules by subsequent photo- \cite{Jones2006ups, Deiglmayr2008fou} or magneto-association \cite{Koehler2006poc, Chin2010fri} techniques. A multitude of different experiments have been carried out on optically trapped molecules, such as collisional studies \cite{Chin2005oof, Ferlaino2008cbt, Ni2010dco} and the manipulation of internal states \cite{Mark2007sou, Winkler2007cot, Lang2008ctm}. The most prominent example of this is the transfer of dimers to their rovibronic ground state \cite{Ni2008ahp, Lang2008utm, Danzl2010auh}.
+Quantum degeneracy of molecular samples was achieved more than $20$ years ago with the observation of molecular Bose-Einstein condensation (BEC) of weakly bound pairs of fermionic atoms \cite{Jochim2003bec, Greiner2003eoa, Zwierlein2003oob} and the experimental realization of the crossover from BEC to Bardeen-Cooper-Schrieffer (BCS) type systems \cite{Bartenstein2004cfa, Regal2004oor, Zwierlein2004cop, Zwerger2012tbb, Strinati2018tbb}. The condensation of weakly bound molecules made of bosonic atoms was demonstrated in Ref.~\cite{Zhang2021tfa} and, most recently, BEC of ground-state dipolar molecules was achieved \cite{Bigagli2024oob,Shi2025bec}. Another important development in the field is the optical dipole trapping and manipulation of diatomic \cite{Zhang2020fas, Cairncross2021aoa, Ruttley2023fou} and polyatomic \cite{Anderegg2019aot,Vilas2024aot} molecules using optical tweezers and tweezer arrays. 
+To fully exploit the wide application potential of ODTs for experiments on ultracold molecular samples, thorough understanding of the limiting processes is required. The complex interactions between molecules along with their very rich level structure can lead to additional effects not relevant for trapped atomic samples.
+
+In our laboratory, we have demonstrated \cite{Soave2023otf} the preparation of optically trapped samples of weakly bound bosonic dimers, composed of two different fermionic constituents, $^{161}$Dy and $^{40}$K. We have achieved efficient molecule production by applying standard magneto-association techniques (`Feshbach ramps' \cite{Koehler2006poc, Chin2010fri}) to a double-degenerate atomic mixture. The samples of `Feshbach molecules' created in this way are of great interest in view of molecular Bose-Einstein condensation in heteronuclear systems and, in a more general sense, as a starting point for the realization of many-body states of strongly interacting fermions with mass imbalance in BEC-BCS crossover regimes \cite{Ciamei2022ddf, Ravensbergen2020rif, Ye2025dms}. Such systems are particularly promising for the realization of asymmetric superfluids with unconventional pairing mechanisms~\cite{Gubbels2009lpi, Gubbels2013ifg, Wang2017eeo, Pini2021bmf}, most notably the elusive Fulde-Ferrell-Larkin-Ovchinnikov (FFLO) state~\cite{Fulde1964sia, Larkin1964nss, Radzihovsky2010ifr}. In addition to that, a variety of interesting few-body phenomena has been predicted to emerge in resonant fermion mixtures \cite{Naidon2017epa, Kartavtsev2007let, Zaccanti2022mif}.
+
+
+A question of central importance concerns the stability of the trapped dimer sample against inelastic dimer-dimer collisions. For homonuclear dimers in fermionic spin mixtures, it is well known that a Pauli suppression effect \cite{Petrov2004wbd, Varenna2006book} can strongly reduce collisional losses, thus greatly enhancing the stability of the system. We would expect a similar effect to be present for our weakly bound DyK molecules \cite{Petrov2005dmi, Jag2016lof}, however, our early attempts to study collisional effects \cite{Soave2023otf} were obstructed by another, by far dominant loss mechanism. Our experiments provided strong evidence for a light-induced decay caused by the ODT itself. The loss effect has been noted before in a few bi-alkali molecular systems~\cite{Chotia2012lld, Zhang2020fas, Spence2023asr}, but it appears to play a much more important role for more complex dimers like LiCr~\cite{Finelli2024ula} and DyK.
+
+In the present work, we report on systematic studies of losses from an optically trapped, dense sample of weakly bound DyK molecules. After summarizing the main properties of the dimers in the vicinity of a Feshbach resonance (Sec.~\ref{Sec:FeshbachMol}) and outlining the main experimental procedures and conditions in (Sec.~\ref{Sec:SamplePrep}), we present detailed measurements of trap-light-induced losses (Sec.~\ref{Sec:LighInducedLosses}). We investigate four different wavelength regions in the near-infrared, carrying out spectroscopic wavelength scans in certain regions of interest and measuring the linear coefficient that characterizes intensity-dependent losses. We also identify regions of minimal losses. With a proper choice of the trap wavelength mitigating the detrimental effect of light-induced losses, we identify the losses caused by inelastic dimer-dimer collisions (Sec.~\ref{Sec:Collisions}) and we measure the corresponding rate coefficient as a function of the magnetic detuning from resonance. We indeed observe a reduction of collisional losses close to resonance by about an order of magnitude, which is in accordance with theoretical expectations for the Pauli suppression effect. Finally (Sec.~\ref{Sec:Conclusions}), we discuss the implications of our findings for future experiments. 
+
+
+\section{D\lowercase{y}K Feshbach molecules}
+\label{Sec:FeshbachMol}
+
+As our essential tool to control the $s$-wave interaction between $^{161}$Dy and $^{40}$K atoms and to form molecules, we employ a low-field interspecies Feshbach resonance near \SI{7.3}{G} \cite{Ye2022ool, Soave2023otf}. The narrow resonance is well isolated from other interspecies resonances and can thus be described in terms of a standard two-channel model well established in the literature \cite{Petrov2004tbp, Chin2010fri}. Moreover, the resonance is not contaminated by intraspecies resonances \cite{Ye2022ool}. To set the stage, we summarize the main properties of this resonance and the relevant parameter values, which were accurately determined in our previous work \cite{Ye2022ool, Soave2023otf}.
+
+Close to the resonance, the $s$-wave scattering length can be expressed as 
+\begin{equation}\label{Eq:scatteringLength}
+	a(B)= a_{\textrm{bg}}- \frac{A}{\delta B}\, a_0 ,\dfrac{num}{den}
+\end{equation}
+where $A$ characterizes the strength of the resonance, $\delta B=B-B_0$ represents the magnetic detuning from the resonance center, $a_{\textrm{bg}}$ denotes the background scattering length, and $a_0$ is the Bohr radius. To our best knowledge, resonance parameters are $B_0=\SI{7.276(2)}{G}$, $A=\SI{24.0(6)}{G}$, and $a_{\textrm{bg}}=23(5)\,a_0$ \cite{Ye2022ool,Soave2023otf}. In Fig.~\ref{fig:FeshbachRes}(a), we show the scattering length in proximity to the resonance.
+
+In the case of a `narrow' Feshbach resonance, also referred to as `closed-channel dominated resonance' \cite{Chin2010fri}, it is necessary to introduce an additional parameter to fully characterize the interaction properties. For this purpose, it is convenient to consider the range parameter $R^*=\hbar^2/(2m_ra_0\delta\mu A)$ \cite{Petrov2004tbp}, where $m_{\textrm r}$ is the reduced mass and $\delta\mu=\mu_{\textrm{open}}-\mu_{\textrm{closed}}$ is the difference in magnetic moments between the atomic scattering state (open channel) and the molecular state underlying the Feshbach resonance (closed channel). For $a\gtrsim R^*$, the interaction physics  acquires universal behavior in the sense that a single parameter, such as the scattering length, is sufficient to describe the underlying physics \cite{Braaten2006uif}. For the resonance considered here $R^*=604(20)\, a_0$, which corresponds to a universal regime accessible for $|\delta B|\lesssim\SI{40}{mG}$.
+
+The molecular state energy related to a narrow Feshbach resonance can be expressed as
+\begin{equation}\label{Eq:BindingEnergy}
+	E_{\mathrm{mol}}(B)=-\delta\mu\,\delta B^*\left(\sqrt{1-\frac{\delta B}{\delta B^*}}-1 \right)^2.
+\end{equation}
+Here, for brevity, we have introduced the magnetic field scale $\delta B^*=m_r\,\delta\mu\,a_0^2\,A^2/(2\hbar^2)$, for which $a(-\delta B^*)=4R^*$, which corresponds to $\delta B^*=\SI{9.9(6)}{mG}$, in our case. In Fig.~\ref{fig:FeshbachRes}(b), we show the binding energy of the DyK dimers according to Eq.~\eqref{Eq:BindingEnergy}, in the magnetic detuning range 
+$-\SI{500}{mG} < \delta B < 0$.
+
+The closed-channel fraction quantifies the admixture between the bare molecular state and the free-atom scattering state in the wavefunction of the Feshbach molecules. It can be obtained from the molecular binding energy through the differential magnetic moment, $\delta \mu_{\textrm{mol}}(B)=\partial E_{\mathrm{mol}}/\partial B$. The closed-channel fraction is then given by 
+\begin{equation}\label{Eq:Pub4:ClosedChannelFraction}
+	Z(B)=\delta\mu_{\mathrm{mol}}(B)/ \delta\mu,
+\end{equation}
+and Fig.~\ref{fig:FeshbachRes}(c) shows the resulting $Z(B)$ for DyK molecules near the 7.3-G resonance.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=1\columnwidth]{gfx/Pub4_fig/Feshbach_res_inset.pdf}
+	\caption{Properties of the 7.3-G Feshbach resonance. (a)~Scattering length $a$, (b) molecular state energy $E_{\textrm{mol}}$, and (c) closed-channel fraction $Z$ as functions of the magnetic detuning $\delta B$. The insets in (b) and (c) focus on the near-universal region close to resonance.}
+	\label{fig:FeshbachRes}
+\end{figure}
+
+\section{Experimental Sequence}
+\label{Sec:SamplePrep}
+
+The preparation of the molecular sample closely follows the procedures developed in our previous work \cite{Ravensbergen2018poa, Ye2022ool, Soave2023otf}. As a starting point, a double-degenerate mixture of $^{161}$Dy and $^{40}$K is prepared with both species spin-polarized in their lowest hyperfine states, $\ket{F,m_F}=\ket{21/2,-21/2}$ and $\ket{9/2,-9/2}$, respectively. This is particularly relevant in the present work, as
+molecules formed in the lowest hyperfine spin channel are immune against spontaneous dissociation, thus avoiding fast corresponding losses as studied for homo- and heteronuclear Feshbach molecules in Refs.~\cite{Thompson2005sdo, Jag2016lof}.
+
+We first prepare the double-degenerate atomic mixture at low magnetic field and then ramp the field to the vicinity of the \SI{7.3}{G}-Feshbach resonance. DyK molecules are subsequently associated by performing a magnetic field sweep across this resonance \cite{Chin2010fri, Soave2023otf}. The molecular sample obtained by this Feshbach ramp is then purified by removing the remaining atoms using a Stern-Gerlach technique \cite{Soave2023otf}. 
+With this procedure, we produce a pure molecular sample of typically \SI{10000}{} DyK molecules at a temperature of around \SI{70}{nK}, with mean trap frequency  $\bar\omega=2\pi\times\SI{31}{Hz}$. Compared with our previous work, we are now able to obtain twice the number of molecules. We achieve this improvement by carefully optimizing both the mixture preparation sequence and  the Stern-Gerlach purification scheme. In particular, we perform the cleaning sequence at a detuning of $\delta B=\SI{-40}{mG}$, which is \SI{80}{mG} closer to resonance than previously, and reduces light-induced losses of molecules during the process. 
+
+
+All results presented in this work are based on measuring the number of the molecules after a variable hold time in a target ODT. After the purification process, the molecular sample is transferred into the ODT under investigation, where the measurement takes place. At the end of the investigation time, the ODT is switched off and the magnetic field is quickly ramped across the resonance to positive detunings, thus dissociating the molecules. The number of molecules is finally obtained from absorption images of the resulting K atoms \footnote{The potassium imaging provides a better quality signal compared to the Dy ones, due to the  higher absorption cross section.}.
+
+
+
+
+
+\section{Light-Induced Losses}
+\label{Sec:LighInducedLosses}
+We investigate the dependence of light-induced losses on wavelength  and intensity of the near-infrared light used for the ODT. In Sec.~\ref{subSec:Spectroscopy}, we report the results of spectroscopic measurements performed on the DyK Feshbach dimers in two different wavelength regions. In Sec.~\ref{subSec:LightIntensity}, we compare light-induced losses at different wavelengths by observing the dependence of loss rate on intensity.
+
+\subsection{Spectroscopy in two regions of interest}
+\label{subSec:Spectroscopy}
+
+We perform spectroscopy on the DyK Feshbach molecules by scanning the wavelength of the near-infrared trapping light and observing losses from the ODT. For generating the trap light, we have the choice between two fiber lasers, with wavelengths centered around \SI{1051}{nm} (NKT Koheras BOOSTIK Y$10$, linewidth $<\,$\SI{20}{kHz}) and \SI{1547}{nm} (NKT Koheras BOOSTIK E$15$, linewidth $<\,$\SI{0.1}{kHz}). Both lasers feature a tuning range of around \SI{1}{nm}. 
+
+The molecules are loaded within \SI{1}{ms} from a $1064$-nm crossed-beam ODT into the single-beam ODT used for spectroscopy. The molecules are then held at a  magnetic detuning of $\delta B=\SI{-60}{mG}$  for a fixed amount of time,  while being levitated by a magnetic field gradient. We choose a hold time of \SI{10}{ms} for the $1051$-nm case and \SI{33}{ms} for the $1547$-nm case, in order to obtain a similar contrast for loss features in the two signals. We report the main results of these measurements in Fig.~\ref{fig:Spectroscopy} \footnote{See Supplemental Material at {link to be added by publischer} for the data files of all figures
+}.  For the $1051$-nm case, the ODT has a waist of \SI{72}{\micro\meter} and a power of \SI{46}{mW}, corresponding to a peak intensity of \SI{0.55}{kW/cm^2}. For the $1547$-nm case, the ODT has a waist of \SI{90}{\micro\meter} and the measurements were taken using a power of \SI{220}{mW}, corresponding to a peak intensity of \SI{1.7}{kW/cm^2}.
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[trim=10 7 37 18,clip,width=1\columnwidth]{gfx/Pub4_fig/SpectroscopyOfMol_differentxaxis.pdf}
+	\caption{Trap-loss spectroscopy on DyK Feshbach molecules by variation of the ODT wavelength. Panel (a) refers to the region around \SI{1051}{nm}, with initial number $N_0=\SI{1.1e4}{}$ and  a hold time of \SI{10}{ms}. Panel (b) refers to the region around \SI{1547}{nm}, with  $N_0=\SI{9e3}{}$ and a hold time of \SI{33}{ms}. The error bars represent $1\sigma$ standard errors, calculated from multiple repetitions. The vertical dashed lines in (a) and (b) indicate the selected wavelengths \SI{1051.03}{nm} and \SI{1547.12}{nm}, respectively, used for all further measurements presented in this work.}
+	\label{fig:Spectroscopy}
+\end{figure}
+
+In Fig.~\ref{fig:Spectroscopy}(a), we report the result of the trap-loss spectroscopy for the $1051$-nm case. Our main observation is a broad loss feature, showing a large width of  about $\SI{0.2}{nm}$ ($\sim\SI{60}{GHz}$) together with very fast losses. This suggests a strong, resonant transition into the manifold of electronically excited molecular states,  which presumably leads to dissociation of the molecules \cite{Jones2006ups}. We also identify a plateau with a local maximum of the molecular lifetime on the shorter wavelength side of the resonance. 
+
+
+In Fig.~\ref{fig:Spectroscopy}(b), we show a corresponding spectroscopic measurement in the region around \SI{1547}{nm}. In contrast to the 1051-nm case, we do not observe any broad resonance features. Instead, we identify three much sharper loss features on a slowly varying background. By performing individual Lorentzian fits on each of the features, we extract a typical linewidth (full width at half maximum) of approximately $\SI{1.2}{GHz}$ and a separation between neighboring lines of about \SI{20}{GHz}. This separation between the lines is of the order of typical rotational splittings in diatomic molecules, as observed in other heteronuclear systems, like KRb \cite{Kasahara1999dfo}, and NaRb \cite{Guo2016coa,Guo2017hrm}. However, without any knowledge of the DyK molecular structure, a comprehensive interpretation is not possible.
+
+\subsection{Dependence on light intensity}
+\label{subSec:LightIntensity}
+
+Here we investigate the dependence of the observed light-induced losses on the intensity of the trapping light. For the two wavelength regions discussed before, we avoid loss resonances by choosing the specific wavelengths where we have identified plateaus with minimal losses, at $1051.03$ nm and $1547.12$ nm (vertical dashed lines in Fig.~\ref{fig:Spectroscopy}). In addition to these two wavelengths, we operate an ODT based on a single-frequency fiber laser at \SI{2002}{nm} (Precilaser FL-SF-$2001$-$20$-CW, linewidth $\sim~\SI{5}{kHz}$), and we reanalyze our earlier measurements with a single-frequency laser at \SI{1064.04}{nm} (Azurlight ALS-IR-$1064$-$5$-I-CC-SF, linewidth $<\,\SI{50}{kHz}$) \cite{Soave2023otf}. The experiments with four different laser sources allow us to investigate and compare the loss behavior in four different near-infrared wavelength regions.
+
+The 1064-nm laser source is not tunable and therefore does not allow for a search of points of minimal losses. This makes the choice of the wavelength a matter of chance, but with a reasonable probability to avoid detrimental resonances. Regarding the $2002$-nm light, we performed similar wavelength scans as the ones near \SI{1051}{nm} and \SI{1547}{nm}, but strong interference effects in our optical set-up, which was not designed for this wavelength, masked the signal and we could not identify any resonance structure related to light-induced losses. As an arbitrary choice for our further experiments, we set the wavelength to \SI{2002.00}{nm}. 
+
+
+
+All measurements on the intensity dependence are carried out with the molecules held in a single-beam ODT, with a waist of $72$, $90$, $90$, and \SI{120}{\micro m} for the wavelengths $1051$, $1064$, $1547$, and $2002$ nm, respectively.
+
+To extract the loss rates for the different cases, we record decay curves for hold times of up to \SI{1}{s}. Assuming one-body effects (processes involving one molecule) to dominate, we fit the different loss curves, except the $2002$-nm case, with a simple exponential decay, $N(t)=N_0\exp{(-\alpha t)}$, where the initial molecule number $N_0$ and the loss rate coefficient $\alpha$ are kept as free parameters. For the $2002$-nm case, the one-body contribution to loss is strongly reduced and two-body contributions (dimer-dimer collisions) to the decay process can no longer be neglected. Consequently, we fit the lifetime data, taking into account both one- and two-body contributions according to the expression \cite{Jag2016lof}
+\begin{equation}\label{Eq:12bodyfit}
+	N(t)=N_0\,\frac{\exp{(-\alpha t)}}{1+\frac{N_0\,\beta}{\alpha\, \textrm{V}_{\textrm{eff}}}[1-\exp{(-\alpha t)}]},
+\end{equation}
+where $\beta$ is the two-body loss coefficient, and ${V_{\textrm{eff}}}=[(4\pi k_BT)/(m\bar{\omega}^2)]^{3/2}$ is the effective volume of the sample, with $m$ being the mass of the dimer, $T$ the temperature and $\bar{\omega}$ the mean trapping frequency. We will discuss in detail the role of collisional losses in Sec.~\ref{Sec:Collisions}. 
+
+Trap-light-induced losses in Feshbach molecules can essentially be attributed to the coupling between the trapping light and the closed-channel fraction of the weakly bound dimers. The role of the closed-channel fraction has been studied for the case of Li$_2$ molecules \cite{Partridge2005mpo}, for KRb molecules \cite{Chotia2012lld}, and in our group for DyK molecules \cite{Soave2023otf}. To facilitate a comparison between our different measurements, taken at magnetic-field detunings between \SI{-30}{mG} and \SI{-60}{mG}, we 
+convert the measured values of the loss rate $\alpha$, which depend on the magnetic field, to the asymptotic loss rate $\alpha_{\textrm{cc}}$ using the relation
+\begin{equation}\label{Eq:LossRateMolecules}
+	\alpha(B)=\alpha_{\textrm{cc}}Z(B),
+\end{equation}
+where $Z(B)$ is the closed-channel fraction as calculated according to Eq.~(\ref{Eq:Pub4:ClosedChannelFraction}). The different values for closed-channel fraction for each measurement are reported in Table \ref{tab:Coeff}. 
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=1\columnwidth]{gfx/Pub4_fig/LossRate_vs_Intensity.pdf}
+	\caption{Loss rate as a function of the trapping beam peak intensity. We show the closed-channel one-body loss rates measured in the experiments for the \SI{1051.03}{nm}, \SI{1547.12}{nm}, and  \SI{2002.00}{nm} ODTs in blue, red and gray dots, respectively. Note that the data and fit result for the $2002$-nm case have been scaled by a factor of 10 for better visibility. For comparison, we also show the data for a trap at \SI{1064.04}{nm} in yellow, already reported in \cite{Soave2023otf}. The data are shown with 1$\sigma$ error bars derived from the lifetime fits (in some cases smaller than the symbol size).
+		{For conversion of intensity (in kW/cm$^2$) to optical potential depth (in \SI{}{\micro K}) use the factors $1.76$, $1.81$, $1.25$, and $1.15$ for the wavelength $1051$\,nm, $1064$\,nm, $1547$\,nm, and $2002$\,nm, respectively.}}
+	\label{fig:LossRateVsInt}
+\end{figure}
+
+In Fig.~\ref{fig:LossRateVsInt}, we show the closed-channel loss rate $\alpha_{\textrm{cc}}$ as function of the light intensity $I$ for the different ODTs, together with a linear fit
+\begin{equation}
+	\alpha_{\textrm{cc}}=\Gamma_{\textrm{cc}}I+\alpha_0,
+	\label{eq:LinFit}
+\end{equation}
+to each data set. These fits yield a wavelength-specific coefficient $\Gamma_{\textrm{cc}}$, which quantifies the slope for each data set \footnote{Because of the thermal spatial distribution in the trap, the molecules sample a mean intensity, which is typically $25\,\%$ below the peak intensity. Therefore our values of $\Gamma_{\textrm{cc}}$, which are simply calculated with the peak intensity, underestimate the true values. This, however, is a small effect regarding the enormous variation of $\Gamma_{\textrm{cc}}$ in our experiments.}. The resulting values are summarized in Table~\ref{tab:Coeff}. They show a dramatic variation of $\Gamma_{\textrm{cc}}$ over more than three orders of magnitude. The linear fit also indicates the presence of weak, residual background losses (parameter $\alpha_0$), which are not induced by the trap light and play no role for our present experiments.
+Similar measurements on light-induced decay have been reported for LiCr Feshbach molecules in Ref.~\cite{Finelli2024ula}, also demonstrating an order-of-magnitude reduction with increasing wavelength in the infrared. 
+
+\begin{table}[]
+
+	\medskip\centering
+	\begin{tabular}{ccc}
+		\hline
+		\hline
+		Wavelength (nm) \qquad&  $Z$ \qquad& $\Gamma_{\textrm{cc}}$ (s$^{-1}$\,cm$^{2}$/kW) \\
+		\hline
+		$1051.03$     & 0.62    &  177(7) \\
+		$1064.04$ &  0.50 & \   41(2)\\
+		$1547.12$& 0.58 & 8.4(7) \\
+		$2002.00$ & 0.58 &   0.11(5)\\
+		\hline
+		\hline
+	\end{tabular}
+		\caption{Measured values for the coefficient $\Gamma_{\textrm{cc}}$, which for light-induced losses characterizes proportionality between loss rate and light intensity. The 1051-nm and 1547-nm values are obtained after careful optimization of the wavelength to avoid resonant processes, while the 1064-nm and 2002-nm case are at an arbitrary wavelength (see text for details). We also report the values of the closed-channel fraction $Z(B)$ used to calculate the closed-channel loss rates for each wavelength, according to Eq.~\eqref{Eq:Pub4:ClosedChannelFraction}.}
+		\label{tab:Coeff}
+\end{table}
+
+The observed decrease of the light-induced loss rates with larger wavelengths, i.e.\ lower photon energies, can be explained by a reduced density of electronically excited molecular states that can resonantly couple to the Feshbach molecules. Below a certain threshold wavelength, which is given by the energy difference between the lowest molecular state (the rovibronic ground-state of lowest molecular potential), resonant excitation is no longer possible. This wavelength sets a natural scale for the appearance or disappearance of light-induced losses.
+For diatomic molecules in ultracold gases, it typically lies in a range between \SI{1.7}{\micro m} and \SI{2.8}{\micro m} \footnote{Examples for the threshold wavelength of bi-alkali molecules are
+	\SI{1820}{\nano m} for KRb \cite{Ni2008ahp},
+	\SI{1890}{\nano m} for NaCs \cite{Warner2023ept},
+	\SI{2000}{\nano m} for RbCs \cite{Takekoshi2014uds}.
+	For dimers involving other atoms:
+	\SI{2200}{\nano m} for RbSr \cite{Zuchowski2014gae},
+	\SI{2660}{\nano m} for LiCr \cite{Finelli2024ula}.
+}.
+
+Our results highlight the benefit of laser sources in the wavelength region of \SI{2}{\micro m} for trapping of ultracold molecules. They combine extreme detuning (previously realized in quasi-electrostatic traps based on CO$_2$ laser light at \SI{10.6}{\micro m} \cite{Takekoshi1998ooo, Grimm2000odt}) to avoid any molecular excitations with the practical advantages of modern fiber laser technology.
+Currently, the \SI{2}{\micro m} wavelength region is not common in molecular quantum-gas experiments, but it holds great potential for future experiments. 
+
+Our present setup was not designed to use such a wavelength. In particular, the viewports of the vacuum apparatus are not anti-reflection coated for this wavelength, and we observed reflections of the light up to $30$\%. Scanning the laser wavelength, we observed that these reflections caused interference effects, such as a parasitic lattice. However, in future experiments, this technical limitation can be overcome by using dedicated optics in an improved setup, which will allow us to take full advantage of  the wavelength region around \SI{2}{\micro m}. 
+
+\section{Collisional Losses and Pauli Suppression}
+\label{Sec:Collisions}
+
+
+Having understood the role of losses induced by the trap light, we are now in a position to thoroughly investigate the contribution of inelastic collisions to the decay of the molecular sample. In particular, it is well known that, in the universal regime close to the resonance center, collisional losses are reduced by Pauli suppression. This has been observed in samples of weakly bound bosonic molecules composed of fermionic atoms ($^6$Li \cite{Cubizolles2003pol, Jochim2003pgo}, $^{40}$K \cite{Regal2004lom} and $^6$Li$^{40}$K \cite{Jag2016lof}).
+
+In order to observe collisional processes in the DyK molecular sample, it is essential to minimize light-induced decay while achieving a high collisional rate. Besides optimization of the trap light wavelength, this requires an ODT that provides tight confinement at a relatively low central intensity. This means that tightly focused laser beams need to be applied. Because of the technical limitations in our present set-up, this is not possible with the 2002-nm light, and we therefore conducted this measurement with the 1547-nm laser light. 
+
+The trap consists of a crossed-beam ODT at \SI{1547}{nm}. The main trapping beam propagates along the horizontal plane and is focused on the molecules with a waist of \SI{25}{\micro m}. For additional confinement in the axial direction of the tight trap, we add a vertical beam, with a waist of \SI{120}{\micro\meter}. A magnetic gradient is applied to levitate the molecules. In this ODT, the geometrically averaged trap frequency is $\bar\omega=2\pi\times \SI{32}{Hz}$. With this configuration, we obtain between $5500$ and $7000$ molecules, at a temperature of around $\SI{90}{nK}$, corresponding to peak densities up to \SI{7.6e11}{cm^{-3}}, entering the regime where collisional losses play an important role. 
+The power used for the horizontal (vertical) beam is \SI{4.6}{mW} (\SI{51}{mW}). The total light intensity is $\SI{0.71}{kW/cm^{2}}$. Based on the results of Sec.~\ref{subSec:LightIntensity}, we can expect a closed-channel loss rate of $\alpha_{\textrm{cc}} = \SI{6.0(7)}{s^{-1}}$.
+
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=1\columnwidth]{gfx/Pub4_fig/Pauli_with_fit.pdf}
+	\caption{Two-body loss rate coefficient versus magnetic detuning from resonance. The dashed line represents a one-parameter fit of Eq.~\eqref{eq:FitPauli} to the data points for detunings $\delta B<-\SI{20}{mG}$ (filled symbols). Additional measurements (open symbols) closer to resonance, presumably beyond the limitations of our simple model, have not been taken into account for the fit. Vertical error bars indicate $1\sigma$ errors, derived from fits to the decay curves. The horizontal error bars represent the 2-mG peak-to-peak magnetic field noise.}
+	\label{Fig:Pauli}
+\end{figure}
+
+In order to study the Pauli suppression of inelastic collisions expected close to resonance, we measure the two-body coefficient $\beta$ for different detunings from the Feshbach resonance. We extract values for $\beta$ by analyzing the decay of the sample at different magnetic field strengths and fitting Eq.~(\ref{Eq:12bodyfit}) to the data, with $N_0$, $\alpha$, and $\beta$ as free parameters. 
+The values obtained in this way for $\alpha$ (not shown) follow the general behavior according to Eq.~(\ref{Eq:LossRateMolecules}) and yield $\alpha_{\textrm{cc}} = \SI{6.2(2)}{s^{-1}}$, which is fully consistent with the results of Sec.~\ref{subSec:LightIntensity}, and follows the behavior observed in Ref.~\cite{Soave2023otf}. Our experimental values for the magnetic-field dependent two-body coefficient $\beta$ are displayed in Fig.~\ref{Fig:Pauli}. We indeed observe a clear reduction of $\beta$ for magnetic fields approaching the resonance center, which we interpret as the expected suppression effect. 
+
+
+In Ref.~\cite{Jag2016lof}, collisional relaxation of weakly bound dimers composed of fermionic atoms has been modeled, considering the situation near a narrow Feshbach resonance. In this work, DyK molecules have served as a specific example. According to the model, collisional relaxation takes place in three different channels, the two atom-dimer channels (atoms of Dy or K with closed-channel DyK dimers) and the dimer-dimer channel. Consequently, the total collisional relaxation rate is obtained as a linear combination of the relaxation rates for each channel weighted with a specific suppression function that contains the Pauli blocking effect.
+
+For magnetic detunings outside of the universal range ($a\lesssim R^*$ corresponding to $|\delta B| \gtrsim 4\delta B^*$), the model can be further simplified. Here the dimer-dimer channel dominates the relaxation and the contribution of the two atom-dimer channels can be neglected. The suppression function for the dimer-dimer channel simplifies to the squared closed-channel fraction, $Z^2(B)$, and we can approximate the relaxation rate coefficient by
+\begin{equation}
+	\beta(B)=\beta_0\,Z^2(B),
+	\label{eq:FitPauli}
+\end{equation}
+with $\beta_0$ as the only free parameter. A corresponding fit to the experimental data, shown by the dashed line reported in Fig.~\ref{Fig:Pauli}, describes well the data for $\delta B< -\SI{20}{mG}$, a range over which the closed-channel character of the molecules is expected to prevail. From the fit we obtain the closed-channel dimer-dimer asymptotic rate coefficient $\beta_0=\SI{2.3(1)e-10}{cm^3s^{-1}}$. This value is comparable with predictions from a quantum Langevin model calculated for similar systems \cite{Gao2010umf, Julienne2011uuc, Quenemer2011uiu}. The minimum value $\beta\approx\SI{2.5e-11}{cm^3s^{-1}}$ is obtained around  the detuning $\delta B=-\SI{17}{mG}$, reported in Fig.\,\ref{fig:LongestLife}, and shows a reduction of $\beta$ by about an order of magnitude, compared to the asymptotic value.
+
+Closer to resonance, a further decrease of $\beta$ may be expected as a consequence of the increasing role of the fermionic nature of the dimer's constituents \cite{Jag2016lof}. However,  for $\delta B \gtrsim-$\SI{13}{mG}, we observe a rapid increase of the two-body coefficient. We attribute this to a combination of different effects leading to a dissociation of the very weakly bound dimers. One contribution is caused by the magnetic field gradient, which makes the exact resonance position dependent on the vertical position. At a detuning of \SI{-10}{mG} the resonance pole is located only few tens of \SI{}{\micro m} above the center of the molecular cloud, which is comparable with the vertical extension of the cloud. Moreover the transfer of the molecules between different traps excite a weak dipole mode in the vertical direction, bringing the molecules even closer to the resonance pole. Additionally, in this region of the magnetic field, the binding energy of the molecules is only a few hundred of \SI{}{nK}, less than an order of magnitude above the thermal kinetic energy of the molecules. In this regime, endoergic collisions can lead to dissociation of the weakly bound dimers \cite{Jochim2003pgo, Chin2004tea}. Understanding the particular role and interplay of these dissociation effects will require more investigations, e.g. in optical trapping schemes combined with homogeneous magnetic fields. Closer to resonance there is potential for further enhancing the fermionic suppression effect. 
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/Pub4_fig/LongestLifetime_17mG.pdf}
+	\caption{Collisional decay and the role of light-induced decay, observed in a 1547-nm trap. The red dots show the number of molecules measured after a variable hold time. The red dashed line represents a fit according to Eq.~(\ref{Eq:12bodyfit}). The orange dot-dashed line shows a hypothetical loss curve with the same two-body loss in the complete absence of one-body losses.}
+	\label{fig:LongestLife}
+\end{figure}
+
+In Fig.\,\ref{fig:LongestLife}, we show the observed decay of the molecular sample at the detuning $\delta B=-\SI{17}{mG}$, where we have identified minimal collisional losses (lowest value of $\beta$ in Fig.~\ref{Fig:Pauli}), together with the best fit according to Eq.~(\ref{Eq:12bodyfit}). As a guide for future experiments, we consider the hypothetical case where light-induced losses are completely absent and only two-body collisional losses remain. Thus setting $\alpha \rightarrow 0$ and using the fitted parameter values for $N_0$ and $\beta$, we obtain the decay curve expected in the absence of light-induced losses, shown as the orange line in the figure. This analysis demonstrates that, in a trapping regime free of light-induced losses, substantially longer decay times are achievable than in our present experiments.
+
+Finally, it is very instructive to compare the elastic collision rate in the trapped dimer sample with the loss rate under the best conditions we could achieve ($\delta B = -17\, {\textrm{mG}}$). The elastic scattering rate can be calculated as 
+$\gamma_{\textrm{el}} = \bar{n} \sigma \bar{v}_{\textrm{rel}}$, 
+with the mean number density 
+$\bar{n} = \frac{1}{\sqrt{8}} N (m \bar{\omega}^2 / (2 \pi k_B T))^{3/2}$, 
+the mean relative velocity $\bar{v}_{\textrm{rel}} = (16 k_B T/(\pi m))^{1/2}$,
+and the scattering cross section $\sigma = 8\pi a_{\textrm{mol}}^2$, where $a_{\textrm{mol}} = 0.77\,a$ represents the dimer-dimer scattering length \cite{Petrov2005dmi, Marcelis2008cpo}. For the experimental parameters of Fig.~\ref{fig:LongestLife} ($N= 5500$, $\bar{\omega} = 2\pi \times 32$\,Hz, $T = 90\,$nK), we obtain $\gamma_{\textrm{el}} = 48\,{\textrm{s}}^{-1}$. For the loss rate, we calculate $\gamma_{\textrm{loss}} = \bar{n} \beta = 3.4\,{\textrm s}^{-1}$.
+The ratio $\gamma_{\textrm{el}}/\gamma_{\textrm{loss}} \approx 14$ tells us that elastic collisions dominate over inelastic ones, but only by about one order of magnitude. 
+Consequently, our attempts to implement evaporative cooling in the present set-up were not successful.
+
+In view of prospective experiments involving quantum-degenerate molecular samples, it is an interesting question whether conditions can be reached for efficient evaporative cooling, which typically requires a good-to-bad collision ratio $\gamma_{\textrm{el}}/\gamma_{\textrm{loss}} \gg 100$  \cite{ketterle1996eco}. If we assume a reduction of the magnetic resonance detuning from the present optimum $\delta B = -17\,$mG by just a factor of two, which corresponds to an increase of the scattering length $a$ by a factor of two, this would increase the elastic scattering rate $\gamma_{\textrm{el}} \propto a^2$ by a factor of four. At the same time, according to the scaling predicted for the Dy-K mass ratio \cite{Petrov2005dmi} $\gamma_{\textrm{loss}} \propto a^{1.8}$, the inelastic rate would drop by a factor of about $3.5$. These two effects together would boost the good-to-bad collision ratio by a factor of $14$ to $\gamma_{\textrm{el}}/\gamma_{\textrm{loss}} \approx 200$, which seems promising for evaporative cooling. To take full advantage of this in an experiment, a highly stable, homogeneous magnetic field would be necessary along with an optical trapping scheme that does not require magnetic levitation.
+
+
+\section{Conclusions and outlook}
+\label{Sec:Conclusions}
+
+We have studied the decay of a dense, ultracold sample of weakly bound DyK dimers stored in an optical dipole trap that operates with far red-detuned laser light. We consider the case of bosonic dimers composed of the fermionic isotopes $^{161}$Dy and $^{40}$K, which is of particular interest for experiments related to pairing and superfluidity in fermionic systems with mass imbalance. We have identified trap-light-induced and collisional processes as the two main sources of losses, and we have demonstrated ways to reduce these losses substantially.
+
+Light-induced losses have been investigated in four selected spectral windows in a wide near-infrared wavelength range between 1051 and 2002\,nm. We have measured corresponding loss rate coefficients, which we found to vary over four orders of magnitude with a clear general trend of strong decrease with larger wavelengths. In addition to that, we have observed resonant loss features, pointing to bound-bound electronic transitions, and plateaus of minimal losses, which are of particular interest for specific applications. Background losses seem to be present everywhere in the spectral range investigated, as our sample spectra suggest. 
+Qualitatively, this behavior can be explained by the very complex and dense spectrum of molecular states in a dimer with complex electronic structure, which features a multitude of different potential curves. With increasing wavelength, i.e.\ lower photon energy, less molecular potentials become accessible and the resonance density decreases until resonant excitation is no longer possible beyond a certain point (wavelengths typically $\gtrsim$\,2\,\unit{\micro m}). A comprehensive interpretation of all the features observed in our experiments would require detailed knowledge of the spectrum of molecular states, which is currently not available for the DyK system.
+
+Collisional losses result from inelastic dimer-dimer collisions. For their observation in our experiments, it was necessary to minimize light-induced decay by carefully choosing the wavelength of the ODT (1547.21\,nm regarding the available laser sources). For dimer binding energies exceeding $\sim h \times 1\,$MHz, we measured collisional decay rates typical for cold dimers in high-lying vibrational states. For a much lower binding energy of about 20\,kHz (closer to the center of the Feshbach resonance employed), we observed a clear suppression of inelastic collisional losses by roughly one order of magnitude. We interpret this observation in terms of the famous Pauli suppression effect that stabilizes weakly bound dimer samples and fermionic mixtures near Feshbach resonances and enables experiments in the resonance regime. 
+In principle, much stronger loss suppression can be expected closer to the resonance, but  our  present experiments were technically limited by magnetic field inhomogeneities caused by the magnetic levitation gradient that was needed to keep the cold sample in the trap.
+
+In view of future experiments, our work conveys important messages. Optically trapped molecules, in particular those with complex electronic structure, will be in general much more susceptible to detrimental light-induced processes than we are used from the bi-alkali dimers commonly used in many experiments. Thus, experiments will require a careful choice of the particular trap-light wavelength. The wavelength region around 2\,\unit{\micro m}, where high-power fiber laser sources are now available, appears to be particularly promising for eliminating light-induced losses. For our special application related to mass-imbalanced Fermi gases, we could confirm the presence of Pauli suppression of collisional losses near a Feshbach resonance. However, to take full advantage of this effect in the DyK system, a trap set-up is needed that allows one to work in a precisely controllable homogeneous magnetic field. These insights will be essential for planning a second-generation set up.
