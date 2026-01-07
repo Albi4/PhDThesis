@@ -1,0 +1,101 @@
+\babel@toc {american}{}\relax 
+\vspace {-\cftbeforepartskip }
+\babel@toc {american}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {american}{}\relax 
+\contentsline {part}{\numberline {i}{Introduction}}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}{Ultracold Gases and quantum mixtures}}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}{Why cold atoms?}}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}{Quantum mixtures}}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}{From fermionic spin mixtures to hetero-nuclear mixtures}}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}{Our choice: Dy-K }}{3}{section.1.4}%
+\contentsline {chapter}{\numberline {2}{Scattering theory and Feshbach resonances}}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}{Basis of scattering theory}}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}{Feshbach resonances in ultracold gases}}{5}{section.2.2}%
+\contentsline {chapter}{\numberline {3}{Thesis Outline}}{7}{chapter.3}%
+\contentsline {part}{\numberline {ii}{D\lowercase {y}K mixture: The quest for an Isolated Feshbach resonance}}{9}{part.2}%
+\contentsline {chapter}{\numberline {4}{D\lowercase {y}K experiment}}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}{Experimental sequence at a glance}}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}{Feshbach resonances in D\lowercase {y}-K}}{14}{section.4.2}%
+\contentsline {chapter}{\numberline {5}{Publication: Observation of low-field Feshbach resonances between $^{161}$D\lowercase {y} and $^{40}$K}}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}{Introduction}}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}{Narrow Feshbach resonances}}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}{Survey of low-field Feshbach resonances}}{18}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}{Preparation of the mixture}}{18}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}{Interspecies thermalization scan}}{20}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}{Binding energy measurements}}{22}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}{Case study of the 7.29-G resonance}}{24}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}{Elastic scattering cross section and scattering length}}{25}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}{Light shift}}{26}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}{Hydrodynamic expansion}}{27}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}{Lifetime and three-body decay}}{32}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}{Creation of Feshbach molecules}}{35}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}{Summary and conclusion}}{36}{section.5.5}%
+\contentsline {section}{\numberline {5.6}{Appendix A: Preparation}}{38}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}{Optical dipole trapping schemes}}{38}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}{In-trap narrow-line laser cooling of Dy}}{39}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}{Appendix B: Magnetic field calibration}}{41}{section.5.7}%
+\contentsline {chapter}{\numberline {6}{Publication: Dipole-Mode Spectrum and Hydrodynamic Crossover in a Resonantly Interacting Two-Species Fermion Mixture}}{45}{chapter.6}%
+\contentsline {section}{\numberline {6.1}{Introduction}}{46}{section.6.1}%
+\contentsline {section}{\numberline {6.2}{Two-species dipole mode spectrum}}{49}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}{Model}}{49}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}{Dipole modes}}{51}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}{Case of strong friction}}{52}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}{Experimental procedures}}{52}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}{Sample preparation}}{52}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}{Interaction tuning}}{54}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}{Excitation and detection}}{54}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}{Fit analysis of oscillation curves}}{56}{subsection.6.3.4}%
+\contentsline {section}{\numberline {6.4}{Experimental results}}{57}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}{Mode spectrum overview}}{57}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}{Crossover mode}}{59}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}{Frequency and damping rate}}{60}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}{Fit analysis}}{61}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}{Dependence on atom number ratio}}{63}{subsubsection.6.4.2.3}%
+\contentsline {subsection}{\numberline {6.4.3}{Damping modes}}{64}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}{Fast damping mode}}{66}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}{Slow damping mode}}{66}{subsubsection.6.4.3.2}%
+\contentsline {subsubsection}{\numberline {6.4.3.3}{Resonance crossover}}{68}{subsubsection.6.4.3.3}%
+\contentsline {section}{\numberline {6.5}{Microscopic view on friction}}{69}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}{Local friction}}{69}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}{Universality on resonance}}{72}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}{Conclusions and Outlook}}{74}{section.6.6}%
+\contentsline {section}{\numberline {6.7}{Appendix A: Equations of motion and solution}}{76}{section.6.7}%
+\contentsline {section}{\numberline {6.8}{Appendix B: Spatial overlap}}{77}{section.6.8}%
+\contentsline {section}{\numberline {6.9}{Appendix C: Modelling the interspecies interaction}}{79}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}{Dissipative interaction (friction)}}{79}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}{Reactive interaction (mean field)}}{81}{subsection.6.9.2}%
+\contentsline {chapter}{\numberline {7}{Additional measurements on the Dy-K Feshbach spectrum}}{83}{chapter.7}%
+\contentsline {part}{\numberline {iii}{Making, probing, and understanding D\lowercase {y}K Feshbach molecules}}{85}{part.3}%
+\contentsline {chapter}{\numberline {8}{Feshbach Molecules as door to the BEC-BCS crossover}}{87}{chapter.8}%
+\contentsline {chapter}{\numberline {9}{Publication: Optically trapped Feshbach molecules of fermionic $^{161}$D\lowercase {y} and $^{40}$K}}{89}{chapter.9}%
+\contentsline {section}{\numberline {9.1}{Introduction}}{90}{section.9.1}%
+\contentsline {section}{\numberline {9.2}{Preparation of pure molecular samples}}{91}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}{Preparation of the mixture and transfer into the 7-G magnetic field region}}{92}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}{Molecule association and Stern-Gerlach purification}}{92}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}{Temperature and phase-space density}}{96}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}{Binding energy, magnetic moment, and resonance parameters}}{97}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}{Basic definitions and relations}}{97}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}{Binding energy spectroscopy}}{98}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}{Magnetic moment spectroscopy}}{99}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}{Summary of the 7-G resonance parameters}}{101}{subsection.9.3.4}%
+\contentsline {section}{\numberline {9.4}{Magnetic antitrapping in levitation field}}{101}{section.9.4}%
+\contentsline {section}{\numberline {9.5}{Lifetime}}{104}{section.9.5}%
+\contentsline {section}{\numberline {9.6}{Conclusions and outlook}}{107}{section.9.6}%
+\contentsline {section}{\numberline {9.7}{Appendix A: Magnetic field control}}{109}{section.9.7}%
+\contentsline {chapter}{\numberline {10}{Publication: Optically trapped Feshbach molecules of fermionic $^{161}$Dy and $^{40}$K: Role of light-induced and collisional losses}}{111}{chapter.10}%
+\contentsline {section}{\numberline {10.1}{Introduction}}{112}{section.10.1}%
+\contentsline {section}{\numberline {10.2}{D\lowercase {y}K Feshbach molecules}}{114}{section.10.2}%
+\contentsline {section}{\numberline {10.3}{Experimental Sequence}}{115}{section.10.3}%
+\contentsline {section}{\numberline {10.4}{Light-Induced Losses}}{117}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}{Spectroscopy in two regions of interest}}{117}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}{Dependence on light intensity}}{119}{subsection.10.4.2}%
+\contentsline {section}{\numberline {10.5}{Collisional Losses and Pauli Suppression}}{122}{section.10.5}%
+\contentsline {section}{\numberline {10.6}{Conclusions and outlook}}{126}{section.10.6}%
+\contentsline {part}{\numberline {iv}{Conclusions}}{129}{part.4}%
+\contentsline {chapter}{\numberline {11}{What have we learned?}}{131}{chapter.11}%
+\contentsline {chapter}{\numberline {12}{Outlook}}{133}{chapter.12}%
+\contentsline {part}{\numberline {v}{Appendix}}{135}{part.5}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{Bibliography}{137}{section*.47}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
