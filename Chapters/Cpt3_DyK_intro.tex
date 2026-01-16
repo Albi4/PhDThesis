@@ -28,7 +28,7 @@ Evaporative cooling in the Dy-K mixture has been found to be most effective for 
 During the years, other trapping beams were aligned on the atoms to explore the role of trapping-light wavelength in our experiments (a good portion of Part \hyperref[pt:MakingProbing]{III} is dedicated to this investigation). For the purpose of the mixture preparation, it is important to mention here that after discovering the beneficial role of the $1547$-nm light on the molecules lifetime, two beams, one horizontal and on vertical, generated at this wavelength\footnote{NKT Koheras BOOSTIK E$15$}, were permanently added to the experiment. In particular, the horizontal beam, with waist \SI{90}{\micro m}, has been successfully employed during the evaporative cooling sequence, allowing us to reach the same degeneracy conditions, with an higher number of dysprosium atoms, and in a more robust way, i.e. with less optimization required in the day-by-day running of the experiment. In Fig.~\ref{fig:ODTscheme}, I present a recap of the \ac{ODT} scheme, with the two additional $1547$ beam and an \textit{exp beam}, which represents all of the additional beams at different wavelengths tested during my PhD.
 \begin{figure}[thb]
 	\includegraphics[trim=0 0 0 2cm, clip, width=1\columnwidth]{gfx/Cpt4_fig/ODT_graph_v2.pdf}
-	\caption{\ac{ODT} setup in the Dy-K experiment. In yellow are reported the trapping beam with a wavelength of \SI{1064}{nm}, while in red the one with a wavelength of \SI{1547}{nm}. The grey path is for all the other different \ac{ODT}s tested during the years and reported in Chapter \ref{Chpt:MolLoss}. Double arrows and the circle-dot indicate the polarization of the beams (linear or circular). \label{fig:ODTscheme}}
+	\caption{\ac{ODT} setup in the Dy-K experiment. In yellow are reported the trapping beam with a wavelength of \SI{1064}{nm}, while in red the one with a wavelength of \SI{1547}{nm}. The gray path is for all the other different \ac{ODT}s tested during the years and reported in Chapter \ref{Chpt:MolLoss}. Double arrows and the circle-dot indicate the polarization of the beams (linear or circular). \label{fig:ODTscheme}}
 \end{figure}
 
 
@@ -40,24 +40,33 @@ During the years, other trapping beams were aligned on the atoms to explore the 
 \section{Feshbach resonances in D\lowercase{y}-K}
 \label{Sec:DyKFeshbachOld}
 
-Once degeneracy is obtained, the main ingredient missing in order to approach the study of crossover physics is a suitable Feshbach resonance to tune interspecies interaction. As previously mentioned, the sheer complexity of the Dy-K system prevented any theoretical prediction of the interaction spectrum.
+ As previously mentioned, the sheer complexity of the Dy-K system prevented any theoretical prediction of the interaction spectrum. After achieving degeneracy, the goal was then to explore the interspecies interaction spectrum, in order to find a suitable Feshbach resonance, where to investigate he mixture in the strongly interacting regime. The experimental set-up was planned accordingly with a pair of large coils in Helmholtz configuration, allowing to explore magnetic field up to \SI{400}{G}.
 
-Scan of the magnetic field up to 400G... Suitable resonances individuated around 200 G... Thermalization measure... Hydrodynamic expansion to prove strong interaction at 217 G.
-
-
-However not well isolated... Difficulties in keeping the degeneracy when ramping to high field... No preparation achieved at higher fields... Need to investigate why... look into Dy interaction alone... Study of loss spectrum at low field 1 G range... more than 40 resonance found... 
-
+The first interesting candidates were individuated in the region around \SI{200}{G}, and reported in Ref.~\cite{Ravensbergen2020rif}. Fig.~\ref{Fig:ThermScan200G} shows the  thermalization measurement between Dy and K in the \SI{200}{G} region. Fast thermalization rates are attributed to strong interactions from Feshbach resonances, and the center of such resonance is located in the proximity of maxima of thermalization rates, indicated with black arrows in the figure.
 \begin{figure}[thb]
 	\includegraphics[width=1\columnwidth]{gfx/Cpt4_fig/thermScanDyK_200G}
-	\caption{ Figure taken from Ref.~\cite{Ravensbergen2020rif} \label{Fig:ThermScan200G}}
+	\caption{Interspecies thermalization scan around the \SI{200}{G} region. Solid arrows point to the main resonance features. Figure taken from Ref.~\cite{Ravensbergen2020rif} \label{Fig:ThermScan200G}}
 \end{figure}
+
+
+ The broadest feature observed in this region is the resonance around \SI{217}{G}. At this Feshbach resonance, strong interaction were proven by observing the expansion of the mixture, see Fig.~\ref{Fig:Hydro200G}. In the weakly interacting regime , i.e. far from the resonance center, the expansion of the two clouds is ballistic, with the lighter potassium cloud expanding faster than the dysprosium one. On top of the resonance instead, the expansion of the two clouds is similar, as the large number of collision between the two species locks the clouds together. This peculiar behavior can be interpreted as the sign of collisional hydrodynamics and the proof of strong interaction in the mixture.
+%Hydrodynamic expansion to prove strong interaction at 217 G...
+
+
 
 \begin{figure}[thb]
 	\includegraphics[width=1\columnwidth]{gfx/Cpt4_fig/hydroexpansion200G}
-	\caption{ Figure taken from Ref.~\cite{Ravensbergen2020rif} \label{Fig:Hydro200G}}
+	\caption{Ballistic (upper) and hydrodynamic (lower) expansion of the mixture in the weakly and strongly interacting regime, respectively. Figure taken from Ref.~\cite{Ravensbergen2020rif} \label{Fig:Hydro200G}}
 \end{figure}
 
+However not well isolated... Difficulties in keeping the degeneracy when ramping to high field... High field difficult in general (eddy currents, heating)... No preparation achieved at higher fields... Need to investigate why... 
 
+
+
+
+
+
+Look into Dy interaction alone... Odd partial wave contribution... Study of loss spectrum at low field 1 G range... more than 40 resonance found... Difficult to navigate around... Strong temperature dependence...
 
 %-Investigation of the low field behavior of Dy alone to try to understand why no evaporative cooling at higher field --> Dy has a shit on of resonance even in a single spin state. 
 
@@ -68,11 +77,6 @@ However not well isolated... Difficulties in keeping the degeneracy when ramping
 	\caption{ Figure taken from Ref.~\cite{Soave2022lff} \label{Fig:Dy1GFeshbachScan}}
 \end{figure}
 
-WTF. 
 
-Gross. 
 
-FML. Necessary to improve B field control
-
-With better resolution worth trying to recheck also lower fields for narrower features
-
+We performed similar measurement to the one summarized here and reported in Ref.~\cite{Ravensbergen2020rif}, both thermalization and hydrodynamic expansion, when investigating the low field Feshbach Resonances. Additionally locking of oscillations... development of additional tool to estimate collisions... Finally summary of all the Feshbach spectrum of Dy-K...
