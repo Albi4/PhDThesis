@@ -6,10 +6,10 @@
 \contentsline {part}{\numberline {i}{Introduction}}{1}{part.1}%
 \contentsline {chapter}{\numberline {1}{Ultracold Gases and quantum mixtures}}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}{Why ultracold atoms?}}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}{Quantum mixtures}}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.2}{Quantum mixtures}}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}{Basic of Fermi gases}}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}{Hetero-nuclear mixtures}}{5}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}{Our choice: Dy-K }}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.1}{Our choice: Dy-K }}{6}{subsection.1.4.1}%
 \contentsline {chapter}{\numberline {2}{Scattering theory and Feshbach resonances}}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}{Basis of scattering theory}}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}{Feshbach resonances in ultracold gases}}{7}{section.2.2}%
@@ -102,5 +102,5 @@
 \contentsline {section}{\numberline {13.1}{Which power supply is the right power supply?}}{143}{section.13.1}%
 \contentsline {section}{\numberline {13.2}{A digital PID fast magnetic field control}}{143}{section.13.2}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{Bibliography}{145}{section*.54}%
+\contentsline {chapter}{Bibliography}{145}{section*.56}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
