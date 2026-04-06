@@ -7,13 +7,13 @@
 \contentsline {chapter}{\numberline {1}{Ultracold Gases and quantum mixtures}}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}{Why ultracold atoms?}}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}{Quantum mixtures}}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}{Basic of Fermi gases}}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}{Hetero-nuclear mixtures}}{6}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}{Our choice: Dy-K }}{6}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.3}{Hetero-nuclear mixtures}}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}{Our choice: Dy-K }}{6}{subsection.1.3.1}%
 \contentsline {chapter}{\numberline {2}{Scattering theory and Feshbach resonances}}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}{Basis of scattering theory}}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}{Feshbach resonances in ultracold gases}}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}{Narrow Feshbach resonances}}{7}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.1}{Basic of Fermi gases}}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}{Basis of scattering theory}}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}{Feshbach resonances in ultracold gases}}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}{Narrow Feshbach resonances}}{7}{subsection.2.3.1}%
 \contentsline {chapter}{\numberline {3}{Thesis Outline}}{9}{chapter.3}%
 \contentsline {part}{\numberline {ii}{D\lowercase {y}-K mixture: The quest for an Isolated Feshbach resonance}}{11}{part.2}%
 \contentsline {chapter}{\numberline {4}{D\lowercase {y}-K experiment}}{13}{chapter.4}%
