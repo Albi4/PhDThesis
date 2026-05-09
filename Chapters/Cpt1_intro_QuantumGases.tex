@@ -33,18 +33,17 @@ with $h$ the Planck constant, $k_B$ the Boltzmann constant, $m$ the mass of atom
 $n$ is the number density of the gas, the quantum statistical nature of the atoms plays a fundamental role.
 
 
-However, the temperatures and densities achieved with laser cooling were not enough to reach quantum degeneracy, and the final step was made possible by evaporative cooling of the trapped gas \cite{Hess1986eco, Ketterle1996eco}.
+However, the temperatures and densities achieved with laser cooling were not enough to reach quantum degeneracy\footnote{It took almost $20$ years before \ac{BEC} was achieved with strontium only using laser cooling \cite{Stellmer2013lct}}, and the final step was made possible by evaporative cooling of the trapped gas \cite{Hess1986eco, Ketterle1996eco}.
 The first milestone was reached in $1995$, with the observation of \ac{BEC} in a dilute ultracold quantum gas of rubidium, achieved at JILA \cite{Anderson1995oob}. Soon after, \ac{BEC} was also achieved in a gas of sodium, at MIT \cite{Davis1995bec}. A few years later, in $1999$, mirroring the historical development of the respective statistics, the first \ac{DFG} was realized with ultracold potassium \cite{DeMarco1999oof}, also at JILA, and shortly after with lithium, in many other laboratories around the world. 
 
-With both quantum statistics experimentally realized, many new exciting opportunities arose to study quantum systems in a controlled and reproducible manner. Thanks to their great tunability, ultracold atoms provide a highly controllable platform for testing theoretical predictions. Among the numerous possibilities, in this thesis we will focus on the behavior of systems composed of more than one species of quantum gas, known as a quantum mixture, which we will introduce in the following section
+With both quantum statistics experimentally realized, many new exciting opportunities arose to study quantum systems in a controlled and reproducible manner. Thanks to their great tunability, ultracold atoms provide a highly controllable platform for testing theoretical predictions. \albi{some examples here maybe?} Among the numerous possibilities, in this thesis we will focus on the behavior of systems composed of more than one species of quantum gas, known as a quantum mixture, which we will introduce in the following section
 
- %such as... (molecules, superfluidity in fermi systems, metrology, super solids), some of this will be discussed in other part of this thesis \albi{link them}
 
 
 
 \section{Quantum mixtures}%two is better than one
 
-The first realizations of mixtures of two degenerate quantum gases were achieved shortly after the realizations of the first \ac{BEC}s in the same research groups. These first few attempts focused on mixtures of two different spin states of the same atomic species \cite{Myatt1997pot, Stenger1998sdi} as they were the most straight forward and accessible combination to realize. 
+The first realizations of mixtures of two degenerate quantum gases were achieved already shortly after the realizations of the first \ac{BEC}s in the same research groups. These first few attempts focused on mixtures of two different spin states of the same atomic species \cite{Myatt1997pot, Stenger1998sdi} as they were the most straight forward and accessible combination to realize. 
 
 While the access to mixture in bosonic system is interesting in order to increase the complexity of the system under study and to allow the exploration of more complex and interesting phases, in fermionic gases operating with a mixture is (almost) mandatory. Generally, when a fermionic gas composed of a single component is cooled to low temperatures, the interaction freezes out, as at low energies only short-range scattering is relevant. Owing to the Pauli exclusion principle, the wave function overlap between identical fermions has to be zero and thus s-wave interactions are forbidden. This is a twofold problem, not only does the interesting physics require interactions, but the final cooling step to reach degeneracy, evaporative cooling, relies on elastic collisions in the atomic gas to rethermalize the cloud. 
 
@@ -53,38 +52,34 @@ The first degenerate Fermi gases were indeed realized in mixtures, either with a
 
 These three approaches to cooling exemplify the three kinds of mixtures realizable in quantum gases. The experimentally easiest and most natural approach is to mix two (or potentially more) spin states of the same atomic species in a homonuclear mixture. This configuration requires minimal differences in the experimental setup, compared to a single-species experiment, as in most cases it does not require laser cooling of additional components and the spin mixture can be realized with the gas already in the ultracold regime. Somewhat more demanding experimentally are isotope mixtures. In this case some parts of the experimental setup are shared between the species involved, e.g.~the atomic source, and often no additional laser sources are needed, but additional optical components are required to address the different isotope-shifted optical transitions employed in the laser cooling sequence. The most experimentally demanding configuration for quantum mixtures is reached with a mixture of two different atomic species. In this case both atomic species require separate sources and the optical transitions involved can be considerably different, requiring dedicated laser sources for each species. Each additional step in complexity, however, opens the possibility to study a different range of physical phenomena and the choice of species and platform is in itself one of the most critical experimental decision.
 
-The other distinction that it is possible to make between the different kinds of mixtures, which also directly determines the physical phenomena accessible, regards the combination of quantum statistics. Spin mixtures are bound to work with Bose-Bose or Fermi-Fermi combinations since they originate from a single atomic species. Heteronuclear mixtures instead do not suffer this limitation but, as we will see in the next section, are limited by what kind of atomic species and isotopes are available in Nature and how feasible it is to laser cool them. If suitable isotopes of the chosen atomic species are available, in heteronuclear mixtures  is possible to change quantum statistics of one of the components when needed.
+The other distinction that it is possible to make between the different kinds of mixtures, which also directly determines the physical phenomena accessible, regards the combination of the different quantum statistics. Spin mixtures are bound to work with Bose-Bose or Fermi-Fermi combinations since they originate from a single atomic species. Heteronuclear mixtures instead do not suffer this kind of limitation and thus they can also feature Bose-Fermi mixtures. Ss we will see in the next section however, Heteronuclear systems are limited by the quantum statistics of the atomic species and isotopes available in Nature and by the feasibility to laser cool them. If suitable isotopes of the chosen atomic species are available, in heteronuclear mixtures  is possible to change quantum statistics of one of the components if needed, with limited experimental downside.
 
+Bose-Bose mixture, whether spin-based or heteronuclear, have proved to be an extremely successful platform to study numerous phenomena. spinor BEC to false vacuum decay to creation of ground state molecules and other very nice examples...  see e.g.~Ref.~ \cite{Varenna2022book,Baroni2024qmo} for a (non-exhaustive) compendium of the many possibility of physical phenomena available with quantum mixtures.
 
-While Bose-Bose mixture both with spin and species composition have proved to be an extremely succesful platform to study numerous phenomena ranging from: spinor BEC to false vaccum decay and other very nice examples...  see e.g.~Ref.~ \cite{Varenna2022book,Baroni2024qmo} for a (non-exhaustive) compendium of the many possibility of physical phenomena available with quantum mixtures.
+%such as... (molecules, superfluidity in fermi systems, metrology, super solids), some of this will be discussed in other part of this thesis \albi{link them}
 
-However, our focus goes instead towards fermionic systems. In the second chapter of this thesis, we introduced in detail different aspects of fermionic mixtures, both for spin and heteronuclear systems and we will summarize the motivation. In the next section instead we will give an overview on the mass imbalance mixture, general motivation of interest, and  the choices of atomic species used in our experiment.
 
 %reread cos review, nice to present some example of the broad range of mixtures before moving to mass imbalanced and fermions
 
-
-
-%Is this thesis we study an heteronuclear mixture composed by two fermionic species, $^{161}$Dy and $^{40}$K. An overview and details on heteronuclear mixtures and the reasons on why this two species were chosen are give in the next section. It is worth however to explain a bit  
-
-
-
-
+Our focus is instead on fermionic systems. In the \hyperref[Chpt:Feshbach]{second chapter} of this thesis, we will introduced different aspects of fermionic mixtures,relevant to both spin and heteronuclear systems.In the following section, we provide an overview of the mass-imbalance heteronuclear mixture and present the motivation for the choice of atomic species employed in our experiment.
 
 
 \section{Hetero-nuclear mixtures and the Dy-K mixture} %From fermionic spin mixtures to 
-%maybe just "the Dy-K mixture" could work?
-
-At the beginning of the millennium the study of Fermi spin mixtures with $^5$Li and $^{40}$K
 
 
-Describe why mass imbalance and some description of the result obtained with other mixtures and describe why Dy-K is our choice 
 
 
-Ref: Cos Nature review has a lot of references + varenna notes 
-Zaccanti's varenna notes have a lot of good reference on this
+At the beginning of the millennium the study of Fermi spin mixtures with $^6$Li and $^{40}$K
 
 
-talk about FFLO somewhere 
+%Describe why mass imbalance and some description of the result obtained with other mixtures and describe why Dy-K is our choice 
+
+
+%Ref: Cos Nature review has a lot of references + varenna notes 
+%Zaccanti's varenna notes have a lot of good reference on this%
+
+
+talk about FFLO briefly as "unconventional superfluidty" and mass imbalance should help in observing such phenomena
 
 The \ac{BCS} theory managed to explain in great detail what we now call conventional superconductors, i.e. system that would become superconductive at very low temperatures, but the discovery of high temperature superconductors 	\albi{cite}, was not explained in the frame work of the \ac{BCS} theory. As a consequence, the possibility of exotic pairing methods were considered as possible explanations for such phenomena. In particular the FFLO theory proposes a pairing between the components which results in a non-zero momentum pair.
 In this thesis the focus is/will be on the interactions between a mixture two different atomic species with the Fermi-Dirac statistics.  
@@ -93,7 +88,7 @@ In this thesis the focus is/will be on the interactions between a mixture two di
 
 Mass ratio criterion cite all important Dima paper.
 
-Li has prove very successful \albi{felikx}, despite the sub optimal mass ratio of the two clouds. This approach has been also very successful in the more exotic mixture of Li and Cr, despite requiring an extra step (Feshbach cooling) to achieve complete thermalization. 
+LiK has prove very successful \albi{felikx}, despite the sub optimal mass ratio of the two clouds. This approach has been also very successful in the more exotic mixture of Li and Cr, despite requiring an extra step (Feshbach cooling) to achieve complete thermalization. 
 
 
 Explorative experiment, first lanthanide+alkali
