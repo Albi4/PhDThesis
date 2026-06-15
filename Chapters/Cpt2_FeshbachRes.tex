@@ -1,41 +1,118 @@
 \chapter{Scattering theory and Feshbach resonances}
 \label{Chpt:Feshbach} %"Fermi gases and Feshbach resonances" %title to be revised
+
+
+
+
 \section{Basic of Fermi gases}
 
 compare with bose gas to keep the analogy with the statistic going
 
-
 a fermionic gas a T$=0$ fills up the harmonic trap
 
+\begin{equation}
+	f(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1}
+	\label{eq:FermiDiracDist}
+\end{equation}
+
+
+\begin{equation}
+	N=\int d\varepsilon\frac{\varepsilon^2}{2(\hbar\omega)^3}f(\varepsilon)
+	\label{eq:NumberHT}
+\end{equation}
 Remark again about lack of interaction in a single component
 
-Pauli pressure, connections to astronomical cases (white dwarfs and neutron star, additional motivation to study this systems, maybe nice to disseminate around and not only in one place) 
 
+\begin{equation}
+	k_F=\frac{\sqrt{2mE_F}}{\hbar}
+	\label{eq:FermiMomentum}
+\end{equation}
+
+\begin{equation}
+	E_F=\hbar\omega(6N)^{1/3}
+	\label{eq:FermiEnergy}
+\end{equation}
+$T_F{\hbar}\omega(6N)^{1/3}/{k_B} $
+T/$T_F$ is the quantification of degeneracy level, while bose present a phase transitions, the final distribution of a non interacting fermionic system deviates from the usual guassian, but not by so much. To obtain a measure of degeneracy we routinely use in our experiment a polylog function to fit $2$D profiles obtained from absorption  imaging.
+
+\begin{equation}
+	polylog...
+\end{equation} 
+
+
+Pauli pressure, connections to astronomical cases (white dwarfs and neutron star, additional motivation to study this systems, maybe nice to disseminate around and not only in one place), mention deformation of fermi surface from dipolar interaction observed in Er
 
 Lithium Workhorse of degenerate fermi gases
 
 
-BEC-BCS crossover here mention here
-
-Unitarity!
-\section{Basis of scattering theory and Feshbach resonances}
+\section{Basis of scattering theory}
 two body problem in a vacuum
 
 phase shift
 
 effective range
 
-p-wave threshold for interaction
+\begin{equation}
+	\psi_k(r)\sim e^{ikz}+f(k,\theta)\frac{e^{ikz}}{r}
+	\label{eq:wavefunScatt}
+\end{equation}
+
+
+\begin{equation}
+\frac{d\sigma}{d\Omega}=|f(k,\theta)|^2
+\label{eq:diffCrossSec}
+\end{equation}
+	
+	
+	
+%eq for now taken from M. Bartenstein thesis to recheck and contextualize
+\begin{equation}
+	V_{eff}=\frac{\hbar^2l(l+1)}{2m_rr^2}+V(r)
+	\label{eq:effPot}
+\end{equation}
+p-wave threshold for interaction, differentiate between K and Dy
+
+\begin{equation}
+	\sigma_l(k)=\frac{4\pi}{k^2}(2l+1)\sin(\delta_l(k))
+	\label{eq:crossSecpartialWave}
+\end{equation}
+
+
+\begin{equation}
+	a=\lim_{k\to0}\frac{\tan(\delta_0(k))}{k}
+	\label{eq:ScatteringLength}
+\end{equation}
 
 
 
-\subsection{Feshabch resonances in ultracold gases}
+\begin{equation}
+	f(k)=\frac{1}{-\frac{1}{a}+\frac{1}{2}r_{\textrm{eff}}k^2-ik}
+	\label{eq:ScatteringAmplswave}
+\end{equation}
 
-Li case as the best possible case, gift of Nature, we will see how it goes for Dy-K later in the thesis, relevance of resonance in regards of studying BEC-BCS 
+mention here the effective parameter range and wink at its role on broad and narrow scattering resonance, which will be explained better in the Feshbach part I guess
+
+
+Now integrating over \eqref{eq:diffCrossSec},  we can obtained the total cross section
+\begin{equation}
+	\sigma(k)=\frac{4\pi}{\left(\frac{1}{a}-\frac{1}{2}r_{\textrm{eff}}k^2\right)^2+k^2 }
+\end{equation}
+
+
+
+
+
+
+\section{Feshabch resonances in ultracold gases}
+
+Li case as the best possible case, gift of nature, we will see how it goes for Dy-K later in the thesis, relevance of resonance in regards of studying BEC-BCS 
 
 General results of Feshbach resonances in all the different platforms.
 
 \section{BEC-BCS crossover}
+BEC-BCS crossover here mention here
+
+Unitarity!
 
 Polarization results of Martins
 
