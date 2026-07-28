@@ -1,9 +1,37 @@
 \chapter{Magnetic Field control}
 \label{app:MagneticField}
 
+The stability and fast control of the magnetic field has been a crucial point for the characterization of the interaction properties of the Dy-K mixture. In this appendix we detail three crucial improvement made to the experiment set-up during my Ph.D.~work. As for many other part of this thesis, this was not the work of a single person and I acknowledge Elisa Soave and Zhu-Xiong Ye for the work done together in  
+\ref{Sec:PowerSupply} and \ref{Sec:EddyCurrents} and Yaakov Yudkin for the work done regarding the \ac{FPGA} fundamental for the work reported in \ref{Sec:FPGA}.
 
 \section{Which power supply is the right power supply?}
+\label{Sec:PowerSupply}
 
+The first important ingredient to produce good and reliable magnetic field is to use the correct power supply to produce good and reliable currents. 
+
+name older model\,\footnote{Delta Elektronika SM$15$-$200$D}, comparison and test between two power supplies with a digital controller, first model already used for quite some time but not good enough, new model much faster, but initially couldn't reach 200 G, tested at 95 A, check the field
+
+
+ allows to set the \ac{PID} parameters digitally and control better the ramps of magnetic fields
+
+we show the comparison between the two supplies and prove how much better is one of the two and why we choose that one if I find the data show the plot of the two transfer of potassium, to give  small peak in how we did some of this meas.
+
+Use of potassium hyperfine transitions to calibrate the magnetic field and measure the response of the system.
+
+\section{Eddy Current suppression}
+\label{Sec:EddyCurrents}
+
+Stability and fast ramps are not the only problem. There is a lot of metal around the coils which gives origin to eddy currents Eddy currents slow downs the magnetic filed ramp and are originated from closed loops of metal. one of the original solution to counter act these unwanted effect was took long before my time in the experiment, and consisted in cutting one of the breadboard used to hold the optics in experiment like ours. these solution proved to be effective (find a fucking number), but remaining eddy currents from the metal vacuum chamber were still a limiting fact. 
+
+A solution developed during the years (again starting before my time) was to measure the transfer function of our system and then convoluted the Laplace transform of the transfer function with the magnetic field ramp required in order to compensate the field. This approach has been quite successful even if required a lot of programming and find tuning in order to make it work properly.
+
+example of the function and figure comparing a non compensated ramp (in B field possibly) to a compensated one
+
+Fundamental to have the digital interface of the power supply to calculate the wave functions necessary for the compensation of magnetic ramps
 
 
 \section{A digital PID for fast magnetic field control}
+\label{Sec:FPGA}
+
+
+Final step was to combined what learned from having a fast power supply with a digital \ac{PID} to reduce even more imprecise ramps. The large power supply used to control the main coils is limited in resolution to perform small magnetic field ramps necessary to handle narrow magnetic Feshbach resonance. Our solution was to use the large coils to provide an off-set field and use a smaller power supply controlled with an home-made digital \ac{PID} based on a \ac{FPGA}, taking from an idea reported in Ref.~\cite{Thomas2020adf}, to do smaller magnetic field ramps.
