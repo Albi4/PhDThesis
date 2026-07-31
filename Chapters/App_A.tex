@@ -7,9 +7,11 @@ The stability and fast control of the magnetic field has been a crucial point fo
 \section{Which power supply is the right power supply?}
 \label{Sec:PowerSupply}
 
-The first important ingredient to produce good and reliable magnetic field is to use the correct power supply to produce good and reliable currents. 
+The first important ingredient to produce good and reliable magnetic field is to use a suitable correct power supply to produce good and reliable currents.  To control the main coils in Helmholtz configuration different power supply have been tried in our experiment. The first candidate was discarded long before 
 
-name older model\,\footnote{Delta Elektronika SM$15$-$200$D}, comparison and test between two power supplies with a digital controller, first model already used for quite some time but not good enough, new model much faster, but initially couldn't reach 200 G, tested at 95 A, check the field
+name older model\,\footnote{Delta Elektronika SM$15$-$200$D}, 
+
+comparison and test between two power supplies with a digital controller, first model already used for quite some time but not good enough, new model much faster, but initially couldn't reach 200 G, tested at 95 A, check the field
 
 
  allows to set the \ac{PID} parameters digitally and control better the ramps of magnetic fields
@@ -18,6 +20,12 @@ we show the comparison between the two supplies and prove how much better is one
 
 Use of potassium hyperfine transitions to calibrate the magnetic field and measure the response of the system.
 
+
+\begin{figure}[htb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/PS_comparison.png}
+	\caption{Comparison of RF spectroscopy on potassium at the same magnetic field with the two different power supplies. \label{fig:PS_comparison}}
+\end{figure}
+
 \section{Eddy Current suppression}
 \label{Sec:EddyCurrents}
 
@@ -25,10 +33,18 @@ Stability and fast ramps are not the only problem. There is a lot of metal aroun
 
 A solution developed during the years (again starting before my time) was to measure the transfer function of our system and then convoluted the Laplace transform of the transfer function with the magnetic field ramp required in order to compensate the field. This approach has been quite successful even if required a lot of programming and find tuning in order to make it work properly.
 
+\begin{equation}
+	contenuto...
+\end{equation}
+
 example of the function and figure comparing a non compensated ramp (in B field possibly) to a compensated one
 
 Fundamental to have the digital interface of the power supply to calculate the wave functions necessary for the compensation of magnetic ramps
 
+\begin{figure}[htb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
+	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution. . \label{figTFexamp}}
+\end{figure}
 
 \section{A digital PID for fast magnetic field control}
 \label{Sec:FPGA}
