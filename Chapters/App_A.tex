@@ -1,23 +1,24 @@
 \chapter{Magnetic Field control}
 \label{app:MagneticField}
 
-The stability and fast control of the magnetic field has been a crucial point for the characterization of the interaction properties of the Dy-K mixture. In this appendix we detail three crucial improvement made to the experiment set-up during my Ph.D.~work. As for many other part of this thesis, this was not the work of a single person and I acknowledge Elisa Soave and Zhu-Xiong Ye for the work done together in  
-\ref{Sec:PowerSupply} and \ref{Sec:EddyCurrents} and Yaakov Yudkin for the work done regarding the \ac{FPGA} fundamental for the work reported in \ref{Sec:FPGA}.
+The stability and rapid control of the magnetic field have been crucial for the characterization of the interaction properties of the Dy-K mixture. In this appendix, we describe three key improvements made to the experimental setup during my Ph.D.~work. As for many other parts of this thesis, this was not the work of a single person; I therefore acknowledge Elisa Soave and Zhu-Xiong Ye for the contributions made jointly in  Sec.~\ref{Sec:PowerSupply} and \ref{Sec:EddyCurrents} and Yaakov Yudkin for the work done regarding the \ac{FPGA}, which was fundamental to the results reported in Sec.~\ref{Sec:FPGA}.
 
 \section{Which power supply is the right power supply?}
 \label{Sec:PowerSupply}
 
-The first important ingredient to produce good and reliable magnetic field is to use a suitable correct power supply to produce good and reliable currents.  To control the main coils in Helmholtz configuration different power supply have been tried in our experiment. The first candidate was discarded long before 
+The first important ingredient to produce good and reliable magnetic field is to use a suitable correct power supply to produce clean currents with fast ramps. To control the main coils used to generate the uniform magnetic field, different power supply have been tried in our experiment. The first candidate was discarded long before 
 
 name older model\,\footnote{Delta Elektronika SM$15$-$200$D}, 
 
-comparison and test between two power supplies with a digital controller, first model already used for quite some time but not good enough, new model much faster, but initially couldn't reach 200 G, tested at 95 A, check the field
-
-
  allows to set the \ac{PID} parameters digitally and control better the ramps of magnetic fields
 
-we show the comparison between the two supplies and prove how much better is one of the two and why we choose that one if I find the data show the plot of the two transfer of potassium, to give  small peak in how we did some of this meas.
+comparison and test between two power supplies with a digital controller, first model already used for quite some time but not good enough, new model much faster, tested at high currents, check the field
 
+we show a comparison between the two supplies to demonstrate the reduction in noise in the magnetic field.
+
+To calibrate and test magnetic fields in or experiment we usually drive \ac{RF} transition between Zeeman states in the lowest hyperfine manifold of potassium, in particular between the stretched ground state $\ket{9/2, -9/2}$ and the first excited state $\ket{9/2, -7/2}$
+
+The main tool that we use to calibrate and test our magnetic fields 
 Use of potassium hyperfine transitions to calibrate the magnetic field and measure the response of the system.
 
 
@@ -25,6 +26,8 @@ Use of potassium hyperfine transitions to calibrate the magnetic field and measu
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/PS_comparison.png}
 	\caption{Comparison of RF spectroscopy on potassium at the same magnetic field with the two different power supplies. \label{fig:PS_comparison}}
 \end{figure}
+
+Other additional problem that a digital power supply allowed us to counteract are eddy currents, which always plague experiments working with magnetic fields and interested in fast and clean ramps.
 
 \section{Eddy Current suppression}
 \label{Sec:EddyCurrents}
@@ -43,11 +46,16 @@ Fundamental to have the digital interface of the power supply to calculate the w
 
 \begin{figure}[htb]
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
-	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution. . \label{figTFexamp}}
+	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution, the balck das. . \label{figTFexamp}}
 \end{figure}
 
 \section{A digital PID for fast magnetic field control}
 \label{Sec:FPGA}
 
 
-Final step was to combined what learned from having a fast power supply with a digital \ac{PID} to reduce even more imprecise ramps. The large power supply used to control the main coils is limited in resolution to perform small magnetic field ramps necessary to handle narrow magnetic Feshbach resonance. Our solution was to use the large coils to provide an off-set field and use a smaller power supply controlled with an home-made digital \ac{PID} based on a \ac{FPGA}, taking from an idea reported in Ref.~\cite{Thomas2020adf}, to do smaller magnetic field ramps.
+Final step was to use what learned from having a fast power supply with a digital \ac{PID} in combination with a smaller set of coils in order to perform quick and and precise ramps of few tens to hundreds of \unit{mG} to precisely control interactions. 
+
+The large power supply used to control the main coils is limited in resolution to perform small magnetic field ramps necessary to handle narrow magnetic Feshbach resonance. Our solution was to use the large coils to provide an off-set field and use a smaller power supply controlled with an home-made digital \ac{PID} based on a \ac{FPGA}, taking from an idea reported in Ref.~\cite{Thomas2020adf}, to do smaller magnetic field ramps.
+
+
+Note: merge this part inside the previous, put only a few details and frame it "tool for final compensation" don't have enough material for a separate paragraph without using basically only Yaakov's stuff. 
