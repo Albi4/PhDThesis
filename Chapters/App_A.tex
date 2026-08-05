@@ -3,23 +3,72 @@
 
 The stability and rapid control of the magnetic field have been crucial for the characterization of the interaction properties of the Dy-K mixture. In this appendix, we describe three key improvements made to the experimental setup during my Ph.D.~work. As for many other parts of this thesis, this was not the work of a single person; I therefore acknowledge Elisa Soave and Zhu-Xiong Ye for the contributions made jointly in  Sec.~\ref{Sec:PowerSupply} and \ref{Sec:EddyCurrents} and Yaakov Yudkin for the work done regarding the \ac{FPGA}, which was fundamental to the results reported in Sec.~\ref{Sec:FPGA}.
 
+
+\section{Eddy Current suppression}
+\label{Sec:EddyCurrents}
+
+
+%\begin{equation}
+%	\mathbold{\mathcal{E}}=-\frac{d\mathbold{B}}{dt}
+%	\label{eq:LenzLaw}
+%\end{equation}
+
+
+There is a lot of metal around the coils which gives origin to eddy currents Eddy currents slow downs the magnetic filed ramp and are originated from closed loops of metal. one of the original solution to counter act these unwanted effect was took long before my time in the experiment, and consisted in cutting one of the breadboard used to hold the optics in experiment like ours. these solution proved to be effective (find a fucking number), but remaining eddy currents from the metal vacuum chamber were still a limiting fact. 
+
+
+A solution developed during the years\,\footnote{starting before my time and brought to completion during my PhD}, consisted in inferring the transfer function of the our experimental apparatus,  by driving the coils with a step function to a determined field and measuring the relaxation time of the coils to the target field
+
+\begin{equation}
+	H(s)=\frac{Y(s)}{X(s)}
+	\label{eq:transferFunc}
+\end{equation}
+
+and then convoluted the \textit{Laplace} transform of the transfer function with the magnetic field ramp required in order to compensate the field. This approach has been quite successful even if required a lot of programming and find tuning in order to make it work properly.
+
+
+example of the function and figure comparing a non compensated ramp (in B field possibly) to a compensated one
+
+
+To calibrate and test magnetic fields in or experiment we typically drive \ac{RF} transitions between Zeeman states in the lowest hyperfine manifold of potassium, in particular, between the stretched ground state $\ket{9/2, -9/2}$ and the first excited state $\ket{9/2, -7/2}$
+
+The main tool that we use to calibrate and test our magnetic fields 
+Use of potassium hyperfine transitions to calibrate the magnetic field and measure the response of the system.
+
+
+Fundamental to have the digital interface of the power supply to calculate the wave functions necessary for the compensation of magnetic ramps
+
+\begin{figure}[htb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
+	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution, the balck das. . \label{figTFexamp}}
+\end{figure}
+
+
+
+
+
+
+
+
 \section{Which power supply is the right power supply?}
 \label{Sec:PowerSupply}
 
-The first important ingredient to produce good and reliable magnetic field is to use a suitable correct power supply to produce clean currents with fast ramps. To control the main coils used to generate the uniform magnetic field, different power supply have been tried in our experiment. The first candidate was discarded long before 
+The first important ingredient to produce good and reliable magnetic field is to use a suitable correct power supply to produce clean currents with fast ramps. To control the main coils used to generate the uniform magnetic field, different power supply have been tried in our experiment. The large range of magnetic field investigated required the possibility to produce both large currents and perform small and quick ramps to precisely control interactions.
+
+Additionally
+
+The first candidate was discarded long before 
 
 name older model\,\footnote{Delta Elektronika SM$15$-$200$D}, 
 
- allows to set the \ac{PID} parameters digitally and control better the ramps of magnetic fields
+It appeared clear over the years, that 
+
+allows to set the \ac{PID} parameters digitally and control better the ramps of magnetic fields
 
 comparison and test between two power supplies with a digital controller, first model already used for quite some time but not good enough, new model much faster, tested at high currents, check the field
 
 we show a comparison between the two supplies to demonstrate the reduction in noise in the magnetic field.
 
-To calibrate and test magnetic fields in or experiment we usually drive \ac{RF} transition between Zeeman states in the lowest hyperfine manifold of potassium, in particular between the stretched ground state $\ket{9/2, -9/2}$ and the first excited state $\ket{9/2, -7/2}$
-
-The main tool that we use to calibrate and test our magnetic fields 
-Use of potassium hyperfine transitions to calibrate the magnetic field and measure the response of the system.
 
 
 \begin{figure}[htb]
@@ -29,25 +78,7 @@ Use of potassium hyperfine transitions to calibrate the magnetic field and measu
 
 Other additional problem that a digital power supply allowed us to counteract are eddy currents, which always plague experiments working with magnetic fields and interested in fast and clean ramps.
 
-\section{Eddy Current suppression}
-\label{Sec:EddyCurrents}
 
-Stability and fast ramps are not the only problem. There is a lot of metal around the coils which gives origin to eddy currents Eddy currents slow downs the magnetic filed ramp and are originated from closed loops of metal. one of the original solution to counter act these unwanted effect was took long before my time in the experiment, and consisted in cutting one of the breadboard used to hold the optics in experiment like ours. these solution proved to be effective (find a fucking number), but remaining eddy currents from the metal vacuum chamber were still a limiting fact. 
-
-A solution developed during the years (again starting before my time) was to measure the transfer function of our system and then convoluted the Laplace transform of the transfer function with the magnetic field ramp required in order to compensate the field. This approach has been quite successful even if required a lot of programming and find tuning in order to make it work properly.
-
-\begin{equation}
-	contenuto...
-\end{equation}
-
-example of the function and figure comparing a non compensated ramp (in B field possibly) to a compensated one
-
-Fundamental to have the digital interface of the power supply to calculate the wave functions necessary for the compensation of magnetic ramps
-
-\begin{figure}[htb]
-	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
-	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution, the balck das. . \label{figTFexamp}}
-\end{figure}
 
 \section{A digital PID for fast magnetic field control}
 \label{Sec:FPGA}
