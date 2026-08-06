@@ -4,33 +4,44 @@
 The stability and rapid control of the magnetic field have been crucial for the characterization of the interaction properties of the Dy-K mixture. In this appendix, we describe three key improvements made to the experimental setup during my Ph.D.~work. As for many other parts of this thesis, this was not the work of a single person; I therefore acknowledge Elisa Soave and Zhu-Xiong Ye for the contributions made jointly in  Sec.~\ref{Sec:PowerSupply} and \ref{Sec:EddyCurrents} and Yaakov Yudkin for the work done regarding the \ac{FPGA}, which was fundamental to the results reported in Sec.~\ref{Sec:FPGA}.
 
 
-\section{Eddy Current suppression}
+\section{Eddy Current compensation}
 \label{Sec:EddyCurrents}
 
+Rapid changes of the magnetic field induce eddy currents in the conductive structures surrounding the magnetic-field coils. These currents circulate along closed paths determined by the geometry and conductivity of the apparatus and, according to Lenz's law, generate a magnetic field opposed to the applied variation. As a consequence, the magnetic field experienced by the atoms does not instantaneously follow the programmed current waveform, but instead exhibits delays and possible distortions after fast ramps. This effect is particularly relevant when working close to Feshbach resonances, where small deviations of the magnetic field can lead to sizable changes of the interaction strength, even more so for the case of narrow resonances, like the one studied in the Dy-K experiment.
 
-%\begin{equation}
-%	\mathbold{\mathcal{E}}=-\frac{d\mathbold{B}}{dt}
-%	\label{eq:LenzLaw}
-%\end{equation}
+Several conductive elements can contribute to eddy currents in an experiment, including the metallic vacuum chamber, optical breadboards, and nearby mounting structures. In our experiment, a first passive mitigation strategy, implemented before the work described in this thesis, consisted in cutting one of the optical breadboards, placed in the proximity of the vacuum chamber, in order to interrupt large conductive loops close to the coils. This modification significantly reduced the amplitude of the induced currents, but residual eddy-current effects, associated with the remaining metallic structures, still limited the speed and accuracy of magnetic-field ramps.
 
-
-There is a lot of metal around the coils which gives origin to eddy currents Eddy currents slow downs the magnetic filed ramp and are originated from closed loops of metal. one of the original solution to counter act these unwanted effect was took long before my time in the experiment, and consisted in cutting one of the breadboard used to hold the optics in experiment like ours. these solution proved to be effective (find a fucking number), but remaining eddy currents from the metal vacuum chamber were still a limiting fact. 
-
-
-A solution developed during the years\,\footnote{This approach started before my time in the experiment and was brought to completion during my Ph.D.}, consisted in inferring the transfer function of the our experimental apparatus,  by driving the coils with a step function to a determined field and measuring the relaxation time of the coils to the target field
+To compensate for these residual effects, we characterized the dynamical response of the magnetic field at the position of the atoms. The response was modeled phenomenologically as a linear time-invariant system, where the input $x(t)$ is a programmed magnetic-field waveform, or equivalently the current command sent to the power supply, and the output $y(t)$ is the magnetic field experienced by the atoms. In this approximation, the two are related by the impulse response $h(t)$ of the apparatus,
 
 \begin{equation}
-	H(s)=\frac{Y(s)}{X(s)}
+	y(t) = (h*x)(t),
+		\label{eq:convolution}
+\end{equation}
+where $*$ denotes convolution. In the Laplace domain this relation becomes
+\begin{equation}
+	Y(s)=H(s)X(s).
+		\label{eq:lamplacedomain}
+\end{equation}
+ The transfer function can therefore be inferred from the measured response to a known input as
+\begin{equation}
+	H(s)=\frac{Y(s)}{X(s)}.
 	\label{eq:transferFunc}
 \end{equation}
 
-and then convoluted the \textit{Laplace} transform of the transfer function with the magnetic field ramp required in order to compensate the field. This approach has been quite successful even if required a lot of programming and find tuning in order to make it work properly.
+In practice, in our experiment we employ two separated sets of coils, as already mentioned in Sec.~\ref{App:MagneticFieldControl}, to produce and control the magnetic field. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
 
 
-example of the function and figure comparing a non compensated ramp (in B field possibly) to a compensated one
 
 
-To calibrate and test magnetic fields in or experiment we typically drive \ac{RF} transitions between Zeeman states in the lowest hyperfine manifold of potassium, in particular, between the stretched ground state $\ket{9/2, -9/2}$ and the first excited state $\ket{9/2, -7/2}$
+\begin{equation}
+	B(t)=B_f+\sum_i A e^{-t/\tau}
+\end{equation}
+
+
+In practice, this procedure was applied separately to the different magnetic-field actuators used in the experiment. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
+
+
+To calibrate and test magnetic fields in or experiment we typically drive \ac{RF} transitions between Zeeman states in the lowest hyperfine manifold of potassium, in particular, between the stretched ground state $\ket{9/2, -9/2}$ and the first excited  Zeeman sublevel $\ket{9/2, -7/2}$
 
 The main tool that we use to calibrate and test our magnetic fields 
 Use of potassium hyperfine transitions to calibrate the magnetic field and measure the response of the system.
@@ -40,7 +51,7 @@ Fundamental to have the digital interface of the power supply to calculate the w
 
 \begin{figure}[htb]
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
-	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution, the balck das. . \label{figTFexamp}}
+	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution, the black dashed represent the target field . 200 mG ramp, example of typical ramp executed in the proximity of the narrow interspecies Feshbach resonance at 7G \label{figTFexamp}}
 \end{figure}
 
 
