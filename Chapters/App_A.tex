@@ -30,15 +30,37 @@ where $*$ denotes convolution. In the Laplace domain this relation becomes
 
 In practice, in our experiment we employ two separated sets of coils, as already mentioned in Sec.~\ref{App:MagneticFieldControl}, to produce and control the magnetic field. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
 
-
-
+The response of each actuator was parametrized independently as a sum of exponential components,
 
 \begin{equation}
 	B(t)=B_f+\sum_i A e^{-t/\tau}
 \end{equation}
 
 
-In practice, this procedure was applied separately to the different magnetic-field actuators used in the experiment. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
+
+\begin{equation}
+	H_j(s)=\frac{\sum_i A_{j,i}\gamma_{j,i}/(s+\gamma_{j,i})}{\sum_i A_{j,i}},
+	\qquad j\in\{\mathrm{off},\mathrm{jump}\}.
+\end{equation}
+
+
+
+
+%In practice, this procedure was applied separately to the different magnetic-field actuators used in the experiment. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
+
+
+For the compensation discussed here, the measured response was well reproduced by a two-timescale model,
+\begin{equation}
+	H(s)=
+	\frac{
+		A_1\gamma_1/(s+\gamma_1)
+		+
+		A_2\gamma_2/(s+\gamma_2)
+	}{
+		A_1+A_2
+	}.
+	\label{eq:eddyTransferFunction}
+\end{equation}
 
 
 To calibrate and test magnetic fields in or experiment we typically drive \ac{RF} transitions between Zeeman states in the lowest hyperfine manifold of potassium, in particular, between the stretched ground state $\ket{9/2, -9/2}$ and the first excited  Zeeman sublevel $\ket{9/2, -7/2}$
