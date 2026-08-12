@@ -22,19 +22,27 @@ where $*$ denotes convolution. In the Laplace domain this relation becomes
 	Y(s)=H(s)X(s).
 		\label{eq:lamplacedomain}
 \end{equation}
- The transfer function can therefore be inferred from the measured response to a known input as
+The transfer function can therefore be inferred from the measured response to a known input as
 \begin{equation}
 	H(s)=\frac{Y(s)}{X(s)}.
 	\label{eq:transferFunc}
 \end{equation}
 
-In practice, in our experiment we employ two separated sets of coils, as already mentioned in Sec.~\ref{App:MagneticFieldControl}, to produce and control the magnetic field. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
+In practice, in our experiment we employ two separated sets of coils, as already mentioned in Sec.~\ref{App:MagneticFieldControl}, to produce and control the magnetic field. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. %The response function extracted in this way should thus be understood as a phenomenological model of a specific coil--power-supply system, including its coupling to the surrounding conductive structures, rather than as a universal response of the apparatus.
+In the experimental sequence, the two coil systems are used for different purposes. The main offset coils generate the large background magnetic field required to approach the region of interest, while the smaller jump coils are used to perform the final, precise tuning of the magnetic field around this offset value. 
 
-The response of each actuator was parametrized independently as a sum of exponential components,
+The response function of both coils is modeled according to the phenomenological model presented here, and in both cases the response is parametrized as a sum of exponential components
 
 \begin{equation}
-	B(t)=B_f+\sum_i A e^{-t/\tau}
+	B(t)=B_{f}+\sum_i A_i e^{-t/\tau_i}+\sum_j A_j e^{-t/\tau_j},
 \end{equation}
+where the index $i,j$ indicate a sum over terms relative to the offset coils and the jump coils, respectively. During the experimental sequence, the offset coils are used before the jump coils. We thus consider the two coils to be independent and characterize them separately.
+
+After setting this field, we typically wait for approximately \SI{100}{ms}, allowing the slow transients associated with the large coils and their power supply to decay.
+
+
+% Since the jump coils operate over a smaller field range and are driven by a different power supply, their dynamical response is characterized separately and is the relevant response for the fast ramps discussed below.
+
 
 
 
