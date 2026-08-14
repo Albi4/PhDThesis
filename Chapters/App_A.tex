@@ -7,12 +7,11 @@ The stability and rapid control of the magnetic field have been crucial for the 
 \section{Eddy Current compensation}
 \label{Sec:EddyCurrents}
 
-Rapid changes of the magnetic field induce eddy currents in the conductive structures surrounding the magnetic-field coils. These currents circulate along closed paths determined by the geometry and conductivity of the apparatus and, according to Lenz's law, generate a magnetic field opposed to the applied variation. As a consequence, the magnetic field experienced by the atoms does not instantaneously follow the programmed current waveform, but instead exhibits delays and possible distortions following fast ramps. This effect is particularly relevant when working close to Feshbach resonances, where small deviations of the magnetic field can lead to sizable changes of the interaction strength, as is the case for the narrow resonances encountered in the Dy-K experiment.
+Rapid changes of the magnetic field induce eddy currents in the conductive structures surrounding the magnetic-field coils. These currents circulate along closed paths determined by the geometry and conductivity of the apparatus and, according to Lenz's law, generate a magnetic field opposed to the applied variation. As a consequence, the magnetic field experienced by the atoms does not instantaneously follow the expected magnetic field, but instead exhibits delays and possible distortions following fast ramps. This effect is particularly relevant when working close to Feshbach resonances, where small deviations of the magnetic field can lead to sizable changes of the interaction strength, especially in the case for narrow resonances like the ones encountered in the Dy-K experiment.
 
-Several conductive elements can contribute to eddy currents in an experiment, including the metallic vacuum chamber, optical breadboards, and nearby mounting structures. In our experiment, a first passive mitigation strategy, implemented before the work described in this thesis, consisted of cutting one of the optical breadboards, near the vacuum chamber, in order to break large conductive loops in the vicinity of the coils. This modification significantly reduced the amplitude of the induced currents, but residual eddy-current effects, associated with the remaining metallic structures, still limited the speed and accuracy of magnetic-field ramps.
+Several conductive elements can contribute to eddy currents in an experiment, including the metallic vacuum chamber, optical breadboards, and nearby mounting structures. In our experiment, a first passive mitigation strategy, implemented before the work described in this thesis, consisted of cutting one of the optical breadboards, in order to break a large conductive loop in the vicinity of the coils. This modification reduced the amplitude of the induced currents, improving the speed of the magnetic field of several tens of ms, but residual eddy-current effects, associated with the remaining metallic structures, still limited the speed and accuracy of magnetic-field ramps.
 
 To compensate for these residual effects, we characterized the dynamical response of the magnetic field at the position of the atoms. The response was modeled phenomenologically as a linear time-invariant system, where the input $x(t)$ is a programmed magnetic-field waveform, or equivalently, the current command sent to the power supply, and the output $y(t)$ is the magnetic field experienced by the atoms. In this approximation, the two are related by the impulse response $h(t)$ of the apparatus,
-
 \begin{equation}
 	y(t) = (h*x)(t),
 		\label{eq:convolution}
@@ -28,10 +27,9 @@ The transfer function can therefore be inferred from the measured response to a 
 	\label{eq:transferFunc}
 \end{equation}
 
-In our experiment, we employ two separate sets of coils, as already mentioned in Sec.~\ref{App:MagneticFieldControl}, to produce and control the magnetic field. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. In the experimental sequence, the two coil systems are used for different purposes. The main offset coils generate the large background magnetic field required to approach the region of interest, while the smaller jump coils are used to perform the final, precise tuning of the magnetic field around this offset value. 
+In our experiment, we employ two separate sets of coils, as already mentioned in Sec.~\ref{App:MagneticFieldControl}, to produce and control the magnetic field. The main offset coils and the faster ``jump'' coils have different inductances, power supplies, geometries, and current ranges, and therefore different effective transfer functions. In the experimental sequence, the two coil systems are used for different purposes. The main offset coils generate the background magnetic field required to approach the region of interest, while the smaller jump coils are used to perform precise tuning of the magnetic field around this offset value. 
 
 The response function of both coil systems is modeled according to the phenomenological model presented here, and in both cases the response is parametrized as a sum of exponential components
-
 \begin{equation}
 	B(t)=B_{f}+\sum_i A_i e^{-t/\tau_i}+\sum_j A_j e^{-t/\tau_j},
 \end{equation}
@@ -44,22 +42,25 @@ To calibrate and test magnetic fields in our experiment we typically drive \ac{R
 	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution for a \SI{175}{mG} ramp., the black dashed represent the target field . 200 mG ramp, example of typical ramp executed in the proximity of the narrow interspecies Feshbach resonance at 7G \label{fig:TFJump_examp}}
 \end{figure}
 
-The characterization of the jump coils is summarized in Fig.~\ref{fig:TFJump_examp}. The blue data points in figure are the magnetic field response of our experimental setup to a step magnetic field ramp of \SI{175}{mG}. The measured response was well reproduced by a two-timescale model, and the transfer function is parametrized as
+The characterization of the jump coils is summarized in Fig.~\ref{fig:TFJump_examp}. The blue data points in figure are the magnetic field response of our experimental setup to a step magnetic field ramp with an amplitude of \SI{175}{mG}. The measured response is well reproduced by a two-timescale model, and the transfer function is parametrized as
 \begin{equation}
 	H(s)=
 	\frac{A_1\gamma_1/(s+\gamma_1)+A_2\gamma_2/(s+\gamma_2)}{A_1+A_2},
 	\label{eq:eddyTransferFunction}
 \end{equation} 
 where $A_i$ are the relative amplitudes of the eddy-current contributions and $\gamma_i=1/\tau_i$ are their decay rates. The normalization ensures $H(0)=1$, so that the transfer function does not change the final magnetic-field value, but only describes the finite settling dynamics.
- For the data shown here, the fitted parameters are
+For the data shown here, the fitted parameters are
 \begin{equation}
-	A_1={0.1}, \qquad \gamma_1=\SI{3.49}{ms^{-1}},
+	A_1={0.1} \quad \gamma_1=\SI{3.49}{ms^{-1}}\quad
+\text{and}\quad
+	A_2={0.025} \quad \gamma_2=\SI{0.5}{ms^{-1}},
 \end{equation}
-and
-\begin{equation}
-	A_2={0.025}, \qquad \gamma_2=\SI{0.5}{ms^{-1}},
-\end{equation}
-corresponding to characteristic decay times $\tau_1\simeq\SI{0.29}{ms}$ and $\tau_2=\SI{2.0}{ms}$. The response function for this set of parameters to a linear ramp in magnetic field, is shown as the red solid line in Fig.~\ref{fig:TFJump_examp}, which reproduces quite well the magnetic field response measured on the atoms. 
+corresponding to characteristic decay times $\tau_1=\SI{0.29}{ms}$ and $\tau_2=\SI{2.0}{ms}$.  
+
+The response function for this set of parameters to a linear ramp in magnetic field, is shown as the red solid line in Fig.~\ref{fig:TFJump_examp}, which reproduces quite well the magnetic field response measured on the atoms. 
+
+
+
 
 In the measurements shown below, the desired magnetic-field waveform was a linear ramp of amplitude $\Delta B$ and duration $T$, followed by a constant hold field. In the Laplace domain, the ideal ramp is given by
 \begin{equation}
@@ -78,6 +79,9 @@ This model was used as a starting point to generate feed-forward corrected wavef
 
 
 
+Figure~\ref{fig:eddyResponseFit} shows the measured magnetic-field response after a rapid change of the programmed field, together with the two-timescale model of Eq.~\eqref{eq:eddyTransferFunction}. The model captures the main relaxation dynamics of the magnetic field and provides the initial estimate used for the feed-forward correction.
+
+The effect of the optimized feed-forward waveform is shown in Fig.~\ref{fig:eddyFeedForward}. Without compensation, the magnetic field initially undershoots the target value and relaxes only over a timescale of several milliseconds. With feed-forward compensation, the measured field reaches the target value already within the earliest measured hold times, with residual deviations of only a few milligauss. The compensation therefore substantially improves the reproducibility and speed of magnetic-field ramps, which is essential for the characterization of narrow features in the Dy--K interaction spectrum.
 
 
 It is worth noting here that in the case of the offset coils, an additional slower component is required, reflecting the larger currents and magnetic-field amplitudes involved.
