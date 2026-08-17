@@ -1,15 +1,14 @@
-\chapter{Magnetic Field control}
+\chapter{Magnetic Field Control}
 \label{app:MagneticField}
 
-The stability and rapid control of the magnetic field have been crucial for the characterization of the interaction properties of the Dy-K mixture. In this appendix, we describe three key improvements made to the experimental setup during my Ph.D.~work. As for many other parts of this thesis, this was not the work of a single person; I therefore acknowledge Elisa Soave and Zhu-Xiong Ye for the contributions made jointly in  Sec.~\ref{Sec:PowerSupply} and \ref{Sec:EddyCurrents} and Yaakov Yudkin for the work done regarding the \ac{FPGA}, which was fundamental to the results reported in Sec.~\ref{Sec:FPGA}.
+The stability and rapid control of the magnetic field have been crucial for the characterization of the interaction properties of the Dy-K mixture. In this appendix, we describe key improvement made to the magnetic field control during my Ph.D.~work. As for many other parts of this thesis, this was not the work of a single person; I therefore acknowledge Elisa Soave and Zhu-Xiong Ye for the contributions made jointly to the compensation of Eddy currents and Yaakov Yudkin for the preparation work done regarding the \ac{FPGA} control.
 
+%\section{Eddy Current compensation}
+%\label{Sec:EddyCurrents}
 
-\section{Eddy Current compensation}
-\label{Sec:EddyCurrents}
+Rapid changes of the magnetic field induce eddy currents in the conductive structures surrounding the magnetic-field coils. These currents circulate along closed paths determined by the geometry and conductivity of the apparatus and, according to Lenz's law, generate a magnetic field opposed to the applied variation. As a consequence, the magnetic field experienced by the atoms does not instantaneously follow the programmed setpoint, but instead exhibits delays and possible distortions following fast ramps. This effect is particularly relevant when working close to Feshbach resonances, where small deviations of the magnetic field can lead to sizable changes of the interaction strength, especially in the case for narrow resonances like the ones encountered in the Dy-K experiment.
 
-Rapid changes of the magnetic field induce eddy currents in the conductive structures surrounding the magnetic-field coils. These currents circulate along closed paths determined by the geometry and conductivity of the apparatus and, according to Lenz's law, generate a magnetic field opposed to the applied variation. As a consequence, the magnetic field experienced by the atoms does not instantaneously follow the expected magnetic field, but instead exhibits delays and possible distortions following fast ramps. This effect is particularly relevant when working close to Feshbach resonances, where small deviations of the magnetic field can lead to sizable changes of the interaction strength, especially in the case for narrow resonances like the ones encountered in the Dy-K experiment.
-
-Several conductive elements can contribute to eddy currents in an experiment, including the metallic vacuum chamber, optical breadboards, and nearby mounting structures. In our experiment, a first passive mitigation strategy, implemented before the work described in this thesis, consisted of cutting one of the optical breadboards, in order to break a large conductive loop in the vicinity of the coils. This modification reduced the amplitude of the induced currents, improving the speed of the magnetic field of several tens of ms, but residual eddy-current effects, associated with the remaining metallic structures, still limited the speed and accuracy of magnetic-field ramps.
+Several conductive elements can contribute to eddy currents in an experiment, including the metallic vacuum chamber, optical breadboards, and nearby mounting structures. In our experiment, a first passive mitigation strategy, implemented before the work described in this thesis, consisted of cutting one of the optical breadboards, in order to break a large conductive loop in the vicinity of the coils. This modification reduced the settling time by several tens of milliseconds, but residual eddy-current effects, associated with the remaining metallic structures, still limited the speed and accuracy of magnetic-field ramps.
 
 To compensate for these residual effects, we characterized the dynamical response of the magnetic field at the position of the atoms. The response was modeled phenomenologically as a linear time-invariant system, where the input $x(t)$ is a programmed magnetic-field waveform, or equivalently, the current command sent to the power supply, and the output $y(t)$ is the magnetic field experienced by the atoms. In this approximation, the two are related by the impulse response $h(t)$ of the apparatus,
 \begin{equation}
@@ -37,12 +36,7 @@ where the indices $i$ and $j$ indicate sums over terms associated with the offse
 
 To calibrate and test magnetic fields in our experiment we typically drive \ac{RF} transitions between Zeeman states in the lowest hyperfine manifold of potassium, in particular, between the stretched ground state $\ket{9/2, -9/2}$ and the first excited  Zeeman sublevel $\ket{9/2, -7/2}$ within the same hyperfine manifold. After applying the magnetic-field ramp under investigation, the atoms are held for a variable time before the \ac{RF} pulse is applied. By scanning the \ac{RF} frequency and determining the resonance center, the magnetic field at the position of the atoms is extracted using the Breit-Rabi formula. This procedure probes the field experienced by the atomic cloud directly.
 
-\begin{figure}[htb]
-	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
-	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution for a \SI{175}{mG} ramp., the black dashed represent the target field . 200 mG ramp, example of typical ramp executed in the proximity of the narrow interspecies Feshbach resonance at 7G \label{fig:TFJump_examp}}
-\end{figure}
-
-The characterization of the jump coils is summarized in Fig.~\ref{fig:TFJump_examp}. The blue data points in figure are the magnetic field response of our experimental setup to a step magnetic field ramp with an amplitude of \SI{175}{mG}. The measured response is well reproduced by a two-timescale model, and the transfer function is parametrized as
+We extract the transfer function of our system by measuring the response of our experimental setup to a step magnetic field ramp, for the case consider in this example we use a jump with an amplitude of \SI{175}{mG}. The measured response is well reproduced by a two-timescale model, and the transfer function is parametrized as
 \begin{equation}
 	H(s)=
 	\frac{A_1\gamma_1/(s+\gamma_1)+A_2\gamma_2/(s+\gamma_2)}{A_1+A_2},
@@ -54,10 +48,17 @@ For the data shown here, the fitted parameters are
 	A_1={0.1} \quad \gamma_1=\SI{3.49}{ms^{-1}}\quad
 \text{and}\quad
 	A_2={0.025} \quad \gamma_2=\SI{0.5}{ms^{-1}},
+	\label{eq:EddySuppParam}
 \end{equation}
-corresponding to characteristic decay times $\tau_1=\SI{0.29}{ms}$ and $\tau_2=\SI{2.0}{ms}$.  
+corresponding to characteristic decay times $\tau_1=\SI{0.29}{ms}$ and $\tau_2=\SI{2.0}{ms}$\, \footnote{It is worth noting here that in the case of the offset coils and for other case of use of the jump coils, like the one reported in Chapter~\ref{Chpt:DipoleandHydro}, an additional slower component is required, reflecting the larger currents, magnetic-field amplitudes  and longer time scales involved.}.  
 
-The response function for this set of parameters to a linear ramp in magnetic field, is shown as the red solid line in Fig.~\ref{fig:TFJump_examp}, which reproduces quite well the magnetic field response measured on the atoms. 
+
+\begin{figure}[thb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/AppA_fig/TransferFunExample.pdf}
+	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution for a \SI{175}{mG} ramp., the black dashed represent the target field . 200 mG ramp, example of typical ramp executed in the proximity of the narrow interspecies Feshbach resonance at 7G. Hold time is measured from the end of the programmed ramp to the RF probe pulse. \label{fig:TFJump_examp}}
+\end{figure}
+
+The compensation of the eddy currents for the jump coils is summarized in Fig.~\ref{fig:TFJump_examp}. The blue data points in figure are the magnetic field response of our experimental setup to a linear magnetic field ramp with an amplitude of \SI{175}{mG}. The response function calculated according  the set of parameters of eq.~\eqref{eq:EddySuppParam} is shown as the red solid line in Fig.~\ref{fig:TFJump_examp}, which reproduces quite well the magnetic field response measured on the atoms. 
 
 
 
@@ -84,7 +85,7 @@ Figure~\ref{fig:eddyResponseFit} shows the measured magnetic-field response afte
 The effect of the optimized feed-forward waveform is shown in Fig.~\ref{fig:eddyFeedForward}. Without compensation, the magnetic field initially undershoots the target value and relaxes only over a timescale of several milliseconds. With feed-forward compensation, the measured field reaches the target value already within the earliest measured hold times, with residual deviations of only a few milligauss. The compensation therefore substantially improves the reproducibility and speed of magnetic-field ramps, which is essential for the characterization of narrow features in the Dy--K interaction spectrum.
 
 
-It is worth noting here that in the case of the offset coils, an additional slower component is required, reflecting the larger currents and magnetic-field amplitudes involved.
+
 
 
 
@@ -105,8 +106,8 @@ Fundamental to have the digital interface of the power supply to calculate the w
 
 
 
-\section{Which power supply is the right power supply?}
-\label{Sec:PowerSupply}
+%\section{Which power supply is the right power supply?}
+%\label{Sec:PowerSupply}
 
 The first important ingredient to produce good and reliable magnetic field is to use a suitable correct power supply to produce clean currents with fast ramps. To control the main coils used to generate the uniform magnetic field, different power supply have been tried in our experiment. The large range of magnetic field investigated required the possibility to produce both large currents and perform small and quick ramps to precisely control interactions.
 
@@ -135,8 +136,8 @@ Other additional problem that a digital power supply allowed us to counteract ar
 
 
 
-\section{A digital PID for fast magnetic field control}
-\label{Sec:FPGA}
+%\section{A digital PID for fast magnetic field control}
+%\label{Sec:FPGA}
 
 
 Final step was to use what learned from having a fast power supply with a digital \ac{PID} in combination with a smaller set of coils in order to perform quick and and precise ramps of few tens to hundreds of \unit{mG} to precisely control interactions. 
