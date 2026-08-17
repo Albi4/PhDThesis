@@ -58,31 +58,26 @@ corresponding to characteristic decay times $\tau_1=\SI{0.29}{ms}$ and $\tau_2=\
 	\caption{Example of magnetic field ramp without (blue) and with the feed forward convolution for a \SI{175}{mG} ramp., the black dashed represent the target field . 200 mG ramp, example of typical ramp executed in the proximity of the narrow interspecies Feshbach resonance at 7G. Hold time is measured from the end of the programmed ramp to the RF probe pulse. \label{fig:TFJump_examp}}
 \end{figure}
 
-The compensation of the eddy currents for the jump coils is summarized in Fig.~\ref{fig:TFJump_examp}. The blue data points in figure are the magnetic field response of our experimental setup to a linear magnetic field ramp with an amplitude of \SI{175}{mG}. The response function calculated according  the set of parameters of eq.~\eqref{eq:EddySuppParam} is shown as the red solid line in Fig.~\ref{fig:TFJump_examp}, which reproduces quite well the magnetic field response measured on the atoms. 
 
-
-
-
-In the measurements shown below, the desired magnetic-field waveform was a linear ramp of amplitude $\Delta B$ and duration $T$, followed by a constant hold field. In the Laplace domain, the ideal ramp is given by
+The compensation of the eddy currents for the jump coils is summarized in Fig.~\ref{fig:TFJump_examp}. The blue data points show the magnetic-field response of the experimental setup to a linear magnetic-field ramp of duration $T=\SI{2}{ms}$ and amplitude $\Delta B=\SI{175}{mG}$, followed by a constant hold field. In the Laplace domain, the ideal target ramp is given by
 \begin{equation}
-	B_{\mathrm{ramp}}(s)
-	=
-	\frac{\Delta B}{T}
-	\frac{1-e^{-Ts}}{s^2}.
+	B_{\mathrm{target}}(s)=\frac{\Delta B}{T}\frac{1-e^{-Ts}}{s^2}.
 	\label{eq:rampLaplace}
 \end{equation}
-The corresponding predicted magnetic-field response is then
+The predicted uncompensated response is then obtained by applying the measured transfer function,
 \begin{equation}
-	B_{\mathrm{pred}}(s)=H(s)B_{\mathrm{ramp}}(s).
+	B_{\mathrm{pred}}(s)=H(s)B_{\mathrm{target}}(s).
 	\label{eq:predictedRamp}
 \end{equation}
+Using the parameters of Eq.~\eqref{eq:EddySuppParam}, this response is shown as the red solid line in Fig.~\ref{fig:TFJump_examp}, which reproduces well the magnetic-field response measured on the atoms.
+
 This model was used as a starting point to generate feed-forward corrected waveforms. Rather than relying on an exact analytical inversion of the transfer function, which would be limited in practice by the finite bandwidth and voltage range of the current supply, the feed-forward waveform was optimized experimentally. The optimization was performed by iteratively modifying the programmed ramp and measuring the resulting magnetic field at the position of the atoms.
 
 
 
 Figure~\ref{fig:eddyResponseFit} shows the measured magnetic-field response after a rapid change of the programmed field, together with the two-timescale model of Eq.~\eqref{eq:eddyTransferFunction}. The model captures the main relaxation dynamics of the magnetic field and provides the initial estimate used for the feed-forward correction.
 
-The effect of the optimized feed-forward waveform is shown in Fig.~\ref{fig:eddyFeedForward}. Without compensation, the magnetic field initially undershoots the target value and relaxes only over a timescale of several milliseconds. With feed-forward compensation, the measured field reaches the target value already within the earliest measured hold times, with residual deviations of only a few milligauss. The compensation therefore substantially improves the reproducibility and speed of magnetic-field ramps, which is essential for the characterization of narrow features in the Dy--K interaction spectrum.
+The effect of the optimized feed-forward waveform is shown in Fig.~\ref{fig:eddyFeedForward}. Without compensation, the magnetic field initially undershoots the target value and relaxes only over a timescale of several milliseconds. With feed-forward compensation, the measured field reaches the target value already within the earliest measured hold times, with residual deviations of only a few \unit{mG}. The compensation therefore substantially improves the reproducibility and speed of magnetic-field ramps, which is essential for the characterization of narrow features in the Dy-K interaction spectrum.
 
 
 
