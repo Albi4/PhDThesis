@@ -58,15 +58,16 @@ I-CC-SF) and a vertical beam, waist of \SI{65}{\micro\meter} (Mephisto MOPA 18 N
 
 To address specific magnetic field strengths in the 7-G region, we employ a set of coils (offset coils) that provide a fixed stable offset, which remains unchanged for the rest of the sequence. These coils were originally designed to produce high magnetic fields of a few hundred gauss \cite{Ravensbergen2020rif} and respond rather slowly to magnetic field changes. Therefore, the magnetic field ramps required for the rest of the sequence are performed employing an additional set of coils ({fast coils}), whose magnetic field adds to the constant field provided by the offset coils. Further details on the way we control the magnetic field during the experimental sequence are reported in App.\,\ref{App:MagneticFieldControl}.
 
-%The offset magnetic field $B_{\mathrm{off}}$ is produced employing a set of coils that are able to generate high magnetic fields and whose PID settings are optimized to perform large magnetic field ramps. The magnetic field produced by the Feshbach coils provides a fix stable offset, which is left unvaried for the rest of the sequence.
-\subsection{Molecule association and Stern-Gerlach purification}\label{SubSec:SGPurification}
-\begin{figure}
+\begin{figure}[t]
 	\centering
 	\includegraphics[%scale=0.4
-	width=0.8\columnwidth
+	width=0.7\columnwidth
 	]{gfx/Pub2_fig/Fig1_SequenceSmallerT_Referee.pdf}
 	\caption{Procedure to prepare a pure sample of Feshbach molecules by magnetic field ramping. (a) Qualitative representation of the steps of the association process and the SG purification in relation to the magnetic field and the energy state of free atoms and molecules. The dashed line refers to the unbound atomic pair below resonance. (b) Qualitative representation of the corresponding ramping scheme for the magnetic field (green) and magnetic field gradient (blue); see main text for details. The dashed line represents the resonance pole position and the dotted line represents the magnetic field gradient that levitates dysprosium. After the transfer of the sample into the 7-G region (T, diamond symbol), the sequence proceeds with four main steps: 1) overlap of the two clouds; 2) magnetic field association of molecules (pink shaded region); 3) SG purification of the sample; 4) transfer to the desired magnetic field. }\label{Fig1:Sequence}
 \end{figure}
+
+\subsection{Molecule association and Stern-Gerlach purification}\label{SubSec:SGPurification}
+
 Figure\,\ref{Fig1:Sequence} schematically illustrates the part of the experimental sequence that takes place in the 7-G region.
 At the end of the transfer into the 7-G region, the two clouds are kept spatially separate for about \SI{50}{\milli\second} to let the field fully stabilize. The experimental sequence then proceeds in four further steps: (1) spatially overlapping the two clouds, (2) magnetic association of molecules, (3) SG purification of the molecular sample, and (4) adiabatic transfer to the desired target field and preparation for final experiments. The molecular state adiabatically follows the changes in magnetic field. In order to account for the changes in the molecular magnetic moment, the magnetic field ramps performed in the steps (1) to (4) are accompanied by corresponding magnetic field gradient ramps, this ensures that the molecular sample experiences the same magnetic force.
 
@@ -76,7 +77,8 @@ Stage (1): We apply a 12-ms ramp of the magnetic field gradient from its initial
 Half-way during the ramp, the magnetic field is decreased within \SI{1}{\milli\second} to \SI{7.325}{ G}, about \SI{+50}{\milli G} above the resonance center. 
 
 Stage (2): By magnetic field association \cite{Koehler2006poc, Chin2010fri} we create about \SI{6e3}{} DyK molecules, corresponding to almost 30\%  conversion efficiency. We found the optimal ramp speed to be $\dot{B}=\SI{0.43}{ G/\milli\second}$, which is in the range of typical experiments using Feshbach resonances of similar widths \cite{Chin2010fri}. The 0.4-ms ramp ends at a magnetic detuning of about \SI{-120}{\milli G}, which corresponds to a molecular binding energy of $h\times$\SI{220}{\kilo\hertz}. We identify such a magnetic field as optimal for the purification of the molecular sample in the subsequent stage (3). The second half of the magnetic field sweep are accompanied by an increase of the magnetic field gradient from the magic levitation value to the one required to balance the gravitational force on the molecules at this detuning. For the sake of notation simplicity, we introduce the {molecular levitation gradient} ${B'}_{\textrm{mol}}=m_{\mathrm{mol}}g/\mu_{\mathrm{mol}}$, where $m_{\mathrm{mol}}$ is the molecular mass, $g$ is the gravitational acceleration and $\mu_{\mathrm{mol}}$ is the molecular magnetic moment. Note that $\mu_{\textrm mol}$ and thus ${B'}_{\textrm{mol}}$ are $B$-dependent quantities. At the end of the magnetic field sweep, the sample consists of a three-component mixture made of DyK molecules and unbound Dy and K atoms.
-\begin{figure}[h]
+
+\begin{figure}[htb]
 	\centering
 	\includegraphics[%scale=0.4
 	width=0.8\columnwidth
@@ -90,9 +92,10 @@ After \SI{4}{\milli\second} the atomic clouds are far enough from the ODT that t
 Stage (4): The magnetic field strength $B$ is finally ramped to its target value within typically 0.5 ms, and the magnetic field gradient is varied accordingly to follow $B'_{\textrm{mol}}$. The trapping conditions (trap frequencies, depth, geometry) are modified depending on the specific measurement we want to perform with the pure sample of DyK Feshbach molecules in the last stage of the experimental cycle. 
 
 At the end of the sequence, the ODT is switched off. The molecular cloud is let to expand keeping the magnetic field and magnetic field gradient fixed. One ms before the imaging pulse, the magnetic field is ramped to positive detunings of the resonance and the molecules are dissociated. The main information about the molecules is obtained from the absorption picture of the dissociated potassium component of the molecular cloud. We can also image the molecules without dissociating them, while keeping the magnetic field fixed. This possibility has the advantage of not altering the expansion of the molecules in time of flight, but the efficiency of the absorption imaging depends on the magnetic field detuning as for more deeply bounded molecular state (large negative $B$ field detunings) only a fraction of the total molecule number can be imaged.
-%The magnetic field ramps required for the four last steps of the sequence are performed by means of an additional, fast pair of coils (\textit{fast coils}), whose magnetic field superposes to the offset provided by the \textit{Feshbach coils}. The \textit{fast coils} can handle a maximum of about \SI{10}{\ampere}, corresponding to about \SI{3}{ G}. The current flow is regulated with a MOSFET whose gate voltage is controlled digitally via a field programmable gate array (FPGA). Following the work reported in Ref. \cite{Thomas2020ADF}, the FPGA is programmed to calibrate the feedback loop and to accordingly schedule the PID parameters during the current ramp. The goodness of the digital PID controller and the low conversion factor current to field are such that the \textit{fast coils} do not introduce extra magnetic field noise in the system. 
+ 
 \subsection{Temperature and phase-space density}\label{SubSec:TemperatureAndPSD}
-\begin{figure}
+
+\begin{figure}[htb]
 	\centering
 	\includegraphics[%scale=0.4
 	width=0.9\columnwidth
@@ -100,18 +103,18 @@ At the end of the sequence, the ODT is switched off. The molecular cloud is let 
 	\caption{Vertical and horizontal size of the molecular cloud as a function of the time of flight $t_{\textrm TOF}$. The sample is let expand at $B=\SI{7.22}{ G}$, upon switching off the magnetic levitation together with the ODT. A fit to the data, assuming a ballistic expansion, yields a vertical and horizontal temperature of \SI{77(6)}{} and \SI{45(3)}{\nano\kelvin}, respectively.
 	}\label{Fig3:Temperature}
 \end{figure}
+
 The experimental scheme described above provides us with a pure molecular sample of about $N_{\textrm{mol}}=\SI{5e3}{}$ molecules, at a temperature of few tens of \SI{}{\nano\kelvin}. We derive the temperature of the molecular cloud from a time-of-flight expansion (Fig.\,\ref{Fig3:Temperature} \footnote{See the \link{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033117}{Supplemental Material} for the data files of all figures}). In this specific set of experiments, the molecules are not dissociated to avoid extra energy from the dissociation, but imaged directly \cite{Duerr2004dou}.  A fit to the data reported in Fig.~\ref{Fig3:Temperature} yields a horizontal and a vertical temperature of \SI{45(3)}{\nano\kelvin} and \SI{77(6)}{\nano\kelvin}, respectively. We attribute the difference in these results to additional excitations caused by the rapid changes of vertical magnetic forces during the ramping process. We indeed observe uncontrolled vertical collective oscillations affecting the expansion, which can result in increased temperatures if measured vertically. The horizontal behavior is free of such effects and the expansion can be fully attributed to the temperature of the sample.
 
-We are able to directly measure the trap frequencies of the molecules by observing the center of mass oscillations. Assuming typical trapping conditions ($\bar{\omega}=2\pi\times\SI{28}{\hertz}$), we calculate a phase-space density $\mathrm{PSD}=N_{\mathrm{mol}}(\hbar\bar{\omega}/k_BT_{\mathrm{mol}})^3\approx0.14$, about one order of magnitude away from degeneracy. The conditions near quantum degeneracy represent an excellent starting point for further experiments. Comparable values of the PSD have been reached recently in a system of NaCs Bose-Bose Feshbach molecules \cite{Lam2022hps}. While BEC has not yet been reached with bosonic heteronuclear Feshbach samples, quantum degenracy has been obtained in fermionic heteronuclear systems of KRb\cite{Demarco2019adf} and NaK \cite{Duda2023tfa}.
-%\\\textcolor{red}{Shall I make a comment about our main limitations (low transfer efficiency and heating mechanism in the transfer to the high field region)?} 
-
-%\alberto{Maybe? Like now we are seeing better numbers with 1550nm so we could also attribute the low efficiency to the 1064, and put this kind of comment on limitations in the final part/outlook?}
+We are able to directly measure the trap frequencies of the molecules by observing the center of mass oscillations. Assuming typical trapping conditions ($\bar{\omega}=2\pi\times\SI{28}{\hertz}$), we calculate a phase-space density $\mathrm{PSD}=N_{\mathrm{mol}}(\hbar\bar{\omega}/k_BT_{\mathrm{mol}})^3\approx0.14$, about one order of magnitude away from degeneracy. The conditions near quantum degeneracy represent an excellent starting point for further experiments. Comparable values of the PSD have been reached recently in a system of NaCs Bose-Bose Feshbach molecules \cite{Lam2022hps}. While BEC has not yet been reached with bosonic heteronuclear Feshbach samples, quantum degenracy has been obtained in fermionic heteronuclear systems of KRb \cite{Demarco2019adf} and NaK \cite{Duda2023tfa}.
 
 \section{Binding energy, magnetic moment, and resonance parameters}
 \label{Sec:ResonanceParameter}
+
 In this section, we provide a further characterization of the Feshbach resonance near \SI{7}{ G}, already introduced in our previous work \cite{Ye2022ool}. We first, in Sec.\,\ref{SubSec:BasicDefinition}, introduce the definitions of the relevant parameters and some basic relations. We then, in Secs.\,\ref{SubSec:BindingEnergyMeas} and \ref{SubSec:MagnMomentSpect}, report on two independent sets of experiments, based on measurements of the magnetic-field dependent molecular binding energy and the magnetic moment, which further confirm and refine the values of the key parameters describing the resonance. In Sec.\,\ref{SubSec:FBParametersDiscussion}, we summarize our results. 
 
 \subsection{Basic definitions and relations}\label{SubSec:BasicDefinition}
+
 Close to the center of a single isolated $s$-wave Feshbach resonance, the scattering length $a$ is large and can be approximated by
 \begin{equation}
 	a= - \frac{A}{\delta B} a_0 ,
@@ -135,7 +138,8 @@ The differential magnetic moment of the molecules is related to the binding ener
 In the following two subsections, we report on measurements of the magnetic-field dependence of the molecular binding energy and the differential magnetic moment. 
 %Those two sets of experiments lead to refined values for $A$ and $\delta\mu$ which are in agreement with our previous results, and, with improved magnetic-field control, provide us with a few mG corrected value for $B_0$. 
 \subsection{Binding energy spectroscopy}\label{SubSec:BindingEnergyMeas}
-\begin{figure}
+
+\begin{figure}[htb]
 	\centering
 	\includegraphics[%scale=0.4
 	width=0.9\columnwidth
@@ -144,6 +148,7 @@ In the following two subsections, we report on measurements of the magnetic-fiel
 		Molecular state energy as a function of the magnetic field, measured via modulation of the magnetic field (wiggle spectroscopy). The experimental data have been corrected by the small thermal shift of $\sim\SI{5}{\kilo\hertz}$. Uncertainties are smaller than the symbol size. The solid line is a fit to the data according to Eq.\,(\ref{Eq:BindingEnergy}). The dashed line indicates the position of the resonance pole.
 	}\label{Fig4:Wiggle}
 \end{figure}
+
 A common method to determine the resonance parameters is based on measuring the molecular binding energy as a function of the magnetic field by magnetic-field (wiggle) modulation spectroscopy \cite{Thompson2005UMP, Donley2002amc, Claussen2003vhp}.
 
 The mixture is prepared at low magnetic-field strength and transferred in the 7-G region, as described in Sec.\,\ref{SubSec:PrepMixture}. By means of the fast coils, the field is then quickly ramped to the target field below the resonance center. We finally superpose the two clouds, ramping the magnetic field gradient to reach magic levitation conditions. At this point, our sample consists  of {$N_{\mathrm{K}}=\SI{1.5e4}{}$} atoms of potassium and {$N_{\mathrm{Dy}}=\SI{7e4}{}$} atoms of dysprosium at a temperature of about \SI{160}{\nano\kelvin} (for this measurement we do not perform full evaporation).
@@ -156,7 +161,8 @@ As for all the other measurements reported in this article, the magnetic field i
 {Ye2022ool}.
 
 \subsection{Magnetic moment spectroscopy}\label{SubSec:MagnMomentSpect}
-\begin{figure}
+
+\begin{figure}[htb]
 	\centering
 	\includegraphics[%scale=0.4
 	width=0.9\columnwidth
@@ -164,6 +170,7 @@ As for all the other measurements reported in this article, the magnetic field i
 	\caption{Differential magnetic moment of the molecules as a function of the magnetic field. The magnetic moment is measured by determining the perfect magnetic field gradient that balances the gravitational force at the given magnetic field. The solid line is a fit to the data according to Eq.\,(\ref{Eq:MagneticMoment}). The dashed line indicates the position of the resonance pole.
 	}\label{Fig5:MagneticMoment}
 \end{figure}
+
 Applying an alternative method, we determine the resonance parameters by magnetic moment spectroscopy \cite{Herbig2003poa, Mark2007sou}. 
 The molecules are prepared as described in Sec.\,\ref{Sec:PreparationSection}. After the SG purification phase, we ramp the magnetic field to the target field. The magnetic field gradient is ramped accordingly to always allow the molecules to stay in the trap. At the target field we hold the molecules for \SI{4}{\milli\second} and then switch off the ODT. Both the magnetic field and the magnetic field gradient remain unchanged. We observe the vertical position of the molecular cloud during the expansion and determine the magnetic field gradient that perfectly compensates the gravitational force. The magnetic field gradient is calibrated performing corresponding measurements on Dy alone, the magnetic moment of which is well known ($\mu_{\mathrm{Dy}}=10\mu_B$, where $\mu_B$ is the Bohr magneton). 
 In Fig.\,\ref{Fig5:MagneticMoment} we plot the differential molecular magnetic moment $\delta\mu_{\mathrm{mol}}$ as a function of the magnetic field strength, the magnetic moment $\mu_{\mathrm{K}}$ of potassium being $1\mu_B$. We fit the experimental data with Eq.\,(\ref{Eq:MagneticMoment}).
@@ -176,9 +183,8 @@ We point out that magnetic moment spectroscopy is a practical and powerful tool.
 We note that magnetic moment spectroscopy offers a great practical advantage. Knowing the resonance parameters $\delta B^*$ and $\delta\mu$, a single measurement of the magnetic gradient that balances gravity directly provides the magnetic detuning $\delta B$ and thus also the scattering length close to resonance.
 
 
-
-%Furthermore, from the practical point of view, it has the great advantage to offer a fast and precise way to calibrate the magnetic field detuning by direct measurement of $\tilde{B}'$.
 \subsection{Summary of the $7$-G resonance parameters}\label{SubSec:FBParametersDiscussion}
+
 \begin{table}[b]
 %	\begin{ruledtabular}
 		\caption{\label{Table:FBParameter} Summary of the parameter values determined for the 7-G Feshbach resonance.}
@@ -199,22 +205,19 @@ We note that magnetic moment spectroscopy offers a great practical advantage. Kn
 		\end{tabular}
 %	\end{ruledtabular}
 \end{table}
-The values of the Feshbach resonance parameters $\delta B^*, \delta\mu$ and $B_0$ obtained from the binding energy spectroscopy and the magnetic moment spectroscopy are reported in Table \ref{Table:FBParameter}. The two methods give consistent results. We also present combined values for the three parameters, which represent our best knowledge.%are in agreement with the results from our previous work \cite{Ye2022OOL}. 
+
+The values of the Feshbach resonance parameters $\delta B^*, \delta\mu$ and $B_0$ obtained from the binding energy spectroscopy and the magnetic moment spectroscopy are reported in Table \ref{Table:FBParameter}. The two methods give consistent results. We also present combined values for the three parameters, which represent our best knowledge.
 
 
 The resonance center position derived in the present work is \SI{20}{\milli G} lower than the value of $B_0=7.295(1)$ \SI{}{ G} reported in our previous work \cite{Ye2022ool}.
 We attribute the discrepancy between the two values to small uncontrolled magnetic field deviations affecting the previous measurements. The experiments reported in the present work have been conducted under improved magnetic field control. In particular, the combination of the fast coils and the digital proportional-integral-derivative (PID) controller leads to a faster stabilization of the magnetic field around the desired set point, minimizing uncontrolled departures of the magnetic field from the target value. Our present results for the parameter values of $\delta B^*$ and $\delta\mu$ are consistent with the previous results within one and two standard errors, respectively.
 
-%Our newest results lead also to small correction to the values of the original values $B^*=9.1(8)$ \SI{}{\milli G} and $\delta\mu/\mu_B=2.71(3)$. Both results are consistent with the new ones within statistical uncertainties, within one and two sigma respectively.
 
 For the two parameters $R^*$ and $A$, which can be calculated from $\delta B^*$ and $\delta\mu$, we obtain the updated values $R^* = 604(20) a_0$ and $A = 24.0(6)$ G.
 
-%Previous work \cite{Ye2022OOL}  9.1(8)  2.71(3)
-
-%Our new results lead to an updated values of $R*=604(20)\,a_0$ and $A = 24.0(6) G$. %The crossover into the universal regime occurs at a magnetic field detuning of \SI{39.8}{\milli G}.
-%The updated value of the range parameter is $R^*=\hbar^2/(2m_ra_0\delta\mu A)=604(20)a_0$ ($a_0$ is the Bohr radius). The universality condition $a\gg R^*$ is recovered for magnetic field detunings $|\delta B|\lesssim \SI{40}{\milli G}$.
 \section{Magnetic antitrapping in levitation field}\label{Sec:Antitrapping}
-\begin{figure}
+
+\begin{figure}[htb]
 	\centering
 	\includegraphics[%scale=0.4
 	width=0.9\columnwidth
@@ -222,14 +225,13 @@ For the two parameters $R^*$ and $A$, which can be calculated from $\delta B^*$ 
 	\caption{%Vertical deformation of the molecular cloud due to the magnetic antitrapping force arising in the presence of a levitating magnetic field gradient.The blue circle are the 
 		Measured vertical size of the levitated molecular cloud after {\SI{20}{\milli\second}} expansion as a function of the magnetic field. The error bars show the sample standard deviation of four individual measurements at the same magnetic field. The solid line is a fit to the data at the large detunings (filled circles) according to Eq.\,(\ref{Eq:VerticalDeformationTOF}).
 		The inset shows the antitrapping frequency $\alpha/2\pi$ calculated according to Eq.\,(\ref{Eq:AntitrapFreq}). For both plots the dashed line indicates the position of the pole of the resonance.}\label{Fig6:StretchingEffect}
-	%The curvature of the molecular energy results in an antitrapping force in the presence of a magnetic field gradient: the inset shows the frequency $\alpha/2\pi$, calculated assuming a varying magnetic field gradient balancing the gravitational force at every magnetic field value. 
-	%The molecular sample is prepared at the desired magnetic field and then let expand in the presence of the levitating magnetic field gradient. The size of the cloud is measured after $t_{TOF}=\textcolor{red}{\SI{14}{\milli\second}}$.} 
 	\end{figure}
-	The magnetic field dependence of the molecular magnetic moment translates, in the presence of a magnetic field gradient, into a position-dependent force. For perfect levitation with a constant magnetic gradient along the vertical axis, this force balances gravity in the trap center, while it pushes up the molecules above the center and pulls down the ones below the center.
-	In first order of the vertical position $z$ with respect to the trap center, this anti-trapping force can be expressed as
-	\begin{equation}
-F(z) = (\partial_z \mu_{\textrm mol})
-(\partial_z B) \, z \, ,
+	
+The magnetic field dependence of the molecular magnetic moment translates, in the presence of a magnetic field gradient, into a position-dependent force. For perfect levitation with a constant magnetic gradient along the vertical axis, this force balances gravity in the trap center, while it pushes up the molecules above the center and pulls down the ones below the center.
+In first order of the vertical position $z$ with respect to the trap center, this anti-trapping force can be expressed as
+\begin{equation}
+	F(z) = (\partial_z \mu_{\textrm mol})
+	(\partial_z B) \, z \, ,
 \end{equation}
 where $\mu_{\textrm mol} = \mu_{\textrm Dy} + \mu_{\textrm K} - \delta \mu_{\textrm mol}$ is the total molecular magnetic moment.
 With $\partial_z \mu_{\textrm mol} =  (\partial_B \mu_{\textrm mol}) (\partial_z B)$ and
@@ -246,17 +248,9 @@ we now define the ``anti-trapping frequency''
 \end{equation}
 where $m_{\textrm mol} = m_{\textrm Dy} + m_{\textrm K}$ is the molecular mass.
 Combining with Eq.\,\ref{Eq:BindingEnergy}) and applying some straightforward algebra, we finally obtain
-% \begin{equation}\label{Eq:AntitrapFreq}
-%     \alpha 
-% = 
-% \frac{\hbar}{\bar{m} a_0 A}
-% \frac{\partial_z B}{ \left( 1-4 \delta B / \delta B^* \right)^{3/4}} \, ,
-% \end{equation}
-
 \begin{equation}\label{Eq:AntitrapFreq}
 \alpha=\sqrt{\frac{\delta\mu}{2m_{\textrm mol}\delta B^*}}\frac{\partial_zB}{\left(1-\frac{\delta B}{\delta B^*}\right)^{3/4}}.
 \end{equation}
-%where $\bar{m} = \sqrt{m_r m_{\textrm mol}} =\sqrt{m_{\textrm Dy} m_{\textrm K}}$ denotes the geometrically averaged mass.
 In the resonance limit $\delta B \rightarrow 0$, where the levitation gradient takes the value $\partial_z B = m_{\textrm mol} g / (\mu_{\textrm Dy} + \mu_{\textrm K}$) = 3.21\,G/cm, the anti-trapping frequency approaches its maximum $\alpha_{\textrm max} = g \sqrt{\delta \mu\,m_{\textrm mol} / (2 \delta B^*)} \, /(\mu_{\textrm Dy}+\mu_{\textrm K}) = 2\pi \times \SI{31.8(8)}{\hertz}$. The calculated anti-trapping frequency is shown in the inset of Fig.\,\ref{Fig6:StretchingEffect}: The closer to resonance, the stronger is the antitrapping force. At detunings larger than about \SI{50}{\milli G}, $\alpha$ decreases to few \SI{}{\hertz}, with negligible effects both on the expansion dynamics and the trapping potential.
 
 The magnetic anti-trapping effect can have considerable impact on molecules in the ODT. The vertical trap frequency is reduced from its bare value $\omega_z$ to an effective value $\sqrt{\omega^2_z - \alpha^2}$. Moreover, with the harmonic anti-trap competing with the Gaussian potential of the ODT, the overall depth of the trapping potential can be substantially reduced.
@@ -267,24 +261,26 @@ When the ODT is switched off, the antitrapping force modifies the ballistic expa
 where $T$ is the temperature of the sample and $t_{\mathrm{TOF}}$ the expansion time.
 
 The stretching effect is shown in Fig.\,\ref{Fig6:StretchingEffect}, where the vertical rms size of the molecular cloud after $t_{\textrm TOF}=$ \SI{20}{\milli\second} of free expansion is plotted as a function of the magnetic field. 
-%For this measurement, we measure the vertical trap frequency to be \textcolor{red}{$\omega_z=2\pi\times\SI{35}{\hertz}$}. 
 The closer to the resonance pole, the more pronounced is the cloud elongation. For a magnetic field detuning larger than about \SI{50}{\milli G}, the effect becomes less relevant and $\sigma_z$ approaches the ballistic-expansion value of about \SI{20}{\micro\meter}. Restricting our attention to the large detuning region, $|\delta B|>$\,\SI{50}{\milli  G}, we fit the data based on Eq.\,(\ref{Eq:VerticalDeformationTOF}) with $T$ being the only free parameter. The resulting value of $T=\SI{27(5)}{\nano\kelvin}$ is somewhat lower than what was obtained from other time of flight measurements. We attribute this discrepancy to a measurement artefact: The cloud was held in the ODT for a time interval that accidentally coincided with a minimum velocity spread during a breathing mode oscillation.
 Overall, the observed vertical stretching effect follows Eq.\,(\ref{Eq:VerticalDeformationTOF}) well, which confirms our model of an anti-trapping effect described by the frequency $\alpha$ according to Eq.\,(\ref{Eq:AntitrapFreq}); see also inset in Fig.\,\ref{Fig6:StretchingEffect}. Close to resonance the anti-trapping effect can substantially modify the free expansion. Only at larger magnetic field detuning ($|\delta B|\gg \delta B^*$) the effect becomes negligible.
 
-%The antitrapping frequency $\alpha$ (inset of Fig.\,\ref{Fig6:StretchingEffect}) features a trend qualitatively similar to the vertical rms size of the cloud: The closer to resonance, the stronger is the antitrapping force. At detunings larger than about \SI{50}{\milli G} $\alpha$ decreases to few Hz, with negligible effects both on the expansion dynamics and the trapping potential.
-%\textcolor{red}{Discussion about the discrepancy with the measured temperature of about 40 nK?}
 \section{Lifetime}\label{Sec:Lifetime}
-\begin{figure}
+
+\begin{figure}[htb]
 \centering
+\makebox[\textwidth][c]{%
+	\hspace*{-1cm}
 \includegraphics[%scale=0.4
 width=1.2\columnwidth
 ]{gfx/Pub2_fig/Fig7And9Comb_ExamplesCombinedIPG0p06Vert0p03WithInverseResidualV6.pdf}
+}
 \caption{Decay of the pure trapped molecular sample. Typical decay curves are shown in panel (a) and (b); note the different time scales. The lifetimes have been measured in an ODT with trap frequency $\bar{\omega}\approx2\pi\times\SI{20}{\hertz}$, at a magnetic detuning of \SI{-27}{\milli G} (a) and \SI{-380}{\milli G} (b). From an exponential fit to the data (solid lines) we derive decay times of \SI{23.1(6)}{} and \SI{11.6(3)}{\milli\second}, respectively. In panel (c) we report decay times measured under the same experimental conditions, as function of the magnetic field strength. The solid line represents the result of a one-parameter fit (see text) to the data at large detunings ($|\delta B|>\SI{30}{\milli G}$, filled circles). The dashed line indicates the position of the pole of the resonance.
 }\label{Fig7:Lifetime} 
 \end{figure}
+
 The stability of the molecular cloud against losses is of primary importance for many future experiments with our system. The fact that we work with a pure sample of molecules already eliminates collisions with free atoms as possible sources of losses. Inelastic collisions between the dimers and processes induced by the trap light thus remain as possible sources. In this section, we study the decay of the optically trapped dimer sample. We measure lifetimes up to 20\,ms, and we identify trap-light induced losses as the dominant decay mechanism.
 
-The molecular sample is prepared as described in Sec.\,\ref{Sec:PreparationSection}. At the end of the purification phase, the cloud is transferred to the target field and the magnetic gradient is ramped accordingly. The molecules are held in the ODT for a variable time, after which they are released and let expand in time of flight. The molecules are dissociated \SI{1}{\milli\second} before the imaging pulse. %Information on the molecular cloud are retrieved from the absorption image of the dissociated potassium component.
+The molecular sample is prepared as described in Sec.\,\ref{Sec:PreparationSection}. At the end of the purification phase, the cloud is transferred to the target field and the magnetic gradient is ramped accordingly. The molecules are held in the ODT for a variable time, after which they are released and let expand in time of flight. The molecules are dissociated \SI{1}{\milli\second} before the imaging pulse. 
 Typical decay curves can be observed in Fig.\,\ref{Fig7:Lifetime}(a) and (b), measured in a rather shallow trap ($\bar{\omega}\approx 2\pi\times\SI{20}{\hertz}$) at $B=\SI{7.248}{}$ and \SI{6.895}{ G}, respectively. 
 The decay follows a simple exponential behavior, suggesting that the limiting loss process is a one-body mechanism. As the only plausible explanation, we assume that the infrared light of the ODT induces transitions into electronically excited molecular states \cite{Partridge2005mpo}. 
 
@@ -292,28 +288,17 @@ The magnetic field detuning clearly has an impact on the lifetime of the sample:
 We systematically investigate the dependence of the lifetime on the magnetic field. The decay times $\tau$ reported in Fig.\,\ref{Fig7:Lifetime}(c) are derived from exponential fits to the corresponding lifetime curves. All curves have been recorded under essentially the same trapping conditions as for Figs.\,\ref{Fig7:Lifetime}(a) and (b), with an initial molecular number varying between 5 and \SI{6e3}{}.
 At large detunings the sample features a relatively fast decay, with $\tau\approx\SI{12}{\milli\second}$. The lifetime of the sample rapidly increases when approaching the pole of the resonance, reaching decay times up to $\tau=\SI{23}{\milli\second}$ for a magnetic field detuning of about \SI{30}{\milli G}.
 
-To explain the behavior we assume that the closed-channel fraction of the Feshbach molecules is responsible for the losses \cite{Partridge2005mpo}. The optical excitation presumably couples the closed channel to some unknown electronically excited molecular states.     
-%In this range of magnetic field ($|\delta B|>\SI{30}{\milli G}$), the behavior of $\tau$ qualitatively resembles the one of the inverse of the closed channel fraction, $1/Z(B)$. 
-%This analogy further sustains the hypothesis that the mechanism underlying the losses implies the promotion of a molecule from its ground state to an excited one. Indeed, the photoexcitation rate $1/\tau$ is expected to be \cite{Partridge2005MPO}:
-%\begin{equation}\label{EqPhotoexcitationRate}
-%	1/\tau=Z\Omega^2/\gamma.
-%\end{equation}
-%The on-resonance Rabi frequency $\Omega$ and the linewidth of the molecular excited state $\gamma$ are so far unknown to us: The solid line in Fig.\,\ref{Fig7:Lifetime}(c) has been obtained rescaling $1/Z$ by a factor $\approx0.1$ to match the data. 
+To explain the behavior we assume that the closed-channel fraction of the Feshbach molecules is responsible for the losses \cite{Partridge2005mpo}. The optical excitation presumably couples the closed channel to some unknown electronically excited molecular states.  
 We therefore model the lifetime by
 \begin{equation}\label{Eq:TauMolecules}
 \tau(B) = \tau_{\textrm closed}/Z(B),
 \end{equation}
-where $Z$ is the closed-channel fraction according to Eq.\,(\ref{Eq:ClosedChannelFraction}) and $\tau_{\textrm closed}$ is the lifetime of the closed-channel molecule. In Fig.\,\ref{Fig7:Lifetime}(c) we show the corresponding behavior of $\tau(B)$ calculated with the resonance parameters as determined before and obtaining $\tau_{\textrm closed} = \SI{10.1 (4)}{\milli\second}$ from a single free parameter fit to the data for     $|\delta B|>\SI{30}{\milli G}$. %The simple theoretical model captures the observed behavior remarkably well up to a magnetic detuning of about \SI{30}{\milli G}.
-
-
-%We fit Eq.\,(\ref{Eq:TauMolecules}) to the data, with $\tau_{\textrm closed}$ as the only free parameters. Considering only the data for $|\delta B|>\SI{30}{\milli G}$, we obtain $\tau_{\textrm closed}=\SI{10.1(4)}{\milli\second}$.
+where $Z$ is the closed-channel fraction according to Eq.\,(\ref{Eq:ClosedChannelFraction}) and $\tau_{\textrm closed}$ is the lifetime of the closed-channel molecule. In Fig.\,\ref{Fig7:Lifetime}(c) we show the corresponding behavior of $\tau(B)$ calculated with the resonance parameters as determined before and obtaining $\tau_{\textrm closed} = \SI{10.1 (4)}{\milli\second}$ from a single free parameter fit to the data for     $|\delta B|>\SI{30}{\milli G}$. 
 
 For $|\delta B|\lesssim \SI{30}{\milli G}$, the observed lifetime changes dramatically, with $\tau$ rapidly decreasing while approaching the resonance pole.
 This different behavior can be understood in terms of the anti-trapping mechanism introduced in Sec.\,\ref{Sec:Antitrapping}, which, close to to resonance pole, becomes sufficiently strong to effectively pull the molecules out of the weak ODT, thus reducing the lifetime of the sample.
 
-%The curvature of the energy curve results in an antitrapping force, effectively pulling the molecules out of the weak ODT and thus reducing the lifetime of the sample. 
-%The closer to the resonance pole, the stronger becomes this force, up to the point it dominates over the restoring force resulting from the dipole trap. When this happens, the molecules spill out of the trap and the sample undergoes a fast decay.
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \includegraphics[%scale=0.4
 width=0.8\columnwidth
@@ -329,7 +314,6 @@ Following basically the same protocols, we have also carried out measurements on
 
 Light-induced one-body losses of optically trapped Feshbach molecules have been observed in Ref.\,\cite{Chotia2012lld}. Here single KRb molecule were trapped in individual sites of an optical lattice, which shielded them and thus suppressed collisional losses. The dependence of decay times on the closed-channel fraction was also studied with similar findings as in our experiment. Trap-light-induced losses were also investigated as possible limitations to experiments with single Feshbach molecules of NaCs or RbCs in optical tweezers \cite{Zhang2020fas, , Spence2023asr}. Decay measurements on samples of optically trapped pure Feshbach molecules of RbCs \cite{Koeppinger2014poo}, very similar to our experiments, also showed an exponential loss behavior, which we interpret as a result of dominant one-body losses. Such trap-light induced losses seem to be rather the rule than the exception, although they have not received much attention so far.
 
-%We are aware of similar studies carried on on single etheronuclear molecules held in optical tweezers: Also in this case, the observations point to a one-body loss mechanism induced by the trapping light \cite{Cornish2023PrivateCommunication}.
 
 
 \section{Conclusions and outlook}
@@ -344,9 +328,8 @@ Lifetime studies have revealed a one-body mechanism induced by the trap light as
 Reaching quantum degeneracy with the molecular sample and thus the observation of a BEC of heteronuclear Feshbach molecules will presumably require a final stage of evaporative cooling. Under the current conditions, however, it can be estimated the a molecule only undergoes roughly one elastic collision in the limited lifetime of the sample. Overcoming this limitation demands both a substantial improvement of the lifetimes (by optimizing the trap wavelength) and an increase in the elastic collision rate. The latter can be achieved by working at small magnetic detunings very close to the resonance center. Deep in the universal regime, the molecular $s$-wave scattering length is predicted to follow the atomic scattering length, $a_{\textrm mol} \approx 0.77\,a$ \cite{Petrov2005dmi}, and will thus also be resonantly enhanced. Moreover, the increasing Pauli blocking of inelastic collisions near resonance \cite{Petrov2004wbd, Petrov2005dmi} will strongly suppress collisional losses, which is a well-established effect in spin-mixtures of fermions \cite{Varenna2006book} and has also been observed in a heteronuclear K-Li Fermi-Fermi mixture \cite{Jag2016lof}. The magnetic antitrapping effect that is caused by the levitation field may be overcome by, e.g., using a standing-wave trap that provides tight vertical confinement. Taking advantage of all these potential improvements, we are confident that a sufficiently high ratio of elastic vs. inelastic molecule-molecule collisions can be reached to implement efficient evaporative cooling towards quantum degeneracy.
 
 
-
-%\appendix
 \section{Appendix A: Magnetic field control}\label{App:MagneticFieldControl}
+
 Precise magnetic field control is crucial for an efficient production of the molecular sample, as well as for the precise determination of the Feshbach resonance parameters. In this regard, we put a lot of efforts into the implementation of an effective magnetic-field ramping protocol, as well as into the development of a precise current actuator for the coils that produce the magnetic field. The Feshbach magnetic field is produced employing two pairs of coils. 
 
 The offset magnetic field $B_{\textrm{off}}$ is generated by a slow set of coils ({offset coils}), whose proportional-integral-derivative (PID) actuator settings are optimized to perform the large magnetic field ramp within \SI{2}{\milli\second}. 

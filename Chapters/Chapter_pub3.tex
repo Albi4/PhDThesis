@@ -197,9 +197,12 @@ Magnetic levitation \cite{Weber2003bec, Ravensbergen2018poa} plays a very import
 
 
 %\onecolumngrid
-\begin{figure}[htb]
+\begin{figure}[tb]
 \centering
+	\makebox[\textwidth][c]{%
+	\hspace*{-0.7cm}
 \includegraphics[trim=5 5 5 0,clip,width=1.2\columnwidth]{gfx/Pub3_fig/Oscillation.pdf}
+}
 \caption{Center-of-mass oscillations of the Dy (blue) and K (orange) clouds for increasing interaction strength. The vertical position is obtained from time-of-flight images and plotted versus the hold time in the trap. The atom number ratio is fixed, $N_{\textrm Dy}/N_{\textrm K}=2.42$. (a) Near the zero crossing of the scattering length, where $x\rightarrow \pm\infty$, the two clouds oscillate independently. (b) and (c) When approaching the resonance, $x = 1.6$ and $0.7$, increasing interaction effects are observed. (d)~On resonance, $x=0$, the interspecies interaction results in a locked hydrodynamic motion of both components. The positions of the clouds are detected after a time of flight of \SI{10}{ms} for Dy and \SI{5}{ms} for K. For better comparison, the K signal is rescaled by a factor of 2. The uncertainties are smaller than the size of the symbols and the solid curves represent fits based on our theoretical model (see text). }
 \label{fig:Oscillation}
 \end{figure}
@@ -428,17 +431,15 @@ After a carefully chosen time delay, the interspecies interaction is introduced 
 For detection, we perform standard time-of-flight imaging, {extracting the center-of-mass velocities at the time of release from the corresponding displacements observed after long times of ballistic flights ($t_{\textrm TOF} = 10$\,ms for Dy, and 5\,ms for K).}
 In addition, for the slow mode, {we also apply} {\textit in-situ} imaging to detect the center-of-mass positions of the two components.
 
-\begin{figure}[thb]
+\subsubsection{Fast damping mode}
+\begin{figure}[htb]
 \centering
 \includegraphics[trim=0 0 0 0,clip,width=0.8\columnwidth]{gfx/Pub3_fig/FastModeDemo_BG.pdf}
 \caption{Fast damping mode on resonance for $N_{\textrm Dy}/N_{\textrm K}=4.5$. In (a), we show the center-of-mass velocities of the two components, Dy (blue) and K (orange), as a function of the hold time in the ODT. The solid curves represent fits based on a superposition of the two damping modes and the crossover mode, as detailed in Sec.~\ref{ssec:fitting}. The inset zooms into the initial behavior from 0 to 4 ms. In (b), we plot the velocity difference between Dy and K in the first 2 ms. While the solid curve represents the result of the full fit, the dashed line illustrates  the slowly varying background resulting from both the slow mode and the crossover mode. The difference between the solid and the dashed curve corresponds to the fast mode. The symbols represent the experimental data with standard errors derived from five repetitions per hold time. The shaded region indicates the 95\% confidence band of the fit.}
 \label{fig:FastModeDemo}
 \end{figure}
 
-\subsubsection{Fast damping mode}
-
-The fast damping mode  
-appears as a direct manifestation of the rapid reduction in the relative velocity of the two species caused by strong friction in the resonantly interacting regime. 
+The fast damping mode appears as a direct manifestation of the rapid reduction in the relative velocity of the two species caused by strong friction in the resonantly interacting regime. 
 Figure~\ref{fig:FastModeDemo}(a) demonstrates the basic behavior as observed for resonant interspecies interaction ($x=0$). 
 {Right after the dipole-mode excitation in the weakly interacting regime and a rapid quench onto resonance, which effectively takes about $20\,\mu$s~\footnote{During our 200-$\mu$s linear ramp from the preparation field ($\delta = -132\,$mG) onto resonance, the systems spends only about $20\,\mu$s in the strongly interacting regime. Thus, the interaction quench is almost an order of magnitude faster than the fastest response of the system.}, the initial velocities (at zero hold time) of the K and Dy clouds differ substantially.} Then, within less than one millisecond, the system reaches the regime of locked oscillations (inset).
 Our fitting model (solid lines) reproduces the observed behavior very well, including the initial transient. Figure~\ref{fig:FastModeDemo}(b) demonstrates the evolution of the velocity difference with time.
