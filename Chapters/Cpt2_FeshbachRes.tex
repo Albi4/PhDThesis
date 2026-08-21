@@ -1,19 +1,22 @@
 \chapter{Scattering theory and Feshbach resonances}
 \label{Chpt:Feshbach} %"Fermi gases and Feshbach resonances" %title to be revised
 
-In this chapter, we 
+In this chapter, we introduce some of the fundamental quantities and mathematical equations useful to better understand the contents of this thesis. The chapter is organized as follows. In Sec.~\ref{sec:FermiGases}, we give some basics of non-interacting Fermi gases, in Sec.~\ref{sec:ScatteringTheo}, we introduce some notions of scattering theory, Sec.~\ref{sec:FeshbachResIntro},  we connected scattering theory to magnetic Feshbach resonances in ultracold gases, and finally, in Sec.~\ref{sec:NarrowFR}, we discuss the concept of \textit{narrow} Feshbach resonance.
 
 
-\section{Basic of Fermi gases}
+\section{Basics of Fermi gases}
+\label{sec:FermiGases}
 
-compare with bose gas to keep the analogy with the statistic going
+An ensemble of identical fermions is a system of perfectly non interacting particles, with the requirement that no more than a single atom can occupy a give energy state.
 
 a fermionic gas a $T=0$ fills up the harmonic trap
 
 \begin{equation}	
-	f(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1}
+	f(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1}.
 	\label{eq:FermiDiracDist}
 \end{equation}
+This distribution is in stark contrast with the one for a Bose gas, where at the denominator the $1$ is subtracted from the exponential thermodynamic function. The difference in sign indicates the different occupancy probability between fermions and bosons and allows, in the limit $T\to0$, for bosons to accumulate in the lowest energy state, and for fermions force single occupancy of a given energy state.
+%compare with bose gas to keep the analogy with the statistic going
 
 
 \begin{equation}
@@ -47,7 +50,8 @@ It is worth noting here that these definitions and quantities are for a single c
 mention deformation of Fermi surface from dipolar interaction observed in Er
 
 
-\section{Basis of scattering theory}
+\section{Basics of scattering theory}
+\label{sec:ScatteringTheo}
 two body problem in a vacuum
 
 phase shift
@@ -105,7 +109,8 @@ Now integrating over \eqref{eq:diffCrossSec},  we can obtained the total cross s
 
 
 
-\section{Feshabch resonances in ultracold gases}
+\section{Feshbach resonances in ultracold gases}
+\label{sec:FeshbachResIntro}
 
 
 Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. As discussed in the previous chapters, they allow the interaction strength between two atoms to be controlled by changing an external magnetic field. At the two-body level, this tunability originates from the coupling between an open scattering channel and a molecular bound state in a closed channel. When the energy of this bound state is tuned close to the scattering threshold, the scattering length becomes resonantly enhanced and can be varied over a large range. On one side of the resonance, the two atoms support a weakly bound molecular state, commonly referred to as a Feshbach molecule.
@@ -130,6 +135,7 @@ $A=\Delta a_{bg}/a_0$
 
 
 \section{Narrow Feshbach resonances}
+\label{sec:NarrowFR}
 
 
 \begin{equation}
