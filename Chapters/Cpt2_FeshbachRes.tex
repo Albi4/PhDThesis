@@ -12,7 +12,7 @@ An ensemble of identical fermions is a system of perfectly non-interacting parti
 	f(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1},
 	\label{eq:FermiDiracDist}
 \end{equation}
-where $\mu$ is chemical potential, and its normalization is imposed by the condition $	N=\int d\varepsilon\frac{\varepsilon^2}{2(\hbar\omega)^3}f(\varepsilon)$.
+where $\mu$ is chemical potential, and its normalization is imposed by the condition $	N=\int d\varepsilon\frac{\varepsilon^2}{2(\hbar\bar{\omega})^3}f(\varepsilon)$.
 
 This distribution is in stark contrast with the one for a Bose gas, where the $+1$ in the denominator is replaced by $-1$. The difference in sign indicates the different occupancy probability between fermions and bosons and allows, in the limit $T\to0$, for bosons to accumulate in the ground state, while for fermions it enforces single occupancy of each energy state.
 
@@ -27,23 +27,29 @@ From the Fermi energy, we can define the Fermi momentum at the trap center
 	k_F=\frac{\sqrt{2mE_F}}{\hbar}.
 	\label{eq:FermiMomentum}
 \end{equation}
-\albi{maybe a figure of the fermi distribution at different temperatures here? with the thermal gaussian also?}
-
 Similarly, we can also define the Fermi temperature 
 \begin{equation}
 	T_F=E_F/{k_B}.
 	\label{eq:FermiTemperature}
 \end{equation}
-Usually in an ultracold gas experiment the temperature is the most readily measurable quantity. The degree of degeneracy of a Fermi gas is therefore commonly quantified by the ratio $T/T_F$, if the measured temperature of the gas is below the Fermi temperature, $T/T_F<1$, the gas is said to be degenerate. This is analogous to the bosonic case, where degeneracy is signaled by $T<T_c$, however, unlike bosons, fermions do not undergo a phase transition and the crossover to degeneracy is smooth.
 
-The density distribution of a non-interacting degenerate Fermi gas deviates from the Gaussian profile characteristic of a thermal gas. In the bosonic case, the difference between the degenerate and thermal distributions is dramatic, reflecting the sharp phase transition to a \ac{BEC}. For the fermionic case, instead, the deviation is more subtle. In practice, this deviation from a Gaussian profile serves as a direct experimental measure of the degree of degeneracy. In practice, to obtain a measure of degeneracy, we routinely fit the two-dimensional column density profiles obtained from absorption imaging with a polylogarithmic function \cite{Ketterle2008mpa}
+\begin{figure}[thb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/Cpt2_fig/FermiDirac.pdf}
+	\caption{ . \label{fig:FDdistro}}
+\end{figure}
+
+Usually in an ultracold gas experiment the temperature is the most readily measurable quantity. The degree of degeneracy of a Fermi gas is therefore commonly quantified by the ratio $T/T_F$. If the measured temperature of the gas is below the Fermi temperature, $T/T_F<1$, the gas is said to be degenerate. This is analogous to the bosonic case, where degeneracy is signaled by $T<T_c$, however, unlike bosons, fermions do not undergo a phase transition and the crossover to degeneracy is smooth.
+
+%The density distribution of a non-interacting degenerate Fermi gas deviates from the Gaussian profile characteristic of a thermal gas. In the bosonic case, the difference between the degenerate and thermal distributions is dramatic, reflecting the sharp phase transition to a \ac{BEC}. For the fermionic case, instead, the deviation is more subtle. 
+
+In practice, this deviation from a Gaussian profile serves as a direct experimental measure of the degree of degeneracy. In practice, to obtain a measure of degeneracy, we routinely fit the two-dimensional column density profiles obtained from absorption imaging with a polylogarithmic function \cite{Ketterle2008mpa}
 \begin{equation}
-	n(x,y) = -A\,\mathrm{Li}_2\left(-z \exp\left(-\frac{x^2}{2\sigma_x^2} - \frac{y^2}{2\sigma_y^2}\right)\right),
+	n(x,y) = -A\,\frac{\mathrm{Li}_2\left(-z \exp\left(-\frac{x^2}{2\sigma_x^2} - \frac{y^2}{2\sigma_y^2}\right)\right)}{\mathrm{Li}_2\left(-z\right)},
 	\label{eq:PolyLog}
 \end{equation} 
 where $ \mathrm{Li}_2$ is the polylogarithm of order $2$, A is an amplitude, $z=e^{\mu/k_BT}$ is the fugacity, and $\sigma_{x,y}$ are the thermal widths. The fugacity $z$ encodes the degeneracy: for $z\ll 1$ the distribution reduces to a Gaussian (classical limit), while for $z\gg1$ the distribution approaches the zero-temperature Thomas-Fermi profile. The ratio  $T/T_F$ is then extracted from the fitted fugacity via:
 \begin{equation}
-	\frac{T}{T_F} = \left(-6,\mathrm{Li}_3(-z)\right)^{-1/3},
+	\frac{T}{T_F} = \left(-6\,\mathrm{Li}_3(-z)\right)^{-1/3},
 \end{equation}
 where $ \mathrm{Li}_3$ is the polylogarithm of order $3$, which accounts for the three-dimensional density of states.
 
@@ -57,34 +63,32 @@ It is worth noting here that these definitions and quantities are valid for a si
 
 \section{Basics of scattering theory}
 \label{sec:ScatteringTheo}
-two body problem in a vacuum
 
-phase shift
+At the low densities and temperatures of ultracold gases, interactions between distinguishable particles can be described to a very good approximation in terms of two-body scattering. In this section, we introduce the basic scattering quantities needed to characterize such interactions.
 
-effective range
-
+We consider two particles interacting through a potential $V(r)$ that depends only on their relative distance. Far away from the interaction region, the scattering wave function can be written as the sum of an incoming plane wave and an outgoing spherical wave,
 \begin{equation}
-	\psi_k(r)\sim e^{ikz}+f(k,\theta)\frac{e^{ikz}}{r}
+	\psi_k(r)\sim e^{ikz}+f(k,\theta)\frac{e^{ikr}}{r},
 	\label{eq:wavefunScatt}
 \end{equation}
-
-
+where $\mathbf{k}$ is the relative wave vector and $f(k,\theta)$ is the scattering amplitude. The differential cross section is obtained directly from the scattering amplitude as
 \begin{equation}
-\frac{d\sigma}{d\Omega}=|f(k,\theta)|^2
+\frac{d\sigma}{d\Omega}=|f(k,\theta)|^2.
 \label{eq:diffCrossSec}
 \end{equation}
 	
-	
-	
-%eq for now taken from M. Bartenstein thesis to recheck and contextualize
+For a central potential, the scattering problem can be decomposed into partial waves of angular momentum quantum number $l$. Each partial wave experiences an effective radial potential	
 \begin{equation}
-	V_{eff}=\frac{\hbar^2l(l+1)}{2m_rr^2}+V(r)
+	V_{eff}(r)=\frac{\hbar^2l(l+1)}{2m_rr^2}+V(r)
 	\label{eq:effPot}
 \end{equation}
+where $m_r$ is the reduced mass of the two body problem. Then first term of this relation is the centrifugal barrier. Generally for low collisions energies, which is usually the case for ultracold gases, collisions with high partial wave, i.e.\ $l>0$, are strongly suppressed, and only the $s$-wave channel, with $l=0$, survives. In the specific case of our experiment, this assumption is only partially valid. While this work well for K, Dy, being a highly magnetic atomic species, 
+
+
 p-wave threshold for interaction, differentiate between K and Dy
 
 \begin{equation}
-	\sigma_l(k)=\frac{4\pi}{k^2}(2l+1)\sin(\delta_l(k))
+	\sigma_l(k)=\frac{4\pi}{k^2}(2l+1)\sin^2(\delta_l(k))
 	\label{eq:crossSecpartialWave}
 \end{equation}
 
