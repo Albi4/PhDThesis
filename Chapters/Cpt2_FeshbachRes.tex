@@ -7,21 +7,22 @@ In this chapter, we introduce some of the fundamental quantities and mathematica
 \section{Basics of Fermi gases}
 \label{sec:FermiGases}
 
-An ensemble of identical fermions is a system of perfectly non-interacting particles, with the requirement that no more than a single atom can occupy a given energy state.Throughout this thesis, we consider gases confined in a three-dimensional harmonic trap. In the limit of $T\to0$, a non-interacting fermionic gas will occupy the available states $\varepsilon_i$ in the harmonic trap, according to the Fermi-Dirac distribution
+
+A useful starting point is the ideal Fermi gas, in which interactions are neglected and the many-body state is constrained by the Pauli exclusion principle: no more than one identical fermion can occupy a given single-particle state. Throughout this thesis, we consider gases confined in a three-dimensional harmonic trap. In the limit of $T\to0$, a non-interacting fermionic gas will occupy the available states $\varepsilon_i$ in the harmonic trap, according to the Fermi-Dirac distribution
 \begin{equation}	
-	f(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1},
+	f_{\mathrm{FD}}(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1},
 	\label{eq:FermiDiracDist}
 \end{equation}
-where $\mu$ is chemical potential, and its normalization is imposed by the condition $	N=\int d\varepsilon\frac{\varepsilon^2}{2(\hbar\bar{\omega})^3}f(\varepsilon)$.
+where $\mu$ is chemical potential, and its normalization is imposed by the condition $	N=\int d\varepsilon\frac{\varepsilon^2}{2(\hbar\bar{\omega})^3}f_{\mathrm{FD}}(\varepsilon)$.
 
 This distribution is in stark contrast with the one for a Bose gas, where the $+1$ in the denominator is replaced by $-1$. The difference in sign indicates the different occupancy probability between fermions and bosons and allows, in the limit $T\to0$, for bosons to accumulate in the ground state, while for fermions it enforces single occupancy of each energy state.
 
-The result is that, even at $T=0$, a fermionic system will have a finite amount of energy, a direct reflection of the Pauli exclusion principle. The energy associated with the resulting distribution is the \textit{Fermi Energy} 
+The result is that, even at $T=0$, a fermionic system will have a finite amount of energy, a direct reflection of the Pauli exclusion principle. The energy associated with the resulting distribution is the \textit{Fermi energy} 
 \begin{equation}
 	E_F=\hbar\bar{\omega}(6N)^{1/3},
 	\label{eq:FermiEnergy}
 \end{equation}
-where  $\bar{\omega}=(\omega_x\omega_y\omega_z)^{1/3}$ is the geometric mean of the trap frequencies. For mixtures, this definition is applied separately to each component, using its atom number, mass, and trapping frequencies.
+where  $\bar{\omega}=(\omega_x\omega_y\omega_z)^{1/3}$ is the geometric mean of the trap frequencies. For mixtures, this definition is applied separately to each component, using its atom number, and trapping frequencies.
 From the Fermi energy, we can define the Fermi momentum at the trap center
 \begin{equation}
 	k_F=\frac{\sqrt{2mE_F}}{\hbar}.
@@ -35,25 +36,26 @@ Similarly, we can also define the Fermi temperature
 
 \begin{figure}[thb]
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/Cpt2_fig/FermiDirac.pdf}
-	\caption{ . \label{fig:FDdistro}}
+	\caption{Energy distribution $n(\varepsilon)=g(\varepsilon)f_{\mathrm{FD}}(\varepsilon)$ of an ideal Fermi gas in a three-dimensional harmonic trap for different values of $T/T_F$. The black dashed curve indicates the zero-temperature limit, where all states below $E_F$ are occupied. The dashed Maxwell--Boltzmann curves illustrate the corresponding classical distributions. All curves are shown in arbitrary units. \label{fig:FDdistro}}
 \end{figure}
+
+In Fig.~\ref{fig:FDdistro}, we summarize the behavior of an ideal Fermi gas close to degeneracy, by plotting the energy distribution $n(\varepsilon)=g(\varepsilon)f_{\mathrm{FD}}(\varepsilon)$ for different values of $T/T_F$. The red dashed line indicates the case of a thermal gas according to the Maxwell-Boltzmann distribution, while the black dashed line indicates the case for $T/T_F\to0$. The solid lines show how, lowering the temperature, the low energy states get filled up and the Fermi-Dirac distribution deviates from the expected behavior of a thermal gas. Te gray dashed line shows the expected distribution for a thermal gas with the same temperature of the solid blue line, $T/T_F=0.1$.  
 
 Usually in an ultracold gas experiment the temperature is the most readily measurable quantity. The degree of degeneracy of a Fermi gas is therefore commonly quantified by the ratio $T/T_F$. If the measured temperature of the gas is below the Fermi temperature, $T/T_F<1$, the gas is said to be degenerate. This is analogous to the bosonic case, where degeneracy is signaled by $T<T_c$, however, unlike bosons, fermions do not undergo a phase transition and the crossover to degeneracy is smooth.
 
-%The density distribution of a non-interacting degenerate Fermi gas deviates from the Gaussian profile characteristic of a thermal gas. In the bosonic case, the difference between the degenerate and thermal distributions is dramatic, reflecting the sharp phase transition to a \ac{BEC}. For the fermionic case, instead, the deviation is more subtle. 
-
-In practice, this deviation from a Gaussian profile serves as a direct experimental measure of the degree of degeneracy. In practice, to obtain a measure of degeneracy, we routinely fit the two-dimensional column density profiles obtained from absorption imaging with a polylogarithmic function \cite{Ketterle2008mpa}
+In practice, this deviation from a Gaussian profile serves as a direct experimental measure of the degree of degeneracy. To obtain a measure of degeneracy, we routinely fit the two-dimensional column density profiles obtained from absorption imaging with a polylogarithmic function \cite{Ketterle2008mpa}
 \begin{equation}
 	n(x,y) = -A\,\frac{\mathrm{Li}_2\left(-z \exp\left(-\frac{x^2}{2\sigma_x^2} - \frac{y^2}{2\sigma_y^2}\right)\right)}{\mathrm{Li}_2\left(-z\right)},
 	\label{eq:PolyLog}
 \end{equation} 
-where $ \mathrm{Li}_2$ is the polylogarithm of order $2$, A is an amplitude, $z=e^{\mu/k_BT}$ is the fugacity, and $\sigma_{x,y}$ are the thermal widths. The fugacity $z$ encodes the degeneracy: for $z\ll 1$ the distribution reduces to a Gaussian (classical limit), while for $z\gg1$ the distribution approaches the zero-temperature Thomas-Fermi profile. The ratio  $T/T_F$ is then extracted from the fitted fugacity via:
+where $ \mathrm{Li}_2$ is the polylogarithm of order $2$, $A$ is an amplitude, $z=e^{\mu/k_BT}$ is the fugacity, and $\sigma_{x,y}$ are the thermal widths. The fugacity $z$ encodes the degeneracy: for $z\ll 1$ the distribution reduces to a Gaussian (classical limit), while for $z\gg1$ the distribution approaches the zero-temperature Thomas-Fermi profile. The ratio  $T/T_F$ is then extracted from the fitted fugacity via:
 \begin{equation}
-	\frac{T}{T_F} = \left(-6\,\mathrm{Li}_3(-z)\right)^{-1/3},
+	\frac{T}{T_F} = \left[-6\,\mathrm{Li}_3(-z)\right]^{-1/3},
 \end{equation}
 where $ \mathrm{Li}_3$ is the polylogarithm of order $3$, which accounts for the three-dimensional density of states.
 
-It is worth noting here that these definitions and quantities are valid for a single component Fermi gas. In such a gas, low-energy $s$-wave collisions  are forbidden by antisymmetry of the many-body wave function, and higher partial waves are suppressed at ultracold temperatures\,\footnote{This is not valid for Dy, as we will see in Chapter.~\ref{Chpt:expIntro}. Thanks to its high magnetic moment, collisions in higher partial waves are possible also at $T=0$}. This is the reason, as mention previously,  we study ultracold Fermi gases in mixtures, to allow for $s$-wave interactions between the different components of the mixture. The remainder of this chapter introduces the scattering concepts needed to describe these interactions and their magnetic-field control through Feshbach resonances.
+It is worth noting here that these definitions and quantities are valid for a single component Fermi gas. In such a gas, low-energy $s$-wave collisions  are forbidden by antisymmetry of the many-body wave function, and higher partial waves are suppressed at ultracold temperatures%\,\footnote{This is not valid for Dy, as we will see in Chapter~\ref{Chpt:expIntro}. For strongly magnetic atoms such as Dy, the long-range and anisotropic dipole-dipole interaction modifies this simple short-range picture and can make higher-partial-wave scattering relevant even at very low temperature.}
+. This suppression of elastic collisions is one of the reasons why ultracold Fermi gases are commonly studied in mixtures, where distinguishable particles can interact through the $s$-wave channel. The remainder of this chapter introduces the scattering concepts needed to describe these interactions and their magnetic-field control through Feshbach resonances.
 
 
 % In the case of spin mixtures the different components share the same mass and optical properties, i.e.~the same trapping frequencies. In the case of
@@ -82,41 +84,43 @@ For a central potential, the scattering problem can be decomposed into partial w
 	V_{eff}(r)=\frac{\hbar^2l(l+1)}{2m_rr^2}+V(r)
 	\label{eq:effPot}
 \end{equation}
-where $m_r$ is the reduced mass of the two body problem. Then first term of this relation is the centrifugal barrier. Generally for low collisions energies, which is usually the case for ultracold gases, collisions with high partial wave, i.e.\ $l>0$, are strongly suppressed, and only the $s$-wave channel, with $l=0$, survives. In the specific case of our experiment, this assumption is only partially valid. While this work well for K, Dy, being a highly magnetic atomic species, 
-
-
-p-wave threshold for interaction, differentiate between K and Dy
-
+where $m_r$ is the reduced mass of the two body problem and the first term of this relation is the centrifugal barrier. The effect of the interaction in each partial wave is encoded in a phase shift $\delta_l(k)$. The corresponding contribution of each partial wave to the total cross section then is 
 \begin{equation}
-	\sigma_l(k)=\frac{4\pi}{k^2}(2l+1)\sin^2(\delta_l(k))
+	\sigma_l(k)=\frac{4\pi}{k^2}(2l+1)\sin^2(\delta_l(k)).
 	\label{eq:crossSecpartialWave}
 \end{equation}
 
+For low collisions energies, which is usually the case for ultracold gases, collisions with high partial wave, i.e.\ $l>0$, are strongly suppressed, and only the $s$-wave channel, with $l=0$, survives. In the specific case of our experiment, this is not valid for Dy. For strongly magnetic atoms, the long-range and anisotropic dipole-dipole interaction enables higher-partial-wave scattering even at very low temperature. Nonetheless, the interspecies interaction in the Dy-K mixture, relevant to most of the results presented in this thesis, still adheres to the contact interaction description.
 
+For the $s$-wave channel, the low-energy scattering properties are summarized by the scattering length $a$, defined through the zero-energy limit of the phase shift,
 \begin{equation}
-	a=\lim_{k\to0}\frac{\tan(\delta_0(k))}{k}
+	a=\lim_{k\to0}\frac{\tan(\delta_0(k))}{k}.
 	\label{eq:ScatteringLength}
 \end{equation}
-
-
-
+The corresponding $s$-wave scattering amplitude is
 \begin{equation}
-	f(k)=\frac{1}{-\frac{1}{a}+\frac{1}{2}r_{\textrm{eff}}k^2-ik}
+	f(k)=\frac{1}{-\frac{1}{a}+\frac{1}{2}r_{\textrm{eff}}k^2-ik},
 	\label{eq:ScatteringAmplswave}
 \end{equation}
-
-mention here the effective parameter range and wink at its role on broad and narrow scattering resonance, which will be explained better in the Feshbach part I guess
-
-
-Now integrating over \eqref{eq:diffCrossSec},  we can obtained the total cross section
+where $r_{\mathrm{eff}}$ is the effective range. Integrating over \eqref{eq:diffCrossSec}, we can obtained the total cross section for the 
 \begin{equation}
 	\sigma(k)=\frac{4\pi}{\left(\frac{1}{a}-\frac{1}{2}r_{\textrm{eff}}k^2\right)^2+k^2 }
 \end{equation}
+In the limit where effective-range corrections can be neglected,
+\begin{equation}
+	\sigma(k)
+	=
+	\frac{4\pi a^2}{1+k^2a^2}.
+	\label{eq:TotalCrossSection}
+\end{equation}
+For small scattering length, $ka\ll1$, this becomes $\sigma=4\pi a^2$. For resonant interactions, $|a|\to\infty$, the cross section saturates at the unitarity limit,
+\begin{equation}
+	\sigma(k)=	\frac{4\pi}{k^2}.
+	\label{eq:UniversaCrossSec}
+\end{equation}
 
 
-
-
-
+The scattering length therefore determines the strength of low-energy interactions in an ultracold gas. In a many-body Fermi system, the relevant dimensionless interaction parameter is $k_Fa$, or equivalently $1/(k_Fa)$. The ability to tune $a$ makes it possible to move from weakly attractive interactions, through the strongly interacting unitary regime, to the molecular side where weakly bound dimers exist. Magnetic Feshbach resonances, introduced in the next section, provide precisely this tunability.
 
 \section{Feshbach resonances in ultracold gases}
 \label{sec:FeshbachResIntro}
@@ -125,6 +129,11 @@ Now integrating over \eqref{eq:diffCrossSec},  we can obtained the total cross s
 Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. As discussed in the previous chapters, they allow the interaction strength between two atoms to be controlled by changing an external magnetic field. At the two-body level, this tunability originates from the coupling between an open scattering channel and a molecular bound state in a closed channel. When the energy of this bound state is tuned close to the scattering threshold, the scattering length becomes resonantly enhanced and can be varied over a large range. On one side of the resonance, the two atoms support a weakly bound molecular state, commonly referred to as a Feshbach molecule.
 
 
+
+\begin{figure}[thb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/Cpt2_fig/FeshbachRes.pdf}
+	\caption{ . \label{fig:FeshbachResonance}}
+\end{figure}
 
 Li case as the best possible case, gift of nature, we will see how it goes for Dy-K later in the thesis, relevance of resonance in regards of studying BEC-BCS 
 
@@ -154,25 +163,13 @@ $A=\Delta a_{bg}/a_0$
 
 
 \begin{equation}
-	E_b=\frac{hbar^2}{8(R^*)^2m_r}\left(\sqrt(1-\frac{4R^*(B-B_0)}{a_0 A})-1 \right)^2
+	E_b=\frac{\hbar^2}{8(R^*)^2m_r}\left(\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}-1 \right)^2
 \end{equation}
 
-$\delta B^* =\frac{m_r\delta_\mu A^2 a_0^2}{2\hbar^2}$
+\begin{equation}
+	\delta B^* =\frac{m_r\delta_\mu A^2 a_0^2}{2\hbar^2}
+\end{equation}
 
 \begin{equation}
 	E_b=\delta_\mu \delta B^*\left(\sqrt{1-\frac{\delta B}{\delta B^*}}-1\right)^2
 \end{equation}
-
-
-%\section{BEC-BCS crossover}
-%BEC-BCS crossover here mention here
-
-%Unitarity!
-
-%Polarization results of Martins
-
-%bad paper, but lot of interesting references to follow are in \cite{Wang2017eeo}
-
-%most of the theoretical work on the subject, for mass-imbalanced mixtures has been done considering only the Li-K combination, that for a very long time was the only experimentally available mixture
-
-%\section{Unconventional pairing: state of the field}
