@@ -68,7 +68,7 @@ It is worth noting here that these definitions and quantities are valid for a si
 
 At the low densities and temperatures of ultracold gases, interactions between distinguishable particles can be described to a very good approximation in terms of two-body scattering. In this section, we introduce the basic scattering quantities needed to characterize such interactions.
 
-We consider two particles interacting through a potential $V(r)$ that depends only on their relative distance. Far away from the interaction region, the scattering wave function can be written as the sum of an incoming plane wave and an outgoing spherical wave,
+We consider two particles interacting through a potential $V(r)$ that depends only on their relative distance. Far from the interaction region, the scattering wave function can be written as the sum of an incoming plane wave and an outgoing spherical wave,
 \begin{equation}
 	\psi_k(r)\sim e^{ikz}+f(k,\theta)\frac{e^{ikr}}{r},
 	\label{eq:wavefunScatt}
@@ -84,13 +84,13 @@ For a central potential, the scattering problem can be decomposed into partial w
 	V_{eff}(r)=\frac{\hbar^2l(l+1)}{2m_rr^2}+V(r)
 	\label{eq:effPot}
 \end{equation}
-where $m_r$ is the reduced mass of the two body problem and the first term of this relation is the centrifugal barrier. The effect of the interaction in each partial wave is encoded in a phase shift $\delta_l(k)$. The corresponding contribution of each partial wave to the total cross section then is 
+where $m_r$ is the reduced mass of the two body problem, and the first term of this relation is the centrifugal barrier. The effect of the interaction in each partial wave is encoded in a phase shift $\delta_l(k)$. The contribution of each partial wave to the total cross section is then
 \begin{equation}
 	\sigma_l(k)=\frac{4\pi}{k^2}(2l+1)\sin^2(\delta_l(k)).
 	\label{eq:crossSecpartialWave}
 \end{equation}
 
-For low collisions energies, which is usually the case for ultracold gases, collisions with high partial wave, i.e.\ $l>0$, are strongly suppressed, and only the $s$-wave channel, with $l=0$, survives. In the specific case of our experiment, this is not valid for Dy. For strongly magnetic atoms, the long-range and anisotropic dipole-dipole interaction enables higher-partial-wave scattering even at very low temperature. Nonetheless, the interspecies interaction in the Dy-K mixture, relevant to most of the results presented in this thesis, still adheres to the contact interaction description.
+For low collision energies, which is usually the case for ultracold gases, higher partial waves, with $l>0$, are strongly suppressed, and only the $s$-wave channel, with $l=0$, survives. In the specific case of our experiment, this is not valid for Dy. For strongly magnetic atoms, the long-range and anisotropic dipole-dipole interaction enables higher-partial-wave scattering even at very low temperatures. Nonetheless, the interspecies interaction in the Dy-K mixture, relevant to most of the results presented in this thesis, is still well described within the contact interaction framework.
 
 For the $s$-wave channel, the low-energy scattering properties are summarized by the scattering length $a$, defined through the zero-energy limit of the phase shift,
 \begin{equation}
@@ -102,7 +102,7 @@ The corresponding $s$-wave scattering amplitude is
 	f(k)=\frac{1}{-\frac{1}{a}+\frac{1}{2}r_{\textrm{eff}}k^2-ik},
 	\label{eq:ScatteringAmplswave}
 \end{equation}
-where $r_{\mathrm{eff}}$ is the effective range. Integrating over \eqref{eq:diffCrossSec}, we can obtained the total cross section for the 
+where $r_{\mathrm{eff}}$ is the effective range. Integrating the differential cross section over solid angle, we can obtain the total cross section for the $s$-wave channel
 \begin{equation}
 	\sigma(k)=\frac{4\pi}{\left(\frac{1}{a}-\frac{1}{2}r_{\textrm{eff}}k^2\right)^2+k^2 }
 \end{equation}
@@ -113,37 +113,40 @@ In the limit where effective-range corrections can be neglected,
 	\frac{4\pi a^2}{1+k^2a^2}.
 	\label{eq:TotalCrossSection}
 \end{equation}
-For small scattering length, $ka\ll1$, this becomes $\sigma=4\pi a^2$. For resonant interactions, $|a|\to\infty$, the cross section saturates at the unitarity limit,
+In the limit of small scattering length, $ka\ll1$, this becomes $\sigma=4\pi a^2$. For resonant interactions, $|a|\to\infty$, the cross section saturates at the unitarity limit,
 \begin{equation}
 	\sigma(k)=	\frac{4\pi}{k^2}.
 	\label{eq:UniversaCrossSec}
 \end{equation}
 
-
-The scattering length therefore determines the strength of low-energy interactions in an ultracold gas. In a many-body Fermi system, the relevant dimensionless interaction parameter is $k_Fa$, or equivalently $1/(k_Fa)$. The ability to tune $a$ makes it possible to move from weakly attractive interactions, through the strongly interacting unitary regime, to the molecular side where weakly bound dimers exist. Magnetic Feshbach resonances, introduced in the next section, provide precisely this tunability.
+The scattering length therefore determines the strength of low-energy interactions in an ultracold gas. In a many-body Fermi system, the relevant dimensionless interaction parameter is $k_Fa$, or equivalently $1/(k_Fa)$. The ability to tune $a$ makes it possible to move from weakly attractive interactions, through the strongly interacting unitary regime, to the molecular side of the resonance, where weakly bound dimers exist. Magnetic Feshbach resonances, introduced in the next section, provide precisely this tunability.
 
 \section{Feshbach resonances in ultracold gases}
 \label{sec:FeshbachResIntro}
 
 
-Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. As discussed in the previous chapters, they allow the interaction strength between two atoms to be controlled by changing an external magnetic field. At the two-body level, this tunability originates from the coupling between an open scattering channel and a molecular bound state in a closed channel. When the energy of this bound state is tuned close to the scattering threshold, the scattering length becomes resonantly enhanced and can be varied over a large range. On one side of the resonance, the two atoms support a weakly bound molecular state, commonly referred to as a Feshbach molecule.
+Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments, as allow the interaction strength between two atoms to be controlled by changing an external magnetic field. Here we briefly summarize the relevant quantities useful to better understand the contents of this thesis, for a detailed overview on Feshbach resonances in ultracold gases we refer to Ref.~\cite{Chin2010fri}, which is the fundamental text for the topic. 
+
+
+At the two-body level, this tunability originates from the coupling between an open scattering channel and a molecular bound state in a closed channel. This two energy states belongs to two different molecular potential which generally have different magnetic moments.
+
+When the energy of this bound state is tuned close to the scattering threshold, the scattering length becomes resonantly enhanced and can be varied over a large range. On one side of the resonance, the two atoms support a weakly bound molecular state, commonly referred to as a Feshbach molecule.
 
 
 
 \begin{figure}[thb]
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/Cpt2_fig/FeshbachRes.pdf}
-	\caption{ . \label{fig:FeshbachResonance}}
+	\caption{Two channel model for a Feshbach resonance. \label{fig:FeshbachResonance}}
 \end{figure}
 
-Li case as the best possible case, gift of nature, we will see how it goes for Dy-K later in the thesis, relevance of resonance in regards of studying BEC-BCS 
+Quick note on the Li case as the best possible case, gift of nature, we will see how it goes for Dy-K later in the thesis
 
-General results of Feshbach resonances in all the different platforms.
 
 \begin{equation}
 	a(B)=a_{bg}-\frac{A}{B-B_0}
 \end{equation}
 
-$A=\Delta a_{bg}/a_0$
+$A=\Delta a_{bg}/a_0$	
 
 
 
@@ -162,7 +165,7 @@ $A=\Delta a_{bg}/a_0$
 
 
 
-\begin{equation}
+\begin{equation}\label{eq:BindingEnergy_Intro}
 	E_b=\frac{\hbar^2}{8(R^*)^2m_r}\left(\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}-1 \right)^2
 \end{equation}
 
@@ -170,6 +173,17 @@ $A=\Delta a_{bg}/a_0$
 	\delta B^* =\frac{m_r\delta_\mu A^2 a_0^2}{2\hbar^2}
 \end{equation}
 
-\begin{equation}
+\begin{equation}\label{eq:BindingEnergyBstar_Intro}
 	E_b=\delta_\mu \delta B^*\left(\sqrt{1-\frac{\delta B}{\delta B^*}}-1\right)^2
+\end{equation}
+
+
+\begin{equation}\label{eq:MagneticMoment_Intro}
+	\delta\mu_{\mathrm{mol}}=\partial E_{\mathrm{mol}}/\partial B=\delta\mu\left(1-\frac{1}{\sqrt{1-\frac{\delta B}{\delta B^*}}}\right).
+\end{equation}
+
+
+
+\begin{equation}\label{eq:ClosedChannelFraction_Intro}
+	Z(B)=\delta\mu_{\mathrm{mol}}(B)/ \delta\mu.
 \end{equation}
