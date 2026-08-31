@@ -35,7 +35,7 @@ Similarly, we can also define the Fermi temperature
 \end{equation}
 
 \begin{figure}[thb]
-	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/Cpt2_fig/FermiDirac.pdf}
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/FermiDirac.pdf}
 	\caption{Energy distribution $n(\varepsilon)=g(\varepsilon)f_{\mathrm{FD}}(\varepsilon)$ of an ideal Fermi gas in a three-dimensional harmonic trap for different values of $T/T_F$. The black dashed curve indicates the zero-temperature limit, where all states below $E_F$ are occupied. The dashed Maxwell--Boltzmann curves illustrate the corresponding classical distributions. All curves are shown in arbitrary units. \label{fig:FDdistro}}
 \end{figure}
 
@@ -128,60 +128,86 @@ The scattering length therefore determines the strength of low-energy interactio
 Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. They allow the interaction strength between two atoms to be controlled by changing an external magnetic field. Here we summarize the key quantities and results relevant to the contents of this thesis, for a detailed overview of Feshbach resonances in ultracold gases, we refer to Ref.~\cite{Chin2010fri}, which is the fundamental text for the topic. 
 
 \begin{figure}[thb]
-	\includegraphics[trim=0cm 0 0cm 0, clip, width=1\columnwidth]{gfx/Cpt2_fig/FeshbachRes.pdf}
-	\caption{Two channel model for a Feshbach resonance. \label{fig:FeshbachResonance}}
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/FeshbachRes.pdf}
+	\caption{Two channel model for a Feshbach resonance. Scattering is resonantly enhanced when the collision energy of two atoms in the open channel is coupled to a bound state of the closed channel potential $V_c$, in red.  \label{fig:FeshbachResonance}}
 \end{figure}
 The two-channel model for Feshbach resonance is illustrated in Fig.~\ref{fig:FeshbachResonance}.The tunability of the scattering length originates, at the two-body level, from the coupling between the open scattering channel, and a molecular bound state $E_c$ supported by a closed channel potential. The two channels generally have different magnetic moments, so that the energy of the bound state relative to the scattering threshold can be tuned by varying an external magnetic field. When this energy is tuned close to the scattering threshold, the scattering length is resonantly enhanced and can be tuned over a wide range. On one side of the resonance, the two-atom system supports a weakly bound molecular state, commonly referred to as a Feshbach molecule.
 
-
-
-
-
-Quick note on the Li case as the best possible case, gift of nature, we will see how it goes for Dy-K later in the thesis
-
-
+\begin{figure}[thb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/Feshbachres_varyingA.pdf}
+	\caption{Examples of resonances with different strength parameters. The blue curve shows the scattering length for the resonance near \SI{7}{G}, using the parameters characterized in this thesis. \label{fig:ScatteringLengthDiffAINtro}}
+\end{figure}
+Near a well-isolated Feshbach resonance, the scattering length as a function of magnetic field $B$, can be expressed in terms of a few parameters \cite{Moerdijk1995riu}
 \begin{equation}
-	a(B)=a_{bg}-\frac{A}{B-B_0}
+	a(B)=a_{bg}-\frac{A}{B-B_0},
+	\label{eq:scatteringLength}
 \end{equation}
+where $B_0$ is the resonance pole, $a_{bg}$ is the background scattering length far from the resonance, and $A$ is the strength parameter, related to the resonance width $\Delta$ by $A=\Delta a_{bg}/a_0$. In Fig.~\ref{fig:ScatteringLengthDiffAINtro}, we show examples of resonances with different strength parameters for a fixed $B_0$ and $a_{bg}$.
 
-$A=\Delta a_{bg}/a_0$	
-
-
-
+In the limit of large scattering length $a$, the binding energy of the Feshbach molecular state can be expressed as
 \begin{equation}
-	E_b=\frac{hbar^2}{2m_ra^2}
+	E_b=\frac{\hbar^2}{2m_ra^2}.
+	\label{eq:BindingEnergyUniv_Intro}
 \end{equation}
+In this region, the bound state acquires a universal character, and can be described in terms of the scattering length $a$ alone. This universal expression holds particularly well near broad, also called open-channel dominated, resonances where the effective range $r_{\mathrm{eff}}$ is small and its corrections to Eq.~\eqref{eq:BindingEnergyUniv_Intro} remain negligible over a wide range of magnetic fields. The Feshbach resonance between different spin states of $^6$Li is a prominent example of such case. The exceptionally large width of one of the resonances has enabled a remarkable variety of experiments and has been defined anecdotally multiple times as a ``gift of nature'' \cite{Jochim2003bec, Varenna2006book}. \albi{cite more}
+
+In the case of Dy-K, nature has been a bit less generous, and most of the interspecies resonances found so far lie within the classification of narrow Feshbach resonance. The next section therefore serves as a brief compendium on narrow Feshbach resonances.
+
 
 
 \section{Narrow Feshbach resonances}
 \label{sec:NarrowFR}
 
-
-\begin{equation}
-	R^*=\frac{\hbar^2}{2m_ra_0\delta_\mu A}
+Narrow,  or closed-channel dominated, resonances occurs when the coupling between the two channels is weak and the underlying bound state retains a predominantly closed-channel character over a wide field range. In this case, the three parameters  ($A$, $a_{bg}$ and $B_0$) introduced previously are no longer sufficient to fully characterize the scattering properties near the resonance, and an additional parameter is required. In $2004$, D.~Petrov introduced the characteristic length scale $R^*$, related to the effective range by $R^*=-r_{\mathrm{eff}}/2$, defined as \cite{Petrov2004tbp}
+\begin{equation}\label{eq:Rstar}
+	R^*=\frac{\hbar^2}{2m_ra_0\delta_\mu A},
 \end{equation}
+where $\delta_\mu$ is the differential magnetic moment between the closed and open channels.
 
-
-
+The binding energy of the molecular state for a narrow resonance, can be then expressed as
 \begin{equation}\label{eq:BindingEnergy_Intro}
-	E_b=\frac{\hbar^2}{8(R^*)^2m_r}\left(\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}-1 \right)^2
+	E_b=\frac{\hbar^2}{8(R^*)^2m_r}\left(\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}-1 \right)^2.
 \end{equation}
+In the limit of $|a|\gg R^*$, the scattering properties of the two body system recovers the universal character, and the binding energy can be expressed again as $E_b=\hbar^2/2m_ra^2$.
 
-\begin{equation}
-	\delta B^* =\frac{m_r\delta_\mu A^2 a_0^2}{2\hbar^2}
-\end{equation}
-
-\begin{equation}\label{eq:BindingEnergyBstar_Intro}
-	E_b=\delta_\mu \delta B^*\left(\sqrt{1-\frac{\delta B}{\delta B^*}}-1\right)^2
-\end{equation}
+\begin{figure}[thb]
+	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/Feshbachres_BindingEnergies.pdf}	
+	\caption{Two channel model for a Feshbach resonance. \label{fig:narrowFRBinding}}
+\end{figure}
+It is then clear that a narrow resonance can appear ``broader'' in character by how feasible is to access the limit $|a|\gg R^*$. A closer inspection to Eq.~\eqref{eq:Rstar}, shows that the strength parameter $A$ and the differential magnetic moment $\delta_\mu$ combine to determine the values of $R^*$ and the ease of accessibility of the universal range. To explore this, in Fig.~\ref{fig:narrowFRBinding} we compare the behavior of bound states of different narrow Feshbach resonances, using the values of $A$ presented in Fig.~\ref{fig:ScatteringLengthDiffAINtro}, combining with two different values of $\delta_\mu$. The vertical dashed lines in Fig.~\ref{fig:narrowFRBinding} show the $B$ field values for which the condition $|a|=R^*$ is satisfied.
+The green line 
 
 
 \begin{equation}\label{eq:MagneticMoment_Intro}
-	\delta\mu_{\mathrm{mol}}=\partial E_{\mathrm{mol}}/\partial B=\delta\mu\left(1-\frac{1}{\sqrt{1-\frac{\delta B}{\delta B^*}}}\right).
+	\delta\mu_{\mathrm{mol}}=\delta_\mu\left(1-\frac{1}{\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}}\right).
 \end{equation}
-
 
 
 \begin{equation}\label{eq:ClosedChannelFraction_Intro}
 	Z(B)=\delta\mu_{\mathrm{mol}}(B)/ \delta\mu.
 \end{equation}
+
+
+
+
+
+
+\begin{figure}[thb]
+\includegraphics[trim=0cm 0 0cm 0, clip, width=0.95\columnwidth]{gfx/Cpt2_fig/Feshbachres_Z.pdf}
+	\caption{Two channel model for a Feshbach resonance. \label{fig:narrowFRZ}}
+\end{figure}
+
+%\begin{equation}\label{eq:BindingEnergyBstar_Intro}
+%	E_b=\delta_\mu \delta B^*\left(\sqrt{1-\frac{\delta B}{\delta B^*}}-1\right)^2
+%\end{equation}
+
+
+%\begin{equation}
+%	\delta B^* =\frac{m_r\delta_\mu A^2 a_0^2}{2\hbar^2}
+%\end{equation}
+
+
+%\begin{equation}
+%	\delta\mu_{\mathrm{mol}}=\partial E_{\mathrm{mol}}/\partial B=\delta\mu\left(1-\frac{1}{\sqrt{1-\frac{\delta B}{\delta B^*}}}\right).
+%\end{equation}
+
