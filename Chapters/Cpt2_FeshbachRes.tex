@@ -1,26 +1,25 @@
 \chapter{Fermi Gases, Scattering Theory, and Feshbach Resonances}
 \label{Chpt:Feshbach} %"Fermi gases and Feshbach resonances" %title to be revised
 
-This chapter introduces the fundamental quantities and mathematical formalism required for the discussion presented throughout this thesis. In Sec.~\ref{sec:FermiGases}, we give some basics of non-interacting Fermi gases, in Sec.~\ref{sec:ScatteringTheo}, we introduce some notions of scattering theory, in Sec.~\ref{sec:FeshbachResIntro},  we connect scattering theory to magnetic Feshbach resonances in ultracold gases, and finally, in Sec.~\ref{sec:NarrowFR}, we discuss the concept of \textit{narrow} Feshbach resonance.
+This chapter introduces the fundamental quantities and mathematical formalism required for the discussion presented throughout this thesis. In Sec.~\ref{sec:FermiGases}, we give some basics of non-interacting Fermi gases, in Sec.~\ref{sec:ScatteringTheo}, we introduce some notions of scattering theory, in Sec.~\ref{sec:FeshbachResIntro}, we connect scattering theory to magnetic Feshbach resonances in ultracold gases, and finally, in Sec.~\ref{sec:NarrowFR}, we discuss the concept of {narrow} Feshbach resonance.
 
 
 \section{Basics of Fermi gases}
 \label{sec:FermiGases}
 
-Before introducing the effects of interactions, it is useful to establish the key energy and length scales that characterize an ideal Fermi gas in a harmonic trap, as these quantities appear throughout this thesis multiple times. For an ideal Fermi gas interactions are neglected and the many-body state is constrained by the Pauli exclusion principle, that is,  no more than one identical fermion can occupy a given single-particle state. A non-interacting fermionic gas will then occupy the available states $\varepsilon_i$ in the harmonic trap according to the Fermi-Dirac distribution\footnote{This distribution is in stark contrast with the one for a Bose gas, where the $+1$ in the denominator is replaced by $-1$. The difference in sign indicates the different occupation probability between fermions and bosons and allows, in the limit $T\to0$, for bosons to accumulate in the ground state, while for fermions it enforces single occupancy of each energy state.}
-\begin{equation}	
+Before introducing the effects of interactions, it is useful to establish the key energy and length scales that characterize an ideal Fermi gas in a harmonic trap, as these quantities appear throughout this thesis multiple times. For an ideal Fermi gas, where interactions are neglected, the many-body state is constrained by the Pauli exclusion principle, that is,  no more than one identical fermion can occupy a given single-particle state. A non-interacting fermionic gas will then occupy the available states $\varepsilon_i$ in the harmonic trap according to the Fermi-Dirac distribution\,\footnote{This distribution is in stark contrast with the one for a Bose gas, where the $+1$ in the denominator is replaced by $-1$. The difference in sign indicates the different occupation probability between fermions and bosons and allows, in the limit $T\to0$, for bosons to accumulate in the ground state, while for fermions it enforces single occupancy of each energy state.}
+\begin{equation}\label{eq:FDdistro}	
 	f_{\mathrm{FD}}(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1},
-	\label{eq:FermiDiracDist}
 \end{equation}
 where $\mu$ is the chemical potential, and its normalization is imposed by the total atom number $N=\int d\varepsilon f_{\mathrm{FD}}(\varepsilon)\,\varepsilon^2/2(\hbar\bar{\omega})^3$.
 
 
-The result is that, even at $T=0$, a fermionic system will have a finite amount of energy, a direct reflection of the Pauli exclusion principle. The energy associated with the resulting distribution is the \textit{Fermi energy} 
+The result is that, even at $T=0$, a fermionic system will have a finite amount of energy, a direct reflection of the Pauli exclusion principle. The energy associated with the resulting distribution is the Fermi energy
 \begin{equation}
 	E_F=\hbar\bar{\omega}(6N)^{1/3},
 	\label{eq:FermiEnergy}
 \end{equation}
-where  $\bar{\omega}=(\omega_x\omega_y\omega_z)^{1/3}$ is the geometric mean of the trap frequencies. From the Fermi energy, we can define the Fermi momentum at the trap center, which defines an important length scale for the system
+where  $\bar{\omega}=(\omega_x\omega_y\omega_z)^{1/3}$ is the geometric mean of the trap frequencies. This zero-point kinetic energy, sometimes referred to as \graffito{This pressure has macroscopic consequences outside of ultracold gases: it is responsible, for example, for the stability of neutron stars against gravitational collapse}\textit{Fermi pressure}, is a purely quantum mechanical effect with no classical analogue, and sets the energy scale against which interactions and temperature are measured throughout this thesis. From the Fermi energy, we can define the Fermi momentum at the trap center, which defines the corresponding length scale for the system
 \begin{equation}
 	k_F=\frac{\sqrt{2mE_F}}{\hbar}.
 	\label{eq:FermiMomentum}
@@ -31,7 +30,7 @@ Similarly, we can also define the Fermi temperature
 	\label{eq:FermiTemperature}
 \end{equation}
 
-\begin{figure}[thb]
+\begin{figure}[tb]
 	\centering
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/FermiDirac.pdf}
 	\caption{Energy distribution $n(\varepsilon)$ of an ideal Fermi gas in a three-dimensional harmonic trap for different values of $T/T_F$. The black dashed curve indicates the zero-temperature limit, where all states below $E_F$ are occupied. The dashed Maxwell--Boltzmann curves illustrate the corresponding classical distributions. All curves are shown in arbitrary units. \label{fig:FDdistro}}
@@ -50,7 +49,7 @@ where $ \mathrm{Li}_2$ is the polylogarithm of order $2$, $A$ is an amplitude, $
 \end{equation}
 where $ \mathrm{Li}_3$ is the polylogarithm of order $3$, which accounts for the three-dimensional density of states.
 
-It is worth noting here that these definitions and quantities are valid for a non interacting Fermi gas. In such a gas, low-energy collisions are forbidden by antisymmetry of the many-body wave function. This suppression of elastic collisions is one of the reasons why ultracold Fermi gases are commonly studied in mixtures, where distinguishable particles can interact through the $s$-wave channel. The remainder of this chapter introduces the scattering concepts needed to describe these interactions and their magnetic-field control through Feshbach resonances.
+It is worth remarking here that these definitions and quantities are valid for a non interacting Fermi gas. In such a gas, low-energy collisions are forbidden by antisymmetry of the many-body wave function. This suppression of elastic collisions is one of the reasons why ultracold Fermi gases are commonly studied in mixtures, where distinguishable particles can interact through the $s$-wave channel. The remainder of this chapter introduces the scattering concepts needed to describe these contact interactions and their magnetic-field control through Feshbach resonances.
 
 
 
@@ -114,14 +113,14 @@ The scattering length therefore determines the strength of low-energy interactio
 \label{sec:FeshbachResIntro}
 
 
-Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. They allow the interaction strength between two atoms to be controlled by changing an external magnetic field; for a detailed overview of Feshbach resonances in ultracold gases, we refer to Ref.~\cite{Chin2010fri}, which is the standard reference for the topic. 
+Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. They allow the interaction strength between two atoms to be controlled by changing an external magnetic field. Here, we briefly summarize the main concepts of Feshbach resonance, while for a detailed overview, we refer to Ref.~\cite{Chin2010fri}, which is the standard reference for the topic. 
 
 \begin{figure}[thb]
 	\centering
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/FeshbachRes.pdf}
 	\caption{Two channel model for a Feshbach resonance. Scattering is resonantly enhanced when the collision energy of two atoms in the open channel is coupled to a bound state of the closed-channel potential $V_c$, in red.  \label{fig:FeshbachResonance}}
 \end{figure}
-The two-channel model for a Feshbach resonance is illustrated in Fig.~\ref{fig:FeshbachResonance}.The tunability of the scattering length originates, at the two-body level, from the coupling between the open scattering channel, and a molecular bound state with energy $E_c$ supported by a closed-channel potential. The two channels generally have different magnetic moments, so that the energy of the bound state relative to the scattering threshold can be tuned by varying an external magnetic field. When this energy is tuned close to the scattering threshold, the scattering length is resonantly enhanced and can be tuned over a wide range. On the repulsive side of the resonance, the two-atom system supports a weakly bound molecular state, commonly referred to as a Feshbach molecule.
+The two-channel model for a Feshbach resonance is illustrated in Fig.~\ref{fig:FeshbachResonance}. The tunability of the scattering length originates, at the two-body level, from the coupling between the open scattering channel, and a molecular bound state with energy $E_c$ supported by a closed-channel potential. The two channels generally have different magnetic moments, so that the energy of the bound state relative to the scattering threshold can be tuned by varying an external magnetic field. When this energy is tuned close to the scattering threshold, the scattering length is resonantly enhanced and can be tuned over a wide range. On the repulsive side of the resonance, the two-atom system supports a weakly bound molecular state, commonly referred to as a Feshbach molecule.
 
 \begin{figure}[thb]
 	\centering
@@ -140,7 +139,7 @@ In the limit of large scattering length $a$, the binding energy of the Feshbach 
 	E_b=\frac{\hbar^2}{2m_ra^2}.
 	\label{eq:BindingEnergyUniv_Intro}
 \end{equation}
-In this region, the bound state acquires a universal character, and can be described in terms of the scattering length $a$ alone. This universal expression holds particularly well near broad, open-channel dominated resonances where the effective range $r_{\mathrm{eff}}$ is small and its corrections to Eq.~\eqref{eq:BindingEnergyUniv_Intro} remain negligible over a wide range of magnetic fields. One of the Feshbach resonances between different spin states of $^6$Li is a prominent example of such a case. The exceptionally large width of this resonance has enabled a remarkable variety of experiments and has been defined anecdotally multiple times as a ``gift of Nature'' \cite{Jochim2003bec, Varenna2006book}. \albi{cite more}
+In this region, the bound state acquires a universal character, and can be described in terms of the scattering length $a$ alone. This universal expression holds particularly well near broad, open-channel dominated resonances where the effective range $r_{\mathrm{eff}}$ is small and its corrections to Eq.~\eqref{eq:BindingEnergyUniv_Intro} remain negligible over a wide range of magnetic fields. One of the Feshbach resonances between different spin states of $^6$Li is a prominent example of such a case. The exceptionally large width of this resonance has enabled a remarkable variety of experiments and has been defined anecdotally multiple times as a ``gift of Nature'' \cite{Varenna2006book}.
 
 In the case of Dy-K, Nature has been a bit less generous, and most of the interspecies resonances found so far lie within the classification of narrow Feshbach resonance. The next section therefore serves as a brief compendium on narrow Feshbach resonances.
 
@@ -157,22 +156,22 @@ where $\delta\mu=\mu_{\mathrm{open}}-\mu_{\mathrm{closed}}$ is the differential 
 
 The binding energy of the molecular state for a narrow resonance can then be  expressed as
 \begin{equation}\label{eq:BindingEnergy_Intro}
-	E_b=\frac{\hbar^2}{8(R^*)^2m_r}\left(\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}-1 \right)^2.
+	E_b(B)=\frac{\hbar^2}{8(R^*)^2m_r}\left(\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}-1 \right)^2.
 \end{equation}
 In the limit of $|a|\gg R^*$, the scattering properties of the two-body system recover their universal character, and the binding energy reduces to the universal expression of Eq.~\eqref{eq:BindingEnergyUniv_Intro}.
 
 \begin{figure}[thb]
 	\centering
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/Feshbachres_BindingEnergies.pdf}	
-	\caption{Binding energy $E_b/h$ as a function of magnetic field detuning $\delta B=B-B_0$ for four narrow Feshbach resonances with different strength parameters $A$ and differential magnetic moments $\delta\mu$. The vertical dashed lines indicate the characteristic detuning at which $|a|=R^*$ for each resonance. The dashed black horizontal line marks the free-atom threshold $E_b=0$.\label{fig:narrowFRBinding}}\albi{change the order of the lines in the legend}
+	\caption{Binding energy $E_b/h$ as a function of magnetic field detuning $\delta B=B-B_0$ for four narrow Feshbach resonances with different strength parameters $A$ and differential magnetic moments $\delta\mu$. The vertical dashed lines indicate the characteristic detuning at which $|a|=R^*$ for each resonance. The dashed black horizontal line marks the free-atom threshold $E_b=0$.\label{fig:narrowFRBinding}}
 \end{figure}
-The parameter $R^*$ determines the range of detunings over which the resonance behaves universally. The apparent width of a narrow resonance is therefore governed by the accessibility of the regime $|a|\gg R^*$. This behavior is illustrated in Fig.~\ref{fig:narrowFRBinding}. The green, blue, and yellow curves correspond to increasing values of $A$ at fixed $\delta\mu$. The vertical dashed lines indicate the magnetic fields for which the condition $|a|=R^*$ is satisfied. As $A$ increases, $R^*$ decreases and the resonance becomes progressively less closed-channel-dominated. Consequently, the universal binding-energy relation remains valid over a wider interval of magnetic-field detunings. For the smallest value, $A=\SI{9}{G}$, the condition $|a|=R^*$ is reached only very close to the resonance pole, while for $A=\SI{60}{G}$ it occurs at detunings of order a few hundred \unit{mG}.
+The parameter $R^*$ determines the range of detunings over which the resonance behaves universally. The apparent magnetic field width of a narrow resonance is therefore governed by the accessibility of the regime $|a|\gg R^*$. This behavior is illustrated in Fig.~\ref{fig:narrowFRBinding}. The green, blue, and yellow curves correspond to increasing values of $A$ at fixed $\delta\mu$. As a guide to the eye, we plot vertical dashed lines which indicate the magnetic fields for which the condition $|a|=R^*$ is satisfied.  As $A$ increases, $R^*$ decreases and the resonance becomes progressively less closed-channel-dominated. Consequently, the universal binding-energy relation remains valid over a wider interval of magnetic-field detunings. For the smallest value, $A=\SI{9}{G}$, the condition $|a|=R^*$ is reached only very close to the resonance pole, while for $A=\SI{60}{G}$ it occurs at detunings of order a few hundred \unit{mG}.
 
 The comparison between the yellow and red curves highlights that the scattering length alone does not fully determine the near-threshold molecular spectrum of a narrow resonance. These two curves have the same value of $A$ and therefore the same scattering length $a(B)$, as shown in Fig.~\ref{fig:ScatteringLengthDiffAINtro}. However, they differ in $\delta\mu$, and therefore in $R^*$. The smaller differential magnetic moment of the red curve leads to a larger $R^*$ and to a more closed-channel dominated molecular state. As a result, the binding energy deviates more strongly from the universal expression, even though the corresponding scattering-length curve is identical.
 
-The molecular bound state underlying a resonance can be directly populated forming weakly bound molecules by sweeping the magnetic field across the resonance, as we will see in more detail in Part~\hyperref[pt:MakingProbing]{III}. Therefore, it is useful to introduce 	the differential magnetic moment of the molecular state, an additional quantity of direct experimental relevance, which is obtained by differentiating the binding energy with respect to the magnetic field
+The molecular bound state underlying a resonance can be directly populated forming weakly bound molecules by sweeping the magnetic field across the resonance, as we will see in more detail in Part~\hyperref[pt:MakingProbing]{III}. Therefore, it is useful to introduce	the differential magnetic moment of the molecular state, an additional quantity of direct experimental relevance, which is obtained by differentiating the binding energy with respect to the magnetic field
 \begin{equation}\label{eq:MagneticMoment_Intro}
-	\delta\mu_{\mathrm{mol}}=\frac{\partial E_b}{\partial B}=\delta\mu\left(1-\frac{1}{\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}}\right).
+	\delta\mu_{\mathrm{mol}}(B)=\frac{\partial E_b}{\partial B}=\delta\mu\left(1-\frac{1}{\sqrt{1-\frac{4R^*(B-B_0)}{a_0 A}}}\right).
 \end{equation}
 Here $E_b$ is defined as the molecular energy relative to the free-atom threshold and is therefore negative for a bound state. Far from the resonance pole, $\delta\mu_{\mathrm{mol}}$ approaches $\delta\mu$, corresponding to the bare closed-channel molecular state. Close to the pole, instead, $\delta\mu_{\mathrm{mol}}\to0$, reflecting the increasing open-channel character of the weakly bound molecule. We can then introduce the closed-channel fraction
 \begin{equation}\label{eq:ClosedChannelFraction_Intro}
@@ -185,14 +184,10 @@ which quantifies the admixture between the bare closed-channel molecular state a
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.95\columnwidth]{gfx/Cpt2_fig/Feshbachres_Z.pdf}
 	\caption{Closed-channel fraction $Z(B)$ as a function of magnetic field detuning  $\delta B=B-B_0$ 	for the same four resonances shown in Fig.~\ref{fig:narrowFRBinding}. The vertical dashed lines indicate the characteristic detunings at which $|a|=R^*$, marking the crossover between the universal open-channel-dominated regime close to the pole and the closed-channel-dominated behavior at larger detuning \label{fig:narrowFRZ}}
 \end{figure}
-In Fig.~\ref{fig:narrowFRZ}, we compare the behavior of $Z(B)$ for the different narrow-resonance examples introduced above. Close to the resonance pole, $B\to B_0$, the closed-channel fraction vanishes, $Z\to0$, reflecting the fact that the weakly bound molecule becomes increasingly open-channel dominated and acquires universal character. Far from the pole, instead, $Z$ approaches unity and the molecule recovers the character of the bare closed-channel bound state. The vertical dashed lines indicate the characteristic detunings at which $|a|=R^*$, as in Fig.~\ref{fig:narrowFRBinding}. They mark the crossover scale between the universal, open-channel-dominated region close to the pole and the closed-channel-dominated behavior at larger detuning. Increasing either the strength parameter $A$ or the differential magnetic moment $\delta\mu$ reduces $R^*$ and broadens the field range over which $Z$ remains small. Conversely, small values of $A$ or $\delta\mu$ lead to large $R^*$ and to molecules that retain a large closed-channel fraction except extremely close to resonance. The possibility of precisely tuning the open- and closed-channel admixture over large magnetic field ranges  has direct experimental consequences on the possibility of,e.~g., controlling the molecules with magnetic field gradients or affecting their interaction with external light fields, as explored in Part~\hyperref[pt:MakingProbing]{III}. 
+In Fig.~\ref{fig:narrowFRZ}, we compare the behavior of $Z(B)$ for the different narrow-resonance examples introduced above. Close to the resonance pole, $B\to B_0$, the closed-channel fraction vanishes, $Z\to0$, reflecting the fact that the weakly bound molecule becomes increasingly open-channel dominated and acquires universal character. Far from the pole, instead, $Z$ approaches unity and the molecule recovers the character of the bare closed-channel bound state. The vertical dashed lines indicate the characteristic detunings at which $|a|=R^*$, as in Fig.~\ref{fig:narrowFRBinding}. %They mark the crossover scale between the universal, open-channel-dominated region close to the pole and the closed-channel-dominated behavior at larger detuning. 
+Increasing either the strength parameter $A$ or the differential magnetic moment $\delta\mu$ reduces $R^*$ and broadens the field range over which $Z$ remains small. Conversely, small values of $A$ or $\delta\mu$ lead to large $R^*$ and to molecules that retain a large closed-channel fraction except extremely close to resonance. The possibility of precisely tuning the open- and closed-channel admixture over large magnetic field ranges  has direct experimental consequences on the possibility of, e.~g., controlling the molecules with magnetic field gradients or their interaction with external light fields, as explored in Part~\hyperref[pt:MakingProbing]{III}. 
 
-
-
-
-%This has direct experimental consequences: near the pole, where $Z\ll1$, the molecules acquire a small differential magnetic moment and become increasingly difficult to separate from the atomic cloud using magnetic field gradients. Conversely, at larger detunings where $Z\to1$, the molecules recover the magnetic moment of the bare closed-channel state and can be efficiently manipulated. The interplay between these two regimes is central to the experimental protocols for molecule association and purification described in Part~\hyperref[pt:MakingProbing]{III}. Beyond magnetic manipulation, open- and closed-channel components generally respond differently to the trapping light. This has direct implications for the light-induced loss rates experienced by the molecules, as explored in Chapter~\ref{Chpt:MolLoss}.
-
-The quantities introduced in this chapter, in particular the scattering length $a(B)$, the binding energy $E_b(B)$, the differential magnetic moment $\delta\mu_{\textrm mol}$, and the closed-channel fraction $Z$, form the foundation for the analysis of the Dy-K interaction spectrum and Feshbach molecules presented in the remainder of this thesis.
+The quantities introduced in this chapter, in particular the scattering length $a(B)$, the binding energy $E_b(B)$, the differential magnetic moment $\delta\mu_{\textrm mol}(B)$, and the closed-channel fraction $Z(B)$, form the foundation for the analysis of the Dy-K interaction spectrum and Feshbach molecules presented in the remainder of this thesis.
 
 
 
