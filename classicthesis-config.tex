@@ -46,7 +46,7 @@
 % ****************************************************************************************************
 \newcommand{\myTitle}{Strongly interacting mixtures of $^{161}$D\lowercase{y} and $^{40}$K:\\
 	Low-field Feshbach resonances, Hydrodynamic crossover and Feshbach molecules \xspace}
-\newcommand{\mySubtitle}{Feshbach Molecules and Hydrodynamic crossover \xspace}
+\newcommand{\mySubtitle}{~}
 \newcommand{\myDegree}{MSc\xspace}
 \newcommand{\myName}{Alberto Canali\xspace}
 \newcommand{\myProf}{Univ.\,Prof.\,Dr.\,Rudolf Grimm\xspace}
@@ -56,8 +56,8 @@
 \newcommand{\myDepartment}{Put data here\xspace}
 \newcommand{\myUni}{Put data here\xspace}
 \newcommand{\myLocation}{Innsbruck\xspace}
-\newcommand{\myTime}{February 2025\xspace}
-\newcommand{\myVersion}{\classicthesis}
+\newcommand{\myTime}{September 2026\xspace}
+%\newcommand{\myVersion}{\classicthesis}
 
 % ********************************************************************
 % Setup, finetuning, and useful commands
@@ -102,8 +102,14 @@
   natbib=true % natbib compatibility mode (\citep and \citet still work)
 }{biblatex}
     \usepackage{biblatex}
+    
     \AtEveryBibitem{
     	\ifentrytype{article}{\clearfield{number}}{}
+    	\clearfield{pages}
+    }
+    \AtEveryBibitem{
+    	\clearfield{month}
+    	\clearfield{day}
     }
     
     \DeclareFieldFormat[article]{title}{%
