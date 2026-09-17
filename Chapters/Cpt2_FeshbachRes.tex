@@ -7,11 +7,11 @@ This chapter introduces the fundamental quantities and mathematical formalism re
 \section{Basics of Fermi gases}
 \label{sec:FermiGases}
 
-Before introducing the effects of interactions, it is useful to establish the key energy and length scales that characterize an ideal Fermi gas in a harmonic trap, as these quantities appear throughout this thesis multiple times. For an ideal Fermi gas, where interactions are neglected, the many-body state is constrained by the Pauli exclusion principle, that is,  no more than one identical fermion can occupy a given single-particle state. A non-interacting fermionic gas will then occupy the available states $\varepsilon_i$ in the harmonic trap according to the Fermi-Dirac distribution\,\footnote{This distribution is in stark contrast with the one for a Bose gas, where the $+1$ in the denominator is replaced by $-1$. The difference in sign indicates the different occupation probability between fermions and bosons and allows, in the limit $T\to0$, for bosons to accumulate in the ground state, while for fermions it enforces single occupancy of each energy state.}
+Before introducing the effects of interactions, it is useful to establish the key energy and length scales that characterize an ideal Fermi gas in a harmonic trap, as these quantities appear throughout this thesis multiple times. For an ideal Fermi gas, where interactions are neglected, the many-body state is constrained by the Pauli exclusion principle, that is,  no more than one identical fermion can occupy a given single-particle state. A non-interacting fermionic gas will then occupy the available states $\varepsilon_i$ in the harmonic trap according to the Fermi-Dirac distribution\,\footnote{This distribution is in stark contrast with the one for a Bose gas, where the $+1$ in the denominator is replaced by $-1$. The difference in sign indicates the different occupation probability between fermions and bosons and allows, in the limit $T\to0$, bosons to accumulate in the ground state, while for fermions it enforces single occupancy of each energy state.}
 \begin{equation}\label{eq:FDdistro}	
 	f_{\mathrm{FD}}(\varepsilon_i)=\frac{1}{\exp{(\varepsilon_i-\mu)/k_BT}+1},
 \end{equation}
-where $\mu$ is the chemical potential, and its normalization is imposed by the total atom number $N=\int d\varepsilon f_{\mathrm{FD}}(\varepsilon)\,\varepsilon^2/2(\hbar\bar{\omega})^3$.
+where $\mu$ is the chemical potential, which normalization is imposed by the total atom number $N=\int d\varepsilon f_{\mathrm{FD}}(\varepsilon)\,\varepsilon^2/2(\hbar\bar{\omega})^3$.
 
 
 The result is that, even at $T=0$, a fermionic system will have a finite amount of energy, a direct reflection of the Pauli exclusion principle. The energy associated with the resulting distribution is the Fermi energy
@@ -35,39 +35,40 @@ Similarly, we can also define the Fermi temperature
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/FermiDirac.pdf}
 	\caption{Energy distribution $n(\varepsilon)$ of an ideal Fermi gas in a three-dimensional harmonic trap for different values of $T/T_F$. The black dashed curve indicates the zero-temperature limit, where all states below $E_F$ are occupied. The dashed Maxwell--Boltzmann curves illustrate the corresponding classical distributions. All curves are shown in arbitrary units. \label{fig:FDdistro}}
 \end{figure}
-In Fig.~\ref{fig:FDdistro}, we show the energy distribution $n(\varepsilon)=g(\varepsilon)f_{\mathrm{FD}}(\varepsilon)$ for different values of $T/T_F$, the ratio that quantifies the degree of degeneracy in an ultracold Fermi gas. Here $g(\varepsilon)=\varepsilon^2/(\hbar\bar\omega)^3$ is the three-dimensional density of states in a harmonic trap. For $T/T_F\to0$ the Pauli principle leads to a sharp Fermi edge at $E_F$, in stark contrast to the classical Maxwell-Boltzmann distribution at the same temperature. At higher temperatures, thermal excitations wash out the Fermi edge and the gas progressively recovers the classical distribution. 
+In Fig.~\ref{fig:FDdistro}, we show the energy distribution $n(\varepsilon)=g(\varepsilon)f_{\mathrm{FD}}(\varepsilon)$ for different values of $T/T_F$, the ratio that quantifies the degree of degeneracy in an ultracold Fermi gas. Here $g(\varepsilon)=\varepsilon^2/(\hbar\bar\omega)^3$ is the three-dimensional density of states in a harmonic trap \cite{Pethick2002book, Pitaevskii2016book}. For $T/T_F\to0$ the Pauli principle leads to a sharp Fermi edge at $E_F$, in stark contrast to the classical Maxwell-Boltzmann distribution at the same temperature. At higher temperatures, thermal excitations wash out the Fermi edge and the gas progressively recovers the classical distribution. 
 
 
-This smooth crossover means there is no sharp experimental signature that marks the onset of degeneracy, unlike the bimodal distribution that appears at the \ac{BEC} transition for bosons. Instead, the degree of degeneracy must be inferred from the shape of the atomic cloud itself. In \ac{TOF} imaging, the trap is switched off and the cloud expands freely before being imaged, mapping the momentum distribution onto a spatial one. The onset of Fermi degeneracy manifests as a deviation of the cloud profile from the Gaussian expected for a classical gas. To extract $T/T_F$ quantitatively, we fit the two-dimensional column density profiles obtained from absorption imaging with a polylogarithmic function \cite{Ketterle2008mpa}
+This smooth crossover means there is no sharp experimental signature that marks the onset of degeneracy, unlike the bimodal distribution that appears at the \ac{BEC} transition for bosons. Instead, the degree of degeneracy must be inferred from the shape of the atomic cloud itself. In \ac{TOF} imaging, the trap is switched off and the cloud expands freely before being imaged, mapping the momentum distribution onto a spatial one. The onset of Fermi degeneracy manifests as a deviation of the cloud profile from the Gaussian expected for a classical gas. To extract $T/T_F$ quantitatively, we fit the two-dimensional column density profiles obtained from absorption imaging with a polylogarithmic function \cite{Ketterle2008mpa, Demarco2001qbo}
 \begin{equation}
 	n(x,y) = -A\,\frac{\mathrm{Li}_2\left(-z \exp\left(-\frac{x^2}{2\sigma_x^2} - \frac{y^2}{2\sigma_y^2}\right)\right)}{\mathrm{Li}_2\left(-z\right)},
 	\label{eq:PolyLog}
 \end{equation} 
-where $ \mathrm{Li}_2$ is the polylogarithm of order $2$, $A$ is an amplitude, $z=e^{\mu/k_BT}$ is the fugacity, and $\sigma_{x,y}$ are the thermal widths. The fugacity $z$ encodes the degeneracy: for $z\ll 1$ the distribution reduces to a Gaussian (classical limit), while for $z\gg1$ the distribution approaches the zero-temperature Thomas-Fermi profile. The ratio  $T/T_F$ is then extracted from the fitted fugacity via:
+where $ \mathrm{Li}_2$ is the polylogarithm of order $2$, $A$ is an amplitude, $z=e^{\mu/k_BT}$ is the fugacity, and $\sigma_{x,y}$ are the thermal widths. The fugacity $z$ encodes the degeneracy: For $z\ll 1$ the distribution reduces to a Gaussian (classical limit), while for $z\gg1$ the distribution approaches the zero-temperature Thomas-Fermi profile \cite{Giorgini2008tou}. The ratio  $T/T_F$ is then extracted from the obtained fugacity via:
 \begin{equation}
 	\frac{T}{T_F} = \left[-6\,\mathrm{Li}_3(-z)\right]^{-1/3},
 \end{equation}
 where $ \mathrm{Li}_3$ is the polylogarithm of order $3$, which accounts for the three-dimensional density of states.
 
-It is worth remarking here that these definitions and quantities are valid for a non interacting Fermi gas. In such a gas, low-energy collisions are forbidden by antisymmetry of the many-body wave function. This suppression of elastic collisions is one of the reasons why ultracold Fermi gases are commonly studied in mixtures, where distinguishable particles can interact through the $s$-wave channel. The remainder of this chapter introduces the scattering concepts needed to describe these contact interactions and their magnetic-field control through Feshbach resonances.
+It is worth remarking here that these definitions and quantities are valid for a non interacting Fermi gas. In such a gas, low-energy collisions are forbidden by antisymmetry of the many-body wave function. This suppression of elastic collisions is one of the reasons why ultracold Fermi gases are commonly studied in mixtures, where distinguishable particles can interact through the $s$-wave channel. The remainder of this chapter introduces the scattering theory concepts needed to describe these contact interactions and their magnetic-field control through Feshbach resonances.
 
 
 
 \section{Basics of scattering theory}
 \label{sec:ScatteringTheo}
 
-At the low densities and temperatures of ultracold gases, interactions between distinguishable particles can be described to a very good approximation in terms of two-body scattering. In this section, we introduce the basic scattering quantities needed to characterize such interactions.
+At the low densities and temperatures of ultracold gases, interactions between distinguishable particles can be described to a very good approximation in terms of two-body scattering. In this section, we introduce the basic scattering quantities needed to characterize such interactions \cite{dalibard2021iba}.
 
-We consider two particles interacting through a potential $V(r)$ that depends only on their relative distance. Far from the interaction region, the scattering wave function can be written as the sum of an incoming plane wave and an outgoing spherical wave,
+We consider two particles interacting through a potential $V(r)$ that depends only on their relative distance, $\mathbf{r}$. Far from the interaction region, the scattering wave function can be written as the sum of an incoming plane wave and an outgoing spherical wave,
 \begin{equation}
-	\psi_k(r)\sim e^{ikz}+f(k,\theta)\frac{e^{ikr}}{r},
+	\psi_k(r)\sim e^{i \mathbf{k}\cdot\mathbf{r} }+f(k,\theta)\frac{e^{ikr}}{r},
 	\label{eq:wavefunScatt}
 \end{equation}
 where $\mathbf{k}$ is the relative wave vector and $f(k,\theta)$ is the scattering amplitude. The differential cross section is obtained directly from the scattering amplitude as
 \begin{equation}
-\frac{d\sigma}{d\Omega}=|f(k,\theta)|^2.
+\frac{d\sigma}{d\Omega}=|f(k,\theta)|^2,
 \label{eq:diffCrossSec}
 \end{equation}
+where $\Omega$ is the solid angle.	
 	
 For a central potential, the scattering problem can be decomposed into partial waves of angular momentum quantum number $l$. Each partial wave experiences an effective radial potential	
 \begin{equation}
@@ -107,25 +108,25 @@ In the limit of small scattering length, $ka\ll1$, this becomes $\sigma=4\pi a^2
 	\label{eq:UniversalCrossSec}
 \end{equation}
 
-The scattering length therefore determines the strength of low-energy interactions in an ultracold gas. In a many-body Fermi system, the relevant dimensionless interaction parameter is $k_Fa$, or equivalently $1/(k_Fa)$. The ability to tune $a$ makes it possible to move from weakly attractive interactions, through the strongly interacting unitary regime, to the molecular side of the resonance, where weakly bound dimers exist. Magnetic Feshbach resonances, introduced in the next section, provide precisely this tunability. 
+The scattering length therefore determines the strength of low-energy interactions in an ultracold gas. In a many-body Fermi system, the relevant dimensionless interaction parameter is $k_Fa$. The ability to tune $a$ makes it possible to move from weakly attractive interactions, through the strongly interacting unitary regime, to the molecular side of the resonance, where weakly bound dimers exist. Magnetic Feshbach resonances, introduced in the next section, provide precisely this tunability. 
 
 \section{Feshbach resonances in ultracold gases}
 \label{sec:FeshbachResIntro}
 
 
-Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. They allow the interaction strength between two atoms to be controlled by changing an external magnetic field. Here, we briefly summarize the main concepts of Feshbach resonance, while for a detailed overview, we refer to Ref.~\cite{Chin2010fri}, which is the standard reference for the topic. 
+Magnetically tunable Feshbach resonances are one of the central tools of ultracold-atom experiments. They allow to control the interaction strength between two atoms by changing an external magnetic field. Here, we briefly summarize the main concepts behind a Feshbach resonance, while for a detailed overview, we refer to Ref.~\cite{Chin2010fri}, which is the standard reference for the topic. 
 
 \begin{figure}[thb]
 	\centering
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/FeshbachRes.pdf}
 	\caption{Two channel model for a Feshbach resonance. Scattering is resonantly enhanced when the collision energy of two atoms in the open channel is coupled to a bound state of the closed-channel potential $V_c$, in red.  \label{fig:FeshbachResonance}}
 \end{figure}
-The two-channel model for a Feshbach resonance is illustrated in Fig.~\ref{fig:FeshbachResonance}. The tunability of the scattering length originates, at the two-body level, from the coupling between the open scattering channel, and a molecular bound state with energy $E_c$ supported by a closed-channel potential. The two channels generally have different magnetic moments, so that the energy of the bound state relative to the scattering threshold can be tuned by varying an external magnetic field. When this energy is tuned close to the scattering threshold, the scattering length is resonantly enhanced and can be tuned over a wide range. On the repulsive side of the resonance, the two-atom system supports a weakly bound molecular state, commonly referred to as a Feshbach molecule.
+The two-channel model for a Feshbach resonance is illustrated in Fig.~\ref{fig:FeshbachResonance}. The tunability of the scattering length originates, at the two-body level, from the coupling between the open scattering channel and a molecular bound state with energy $E_c$ supported by a closed-channel potential. The two channels generally have different magnetic moments, so that the energy of the bound state relative to the scattering threshold can be tuned by varying an external magnetic field. When this energy is tuned close to the scattering threshold, the scattering length is resonantly enhanced and can be tuned over a wide range. On the repulsive side of the resonance, the two-atom system supports a weakly bound molecular state, commonly referred to as a Feshbach molecule.
 
 \begin{figure}[thb]
 	\centering
 	\includegraphics[trim=0cm 0 0cm 0, clip, width=0.9\columnwidth]{gfx/Cpt2_fig/Feshbachres_varyingA.pdf}
-	\caption{Scattering length near a Feshbach resonance for different values of the pole strength $A$. The yellow and red curves overlap because they have the same value of $A$. The blue curve shows the scattering length for the resonance near \SI{7}{G}, using the parameters characterized in this thesis. \label{fig:ScatteringLengthDiffAINtro}}
+	\caption{Scattering length near a Feshbach resonance for different values of the pole strength $A$. The yellow and red curves overlap because they have the same value of $A$. The blue curve shows the scattering length for the Dy-K resonance near \SI{7}{G}, using the parameters characterized in this thesis. \label{fig:ScatteringLengthDiffAINtro}}
 \end{figure}
 Near a well-isolated Feshbach resonance, the scattering length as a function of magnetic field $B$, can be expressed in terms of a few parameters \cite{Moerdijk1995riu}
 \begin{equation}

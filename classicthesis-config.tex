@@ -106,10 +106,12 @@
     \AtEveryBibitem{
     	\ifentrytype{article}{\clearfield{number}}{}
     	\clearfield{pages}
+    	\clearfield{issue}
     }
     \AtEveryBibitem{
     	\clearfield{month}
     	\clearfield{day}
+    	
     }
     
     \DeclareFieldFormat[article]{title}{%
